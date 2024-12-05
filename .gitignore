@@ -199,3 +199,4 @@ FakesAssemblies/
 
 #Ignore JSON
 *.json
+.fake
