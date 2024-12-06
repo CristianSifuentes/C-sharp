@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureDemo", "FeatureDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreObjectOrientedFeatures", "CoreObjectOrientedFeatures\CoreObjectOrientedFeatures.csproj", "{DF449AD3-CC3A-48E8-86D7-749E3CD1B55D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp3FeaturesDemo", "CSharp3FeaturesDemo\CSharp3FeaturesDemo.csproj", "{78FDA8F5-910E-460C-9174-D91C55AC0FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsDemo", "GenericsDemo\GenericsDemo.csproj", "{FE977389-EFBE-4107-9163-0D052AE806D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{DF449AD3-CC3A-48E8-86D7-749E3CD1B55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF449AD3-CC3A-48E8-86D7-749E3CD1B55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF449AD3-CC3A-48E8-86D7-749E3CD1B55D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78FDA8F5-910E-460C-9174-D91C55AC0FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FDA8F5-910E-460C-9174-D91C55AC0FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FDA8F5-910E-460C-9174-D91C55AC0FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FDA8F5-910E-460C-9174-D91C55AC0FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE977389-EFBE-4107-9163-0D052AE806D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE977389-EFBE-4107-9163-0D052AE806D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE977389-EFBE-4107-9163-0D052AE806D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE977389-EFBE-4107-9163-0D052AE806D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
