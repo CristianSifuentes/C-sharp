@@ -35,3 +35,94 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 
 
 ### Creating Project
+
+To create a solution and add a console project in Visual Studio Code using the .NET CLI, follow these steps:
+
+
+1. Install .NET SDK
+
+Before you begin, make sure you have the .NET SDK installed on your system. To verify, run:
+
+```bash 
+dotnet --version
+
+```
+If it is not installed, download it from [here](https://dotnet.microsoft.com/en-us/download)
+
+
+2. Create a solution (.sln)
+
+   1.  Open the terminal and navigate to the directory where you want to create the solution.
+
+   1.  Create the solution using the command:
+        ```bash 
+         dotnet new sln -n NombreDeTuSolucion
+        ```
+
+Example:
+
+```bash 
+  dotnet new sln -n MiSolucion
+```
+
+
+3. Create a console project
+
+Inside the solution directory or in a subdirectory, create the console project:
+
+```bash 
+dotnet new sln -n NombreDeTuSolucion
+```
+Example:
+
+```bash 
+dotnet new sln -n MiSolucion
+
+```
+This will generate a folder with the project name, containing the initial files.
+
+
+4. Add the project to the solution
+
+```bash 
+dotnet sln add RutaDelProyecto
+
+
+```
+
+
+```bash 
+dotnet sln add MiProyectoConsola/MiProyectoConsola.csproj
+
+
+```
+
+5. Open the project in Visual Studio Code
+
+```bash 
+code .
+
+```
+
+6. Restore and run the project
+
+```bash 
+dotnet restore
+
+
+```
+
+```bash 
+dotnet run --project RutaDelProyecto
+
+
+```
+
+
+```bash 
+dotnet run --project MiProyectoConsola
+
+
+```
+
+
