@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp7FeaturesDemo", "CSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp8FeaturesDemo", "CSharp8FeaturesDemo\CSharp8FeaturesDemo.csproj", "{3F644B8E-205D-431B-A271-7419E258DF67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp9FeaturesDemo", "CSharp9FeaturesDemo\CSharp9FeaturesDemo.csproj", "{9E63072D-8D32-4D92-AF1D-DDB7D6DA46D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{3F644B8E-205D-431B-A271-7419E258DF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F644B8E-205D-431B-A271-7419E258DF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F644B8E-205D-431B-A271-7419E258DF67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E63072D-8D32-4D92-AF1D-DDB7D6DA46D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E63072D-8D32-4D92-AF1D-DDB7D6DA46D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E63072D-8D32-4D92-AF1D-DDB7D6DA46D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E63072D-8D32-4D92-AF1D-DDB7D6DA46D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
