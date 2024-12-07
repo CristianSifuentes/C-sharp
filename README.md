@@ -84,12 +84,16 @@ This will generate a folder with the project name, containing the initial files.
 
 4. Add the project to the solution
 
+Go back to the root of your solution (where the .sln file is).
+
+Add the project to the solution with the command:
+
 ```bash 
 dotnet sln add RutaDelProyecto
 
 
 ```
-
+Example:
 
 ```bash 
 dotnet sln add MiProyectoConsola/MiProyectoConsola.csproj
