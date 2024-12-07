@@ -1,5 +1,5 @@
 namespace MyProject.Models{
-    class Products{
+    class Product{
         public  string Name { get; set; }
         //public required string Name { get; set; }
 
