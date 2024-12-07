@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitDemo", "AsyncAwai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workspace", "Workspace\Workspace.csproj", "{043F2D1B-B8A2-4E74-823F-FC67EA0FFE54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp10FeaturesDemo", "CSharp10FeaturesDemo\CSharp10FeaturesDemo.csproj", "{4B6E1D1C-9A61-47B5-90EA-E14F75A84DB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{043F2D1B-B8A2-4E74-823F-FC67EA0FFE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{043F2D1B-B8A2-4E74-823F-FC67EA0FFE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{043F2D1B-B8A2-4E74-823F-FC67EA0FFE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B6E1D1C-9A61-47B5-90EA-E14F75A84DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6E1D1C-9A61-47B5-90EA-E14F75A84DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6E1D1C-9A61-47B5-90EA-E14F75A84DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6E1D1C-9A61-47B5-90EA-E14F75A84DB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
