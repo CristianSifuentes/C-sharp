@@ -8,15 +8,21 @@ namespace AsyncAwaitDemo
     {
         static async Task Main(string[] args)
         {
-             Console.WriteLine("C# 5.0 Asynchronous Programming Demo");
-             // Sequential execution (blocking)
-             Console.WriteLine("\nStarting sequential download...");
-             SequentialDownload();
+            Console.WriteLine("C# 5.0 Asynchronous Programming Demo");
+            // Sequential execution (blocking)
+            Console.WriteLine("\nStarting sequential download...");
+            SequentialDownload();
 
-                         // Parallel execution with async/await
+            // Parallel execution with async/await
             Console.WriteLine("\nStarting parallel download...");
             await ParallelDownload();
-         
+            // Demonstrating an asynchronous method that returns a value
+            Console.WriteLine("\nCalculating factorial asynchronously...");
+            int number = 5;
+            var result = await CalculateFactorialAsync(number);
+            Console.WriteLine($"Factorial of {number} is {result}");
+
+            Console.WriteLine("\nC# 5.0 Features Demonstrated Successfully!");
 
         }
 
@@ -50,12 +56,10 @@ namespace AsyncAwaitDemo
             Console.WriteLine($"Bing downloaded {bingContent.Length} characters.");
         }
 
-        // Asynchronous Method that Returns a Value
+       // Asynchronous Method that Returns a Value
         static async Task<int> CalculateFactorialAsync(int number)
         {
-            await Task.Delay(100); // Simulation
-             return number * 10; // Dummy based on input
-
+            return await Task.Run(() => Factorial(number));
         }
 
         // Synchronous factorial calculation (can be offloaded to a Task)
