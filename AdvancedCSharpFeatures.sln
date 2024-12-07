@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsDemo", "GenericsDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp4FeaturesDemo", "CSharp4FeaturesDemo\CSharp4FeaturesDemo.csproj", "{FC202DCF-1336-4576-9807-B6E9E7BCD579}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitDemo", "AsyncAwaitDemo\AsyncAwaitDemo.csproj", "{496B6ED7-B44F-400A-8D70-003DD0C1B30E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{FC202DCF-1336-4576-9807-B6E9E7BCD579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC202DCF-1336-4576-9807-B6E9E7BCD579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC202DCF-1336-4576-9807-B6E9E7BCD579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{496B6ED7-B44F-400A-8D70-003DD0C1B30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496B6ED7-B44F-400A-8D70-003DD0C1B30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496B6ED7-B44F-400A-8D70-003DD0C1B30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496B6ED7-B44F-400A-8D70-003DD0C1B30E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
