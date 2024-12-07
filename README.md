@@ -56,77 +56,83 @@ If it is not installed, download it from [here](https://dotnet.microsoft.com/en-
 
    1.  Create the solution using the command:
         ```bash 
-         dotnet new sln -n NombreDeTuSolucion
+         dotnet new sln -n YourSolutionName
         ```
 
-Example:
+       Example:
 
-```bash 
-  dotnet new sln -n MiSolucion
-```
+        ```bash 
+        dotnet new sln -n MySolution
+        ```
 
 
 3. Create a console project
 
-Inside the solution directory or in a subdirectory, create the console project:
+   1. Inside the solution directory or in a subdirectory, create the console project:
 
-```bash 
-dotnet new sln -n NombreDeTuSolucion
-```
-Example:
+        ```bash 
+            dotnet new console -n YourProjectName
+        ```
 
-```bash 
-dotnet new sln -n MiSolucion
+      Example:
 
-```
-This will generate a folder with the project name, containing the initial files.
+        ```bash 
+        dotnet new console -n MyProjectConsole
+        ```
+        This will generate a folder with the project name, containing the initial files.
 
 
 4. Add the project to the solution
 
-Go back to the root of your solution (where the .sln file is).
+   1. Go back to the root of your solution (where the `.sln` file is).
 
-Add the project to the solution with the command:
+   1. Add the project to the solution with the command:
 
-```bash 
-dotnet sln add RutaDelProyecto
+        ```bash 
+        dotnet sln add ProjectPath
 
+        ```
+      Example:
 
-```
-Example:
+        ```bash 
+        dotnet sln add MyProjectConsole
+        /MyProjectConsole.csproj
 
-```bash 
-dotnet sln add MiProyectoConsola/MiProyectoConsola.csproj
-
-
-```
+        ```
 
 5. Open the project in Visual Studio Code
 
-```bash 
-code .
+   1. Open the solution in Visual Studio Code:
 
-```
+        ```bash 
+         code .
+        ```
+
+   1. Make sure you have the C# Extension Pack installed in Visual Studio Code to get IntelliSense and additional tools.
+
 
 6. Restore and run the project
 
-```bash 
-dotnet restore
+   1. Restore the necessary packages:
+
+        ```bash 
+        dotnet restore
+
+        ```
+
+   1. Run the project to test:
+
+        ```bash 
+        dotnet run --project ProjectPath
 
 
-```
+        ```
 
-```bash 
-dotnet run --project RutaDelProyecto
+      Example
 
+        ```bash 
+        dotnet run --project MyProjectConsole
 
-```
-
-
-```bash 
-dotnet run --project MiProyectoConsola
-
-
-```
+        ```
 
 
