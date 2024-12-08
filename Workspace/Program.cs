@@ -33,7 +33,7 @@ using AliasModels = MyProject.Models;
 class Program{
     static void Main(){
         MyClass obj = new MyClass();
-        obj.ShowMessage();
+        obj.ShowInfo();
         Tools tool = new Tools();
         tool.Hi();
         User user = new User();
@@ -58,7 +58,8 @@ class Program{
         Console.WriteLine(objAliasProduct.Name);
         Console.WriteLine(objAliasUser.Name);
 
-        Circle circle = new Circle("Color");
+        //error CS1503: Argument 1: cannot convert from 'string' to 'double'
+        Circle circle = new Circle(8);
         circle.Name = "Circle";
         circle.CalculateArea();
         Console.WriteLine(circle.Name);
@@ -85,7 +86,7 @@ namespace MyProject
 {
     class MyClass
     {
-        public void ShowMessage(){
+        public void ShowInfo(){
             Console.WriteLine("Hi fom MyClass in MyProject");
         }
     }
@@ -103,38 +104,69 @@ namespace MyProject
 //Flexibility: It allow you to define a base structure without specifying all the details, leaving room for customization int derived classes
 
 
-abstract class Figure{
+abstract class Shape{
     //Abstract properties have no body
     public abstract string Name { get; set;} // Abstract property
     //Non-abstract properties have body
     public int Sides { get; set; } = 4; // Non-abstract property
+    public double Radius { get; set; } = 0.0;
+
     // Abstract methods have no implementation and must be implemented
     // by derived classes
     public abstract double CalculateArea();
     // Non-abstract methods have implementation and can be inherited directly
-    public void ShowMessage(){
-        Console.WriteLine("I am a figure");
+    public void ShowInfo(){
+        Console.WriteLine("I am a Shape");
     }
     //Abstract class 
-    public Figure(string color){
-        color = color;
-        //error CS7036: There is no argument given that corresponds to the required parameter 'color' of 'Figure.Figure(string)'
+    //Although it cannot be instantiated, it can have a constructor that will be called by derived classes.   
+    public Shape(double radius){
+         Radius = radius;
+        //error CS7036: There is no argument given that corresponds to the required parameter 'color' of 'Shape.Shape(string)'
     }
 }
 
-class Circle: Figure {
-     //Derived classes must provide implementations for all abstract members
-     public override global::System.String Name { 
-        get => throw new System.NotImplementedException(); 
-        set => throw new System.NotImplementedException(); 
+class Circle: Shape {
+    //Derived classes must provide implementations for all abstract members
+    //  public override global::System.String Name { 
+    //     get => throw new System.NotImplementedException(); 
+    //     set => throw new System.NotImplementedException(); 
+    // }
+    //error CS0102: The type 'Circle' already contains a definition for 'Name'
+    public override global::System.String Name {
+         get => throw new System.NotImplementedException(); 
+         set => throw new System.NotImplementedException(); 
+    }
+
+    // public double Radius { get; set; }
+     
+     //error CS0534: 'Circle' does not implement inherit ted abstract member 'Shape.Name.get'
+    // public override global::System.Double CalculateArea() => throw new System.NotImplementedException();
+
+    //error CS0111: Type 'Circle' already defin es a member called 'CalculateArea' with the same parameter types 
+    public override double CalculateArea()
+    {
+        return Math.PI * Radius * Radius;
     }
      
-     //error CS0534: 'Circle' does not implement inherit ted abstract member 'Figure.Name.get'
-     public override global::System.Double CalculateArea() => throw new System.NotImplementedException();
-     //Although it cannot be instantiated, it can have a constructor that will be called by derived classes.   
-     public Circle(string color): base(color) { }
+    //  public Circle(string color): base(color) { }
+     public Circle(double radius):base(radius) {}
  }
 
+class Square : Shape
+{
+    public Square(double radius) : base(radius)
+    {
+    }
+
+    //error CS0534: 'Square' does not implement  inherited abstract member 'Shape.Name.get
+    public override string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+    public override double CalculateArea()
+    {
+        throw new NotImplementedException();
+    }
+}
 //You can´t do this 
-//Figure myFigure = new Figure(); //Error
+//Shape myShape = new Shape(); //Error
 #endregion
