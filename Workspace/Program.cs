@@ -58,11 +58,11 @@ class Program{
         Console.WriteLine(objAliasProduct.Name);
         Console.WriteLine(objAliasUser.Name);
 
-        Circle circle = new Circle();
+        Circle circle = new Circle("Color");
         circle.Name = "Circle";
         circle.CalculateArea();
         Console.WriteLine(circle.Name);
-        Console.WriteLine( circle.CalculateArea());
+        Console.WriteLine(circle.CalculateArea());
 
 
     }
@@ -98,6 +98,11 @@ namespace MyProject
 #region AbstractClasses
 //It cannot be instantiated directly
 //You can only use it as a base class
+//Code reuse: You can define common behavior in the abstract class and extend it in derived classes
+//Consistency: Ensures that all derived classes implement certain methods and properties.
+//Flexibility: It allow you to define a base structure without specifying all the details, leaving room for customization int derived classes
+
+
 abstract class Figure{
     //Abstract properties have no body
     public abstract string Name { get; set;} // Abstract property
@@ -110,6 +115,11 @@ abstract class Figure{
     public void ShowMessage(){
         Console.WriteLine("I am a figure");
     }
+    //Abstract class 
+    public Figure(string color){
+        color = color;
+        //error CS7036: There is no argument given that corresponds to the required parameter 'color' of 'Figure.Figure(string)'
+    }
 }
 
 class Circle: Figure {
@@ -121,6 +131,8 @@ class Circle: Figure {
      
      //error CS0534: 'Circle' does not implement inherit ted abstract member 'Figure.Name.get'
      public override global::System.Double CalculateArea() => throw new System.NotImplementedException();
+     //Although it cannot be instantiated, it can have a constructor that will be called by derived classes.   
+     public Circle(string color): base(color) { }
  }
 
 //You can´t do this 
