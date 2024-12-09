@@ -5,7 +5,8 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 1. [C# Versions and Features](#c-versions-and-features)
 2. [Explanation of Features](#explanation-of-features)
 3. [Creating a Project with .NET CLI](#creating-a-project-with-net-cli)
-4. [Additional Resources](#additional-resources)
+4. [Multi Entry Point](#multi-entry-point)
+5. [Additional Resources](#additional-resources)
 
 ---
 
@@ -119,6 +120,44 @@ If the command outputs a version number, the SDK is installed. If not, download 
 
 ---
 
+## Multi Entry Point
+
+```bash 
+error CS0017: Program has more than one entry point defined.
+```
+
+The error occurs because there are multiple ```Main``` methods in the project.
+
+* Program.Main (in Program.cs).
+
+* AnotherProgram.Main (in AnotherProgram.cs).
+
+In this case, we are setting the ```Main``` method of the AnotherProgram class as the entry point.
+
+* Compile the project specifying which Main method to use as entry point:
+
+     ```bash 
+     dotnet build /p:StartupObject=AnotherProgram
+* To run the program, use:
+     ```
+     ```bash 
+     dotnet run
+
+     ```
+
+* if you want to use the Main method of the Program class, compile again with:
+     ```bash 
+     dotnet build /p:StartupObject=Program
+
+     ```
+* Then run the program:
+
+
+     ```bash 
+     dotnet run
+
+     ```
+---
 ## Example Code
 Here’s a simple example of C# code to get started:
 ```csharp
