@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp9FeaturesDemo", "CSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp11FeaturesDemo", "CSharp11FeaturesDemo\CSharp11FeaturesDemo.csproj", "{CF193092-8CB8-4B81-84CB-A30B9E81F7D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiEntryPointExample", "MultiEntryPointExample\MultiEntryPointExample.csproj", "{FA0F8115-B560-4C64-BFCF-2E475C6EDD80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,5 +92,9 @@ Global
 		{CF193092-8CB8-4B81-84CB-A30B9E81F7D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF193092-8CB8-4B81-84CB-A30B9E81F7D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF193092-8CB8-4B81-84CB-A30B9E81F7D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0F8115-B560-4C64-BFCF-2E475C6EDD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0F8115-B560-4C64-BFCF-2E475C6EDD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0F8115-B560-4C64-BFCF-2E475C6EDD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0F8115-B560-4C64-BFCF-2E475C6EDD80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
