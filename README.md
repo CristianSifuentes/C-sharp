@@ -47,7 +47,7 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 
 ## Creating a Project with .NET CLI
 
-Follow these steps to create a solution and add a console project in Visual Studio Code using the .NET CLI:
+Follow these steps to create a solution and add a console project in Visual Studio Code using the .NET CLI.
 
 ---
 
