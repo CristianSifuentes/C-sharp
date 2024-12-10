@@ -57,8 +57,9 @@ namespace GeometryApp
 {
     using Geometry.Shapes;
     using Geometry.Utilities;
+    using InterfaceClass;
 
-    class Program1
+    class Program
     {
         static void Main()
         {
@@ -73,6 +74,13 @@ namespace GeometryApp
             square.ShowInfo();
             Console.WriteLine($"Area: {square.CalculateArea()}");
             Console.WriteLine($"Perimeter: {MathUtilities.CalculateSquarePerimeter(4)}");
+ 
+            IVehicle myCar = new Car();
+            IVehicle myMotorcycle = new Motorcycle();
+            myCar.Star();
+            myCar.Stop();
+            myMotorcycle.Star();
+            myMotorcycle.Stop();
         }
     }
 }

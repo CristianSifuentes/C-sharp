@@ -30,42 +30,42 @@ using AliasModels = MyProject.Models;
 //Promotes the sharing of code in different projects
 
 class Program{
-    static void Main(){
-        MyClass obj = new MyClass();
-        obj.ShowInfo();
-        Tools tool = new Tools();
-        tool.Hi();
-        User user = new User();
-        user.Name = "Artur";
-        Product product = new Product();
-        product.Name = "Apple";
+    // static void Main(){
+    //     MyClass obj = new MyClass();
+    //     obj.ShowInfo();
+    //     Tools tool = new Tools();
+    //     tool.Hi();
+    //     User user = new User();
+    //     user.Name = "Artur2";
+    //     Product product = new Product();
+    //     product.Name = "Apple2";
 
-        Console.WriteLine(product.Name);
-        Console.WriteLine(user.Name);
+    //     Console.WriteLine(product.Name);
+    //     Console.WriteLine(user.Name);
 
-        List<string> names = new List<string>{
-            "Ana", "Marie", "Sofia"
-        };
-        foreach (var name in names){
-            Console.WriteLine(name);
-        }
+    //     List<string> names = new List<string>{
+    //         "Ana2", "Marie2", "Sofia2"
+    //     };
+    //     foreach (var name in names){
+    //         Console.WriteLine(name);
+    //     }
         
-        AliasModels.Product objAliasProduct = new AliasModels.Product();
-        AliasModels.User objAliasUser = new AliasModels.User();
-        objAliasProduct.Name = "PC";
-        objAliasUser.Name = "Jose";
-        Console.WriteLine(objAliasProduct.Name);
-        Console.WriteLine(objAliasUser.Name);
+    //     AliasModels.Product objAliasProduct = new AliasModels.Product();
+    //     AliasModels.User objAliasUser = new AliasModels.User();
+    //     objAliasProduct.Name = "PC";
+    //     objAliasUser.Name = "Jose";
+    //     Console.WriteLine(objAliasProduct.Name);
+    //     Console.WriteLine(objAliasUser.Name);
 
-        //error CS1503: Argument 1: cannot convert from 'string' to 'double'
-        Circle circle = new Circle(8);
-        circle.Name = "Circle";
-        circle.CalculateArea();
-        Console.WriteLine(circle.Name);
-        Console.WriteLine(circle.CalculateArea());
+    //     //error CS1503: Argument 1: cannot convert from 'string' to 'double'
+    //     Circle circle = new Circle(8);
+    //     circle.Name = "Circle";
+    //     circle.CalculateArea();
+    //     Console.WriteLine(circle.Name);
+    //     Console.WriteLine(circle.CalculateArea());
 
 
-    }
+    // }
 
 }
 
@@ -167,13 +167,22 @@ class Square : Shape
 //Shape myShape = new Shape(); //Error
 #endregion
 
-namespace interfaz{
+#region Interface
+namespace InterfaceClass{
 //In C#, an interface is a contract that 
 //defines a set of methods, properties, events, 
 //or indexers that a class or structure must implement.
 //Interfaces do not contain implementation; they
 //only specify which members should be implemented.
-    #region Interfaz  
+
+//1 Establish a Contract
+//2 Support Multiple Inheritance:
+//3 Abstract the Implementation:
+//4 Facilitate Extensibility
+//5 Polymorphism Support:
+
+
+
     interface IVehicle {
         void Star();
         void Stop();
@@ -203,6 +212,7 @@ namespace interfaz{
         }
     }
 
-    #endregion
 
 }
+
+#endregion
