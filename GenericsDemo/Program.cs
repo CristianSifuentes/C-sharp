@@ -5,24 +5,24 @@ using System.Collections.Generic;
 namespace GenericsDemo
 {
     // Generic Class Example
-    public class GenericRepository<T>
+    public class GenericRepository<W>
     {
-        private readonly List<T> _items = new();
+        private readonly List<W> _items = new();
 
         // Add item to the repository
-        public void Add(T item)
+        public void Add(W item)
         {
             _items.Add(item);
         }
 
         // Get all items
-        public IEnumerable<T> GetAll()
+        public IEnumerable<W> GetAll()
         {
             return _items;
         }
 
         // Generic method to find an item by predicate
-        public T Find(Predicate<T> match)
+        public W Find(Predicate<W> match)
         {
             return _items.Find(match);
         }
