@@ -7,14 +7,36 @@ namespace GenericsDemo
     // Generic Class Example
     public class GenericRepository<W>
     {
+        //class System.Collections.Generic.List<T>
+        //readonly is used to declare fields that can only be
+        //assigned when initializing them or in the class constructor.
+        //Unlike const, it allows dynamic or calculated values at run time.
+
+        /*
+        readonly:
+        You can assign its value in the declaration or in the
+        constructor. Useful for values thar are calculated at run time.
+        Its is immutable at all times and cannot be modified.
+        
+        const: 
+        The value must be known at compile time.
+        */
+
         private readonly List<W> _items = new();
+        public readonly int ReadOnlyField; // readonly field
+        public const int ConstField = 100; // Campo const
+        public readonly DateTime ReadOnlyDate; // Campo readonly para un tipo de referencia
+        
+
 
         // Add item to the repository
+        // Change T for W
         public void Add(W item)
         {
             _items.Add(item);
         }
 
+        // interface System.Collections.Generic.IEnumerable<out T>
         // Get all items
         public IEnumerable<W> GetAll()
         {
@@ -22,6 +44,7 @@ namespace GenericsDemo
         }
 
         // Generic method to find an item by predicate
+        //delegate bool System.Predicate<in T>(T obj)
         public W Find(Predicate<W> match)
         {
             return _items.Find(match);
