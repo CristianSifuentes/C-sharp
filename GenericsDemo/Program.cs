@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 // Namespace encapsulating the application
@@ -18,8 +19,92 @@ namespace GenericsDemo
     any type when the class is instantiated.
     Promotes code reusability and flexibility.
 
+
+
+
     */
     // Generic Class Example
+
+    public class TaskManager
+    {
+          private readonly Hashtable taskQueues;
+            public TaskManager(){
+                //(awaitable) class System.Threading.Tasks.Task
+                    // Initialize priority queues
+                        taskQueues = new Hashtable
+                        {  
+                            { "High", new Queue<Task>() },
+                            { "Medium", new Queue<Task>() },
+                            { "Low", new Queue<Task>() }
+                        };
+            }
+
+            public void AddTask(string priority, string description, int? assignedTo = null)
+                {
+                    if (!taskQueues.ContainsKey(priority))
+                    {
+                        throw new ArgumentException("Invalid priority level.");
+                    }
+
+                    var queue = (Queue<Task>)taskQueues[priority];
+                    queue.Enqueue(new Task
+                    {
+                        Id = Guid.NewGuid(),
+                        Description = description,
+                        AssignedTo = assignedTo,
+                        CreatedAt = DateTime.Now
+                    });
+                }
+
+            public IEnumerable<Task> GetTasksByPriority(string priority, Func<Task, bool> filter = null){
+                if (!taskQueues.ContainsKey(priority))
+                {
+                    throw new ArgumentException("Invalid priority level.");
+                }
+
+                var queue = (Queue<Task>)taskQueues[priority];
+
+                foreach (var task in queue)
+                {
+                    if (filter == null || filter(task)) // Aplicar filtro si existe.
+                    {
+                        yield return task;
+                    }
+                }
+            }
+            public void ShowAllTasks(){
+                        foreach (DictionaryEntry entry in taskQueues)
+                            {
+                                string priority = (string)entry.Key;
+                                var queue = (Queue<Task>)entry.Value;
+
+                                Console.WriteLine($"{priority} Priority Tasks:");
+                                foreach (var task in queue)
+                                {
+                                    Console.WriteLine($"- {task}");
+                                }
+                            }
+            }
+
+    }
+ 
+
+    public class Task
+    {
+        public Guid Id { get; set; }
+        public string Description { get; set; }
+        public int? AssignedTo { get; set; } // Nullable type.
+        //Nullable types is C# allow a value type (for example, int, float, bool, etc.)
+        //to also represent a null value. This is useful when you need to work with data that could be optionally
+        //unallocated or unknown
+        public DateTime CreatedAt { get; set; }
+
+        public override string ToString()
+        {
+            return $"[{Id}] {Description} (Assigned to: {AssignedTo?.ToString() ?? "None"}, Created: {CreatedAt})";
+        }
+    }
+
     public class GenericRepository<T>: IRepository<T>
     {
         //class System.Collections.Generic.List<T>
@@ -140,13 +225,14 @@ namespace GenericsDemo
         }
     }
 
+    
+
     // Program demonstrating the use of generics
     class Program
     {
         static void Main(string[] args)
         {
             string connectionString = "Server=myServer;Database=myDb;User=myUser;Password=myPassword;";
-
             var example = new ReadOnlyExample(42);
 
             example.DisplayValues();
@@ -205,6 +291,32 @@ namespace GenericsDemo
             var anotherLaptop = new Product { Name = "Laptop Pro", Price = 1500.00m };
             Console.WriteLine($"\nAre the products equal in price? {laptop.Compare(anotherLaptop)}");
 
+            var taskManager = new TaskManager();
+
+            //Add Task
+            taskManager.AddTask("High", "Fix critical bug", 1);
+            taskManager.AddTask("Medium", "Prepare project report");
+            taskManager.AddTask("Low", "Organize team meeting");
+            taskManager.AddTask("High", "Review pull request", 2);
+
+            //  Show all Task
+            Console.WriteLine("All Tasks:");
+            taskManager.ShowAllTasks();
+
+            // Use iterator with yield to get high priority tasks
+            Console.WriteLine("\nHigh Priority Tasks (Assigned to User ID 1):");
+            foreach(var task in taskManager.GetTasksByPriority("High", t => t.AssignedTo==1)){
+                Console.WriteLine(task);
+            } 
+
+            // Show all pending task using an anonymous method
+            Func<Task, bool> allTasksFilter = task => true;
+            Console.WriteLine("\nAll Tasks (Using Anonymous Method):");
+            foreach (var task in taskManager.GetTasksByPriority("Medium", allTasksFilter))
+            {
+                Console.WriteLine(task);
+            }
+            //nullable types -> 
             Console.WriteLine("\nC# 2.0 Generics Demonstrated Successfully!");
         }
     }
