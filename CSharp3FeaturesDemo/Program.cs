@@ -105,6 +105,13 @@ namespace CSharp3FeaturesDemo
                 Console.WriteLine(product);
             }
 
+            //LINQ: To query collections. 
+            //Extension Methods: To add custom functionality to collections.
+            //Lambda Expressions: To simplify queries and operations with collections.
+            //Automatic Properties: To handle data concisely and with less code.
+
+
+
             // Lambda Expressions with LINQ
             var cheapProducts = products.Where(p => p.Price <= 100);
             Console.WriteLine("\nProducts with Price <= 100 (Using Lambda Expressions):");
