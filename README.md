@@ -156,26 +156,46 @@ To create a new C# project using the .NET CLI, follow these steps:
 1. **Install the .NET SDK**:
    Ensure you have the .NET SDK installed. You can download it from [Microsoft's official site](https://dotnet.microsoft.com/).
 
-2. **Create a New Project**:
+2. **Create a Solution (.sln)**:
+   Open your terminal and navigate to the directory where you want to create the solution:
+   ```bash
+   dotnet new sln -n YourSolutionName
+   ```
+   Replace `YourSolutionName` with the desired name of your solution.
+
+3. **Create a New Project**:
    Run the following command to create a new console application:
    ```bash
    dotnet new console -n MyApp
    ```
    Replace `MyApp` with the desired name of your project.
 
-3. **Navigate to the Project Directory**:
+4. **Add the Project to the Solution**:
+   Return to the root of your solution (where the `.sln` file is located).
    ```bash
-   cd MyApp
+   dotnet sln add YourProjectName/YourProjectName.csproj
    ```
 
-4. **Run the Application**:
+5. **Open the Project in Visual Studio Code**:
+   Open the project in Visual Studio Code using the next command.
    ```bash
-   dotnet run
+    code .
    ```
+   Ensure that the **C# Extension Pack** is installed in Visual Studio Code to enable IntelliSense and additional features.
 
-This will execute the `Program.cs` file and display the output.
+6. **Restore and Run the Project**:
+   Restore the required packages by running the next command:
+   ```bash
+     dotnet restore
+   ```
+   Run the project to test using the next command:
+   ```bash
+     dotnet run --project YourProjectName
+   ```
+   This will execute the `Program.cs` file and display the output.
 
 ---
+
 
 ## Multi Entry Point
 
