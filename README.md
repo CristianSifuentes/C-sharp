@@ -159,9 +159,9 @@ To create a new C# project using the .NET CLI, follow these steps:
 2. **Create a Solution (.sln)**:
    Open your terminal and navigate to the directory where you want to create the solution:
    ```bash
-   dotnet new sln -n YourSolutionName
+   dotnet new sln -n MySln
    ```
-   Replace `YourSolutionName` with the desired name of your solution.
+   Replace `MySln` with the desired name of your solution.
 
 3. **Create a New Project**:
    Run the following command to create a new console application:
@@ -173,9 +173,13 @@ To create a new C# project using the .NET CLI, follow these steps:
 4. **Add the Project to the Solution**:
    Return to the root of your solution (where the `.sln` file is located).
    ```bash
-   dotnet sln add YourProjectName/YourProjectName.csproj
+   dotnet sln add MyApp/MyApp.csproj
    ```
-
+   Or
+   ```bash
+    
+   dotnet sln MySln.sln add MyApp/MyApp.csproj
+   ```
 5. **Open the Project in Visual Studio Code**:
    Open the project in Visual Studio Code using the next command.
    ```bash
