@@ -146,18 +146,37 @@ Basic object-oriented programming (OOP) features were introduced, including:
 ---
 
 ## C# 6.0 Features
-- **Expression-Bodied Members:** Simplify methods and properties.
-- **String Interpolation:** Enhance string formatting with embedded expressions.
-- **Null-Conditional Operators (`?.`):** Simplify null checks in code.
+- **Expression-Bodied Members:** Simplify methods and properties. 
+     * Key Features
+          * Reduces boilerplate code, making it more concise and readable.
+          * Allows concise definitions for methods, properties, and constructors.
+- **String Interpolation:** Enhance string formatting with embedded expressions. 
+     * Key Features
+          * Allows embedding expressions directly in string literals using `$"..."`.
+          * Simplifies string formatting, improving clarity and maintainability.
+- **Null-Conditional Operators (`?.`):** Simplify null checks in code. 
+     * Key Features
+          * Simplifies null checks by safely accessing members of an object without throwing a `NullReferenceException`.
+          * Enhances safety and reduces repetitive null checks. 
+- **Null-Coalescing Operator (`??`):** Provides a fallback value when a nullable expression evaluates to null.
+
 
 ---
 
 ## C# 7.0-7.3 Features
 - **Tuples:** Return multiple values from methods with ease.
+     * Key Features
+        * Tuples provide a lightweight way to return multiple values from a method. 
 - **Pattern Matching:** Simplify conditional checks with patterns.
+     * Key Features
+        * Simplifies type-checking and conditional logic with `is` and `switch`. 
 - **Local Functions:** Define functions inside methods for better encapsulation.
+     * Key Features
+        * Functions declared within a method, useful for encapsulating logic.
 - **`Ref` Returns and `In` Parameters:** Optimize memory usage in performance-critical code.
-
+     * Key Features
+        * Allows returning a reference to a variable or array element, enabling modifications to the original source.
+        * Passes arguments by reference for performance without allowing modifications.
 ---
 
 ## C# 8.0 Features
