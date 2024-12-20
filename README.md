@@ -98,7 +98,6 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Characteristics:**
      * Focused on reusability and efficiency.
      * Compatible with .NET Framework 2.0
-- **Anonymous Methods:** Define inline unnamed functions.
 - **Generics:** Enable type-safe data structures and methods. 
      * **Program.cs:** 
           ```csharp
@@ -199,22 +198,22 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 
           ```  
      * **Generic Class:** 
-          * GenericRepository<T> is a generic class that works with any type T.
+          * `GenericRepository<T>` is a generic class that works with any type `T.
           * Provides reusable methods like `Add`, `GetAll`, and `Find`.
      * **Generic Methods:**
           * The `Find` method in `GenericRepository<T>` uses a `Predicate<T>` delegate to filter items. 
-     * Generic Interfaces
+     * **Generic Interfaces:**
           * `IComparableEntity<T>` defines a contract for comparing two objects of type `T`.
           * Implemented in the `Product` class to compare prices between products.
-     * Custom Generic Type
+     * **Custom Generic Type:**
           * `Product` demonstrates the use of a generic interface (`IComparableEntity<T>`) to compare objects of its own type.
-     * Reusability
+     * **Reusability:**
           * The GenericRepository<T> can work with any type, making it highly reusable across different scenarios.
-     * Why Generics Are Important
+     * **Why Generics Are Important:**
          * **Type Safety:** Prevents runtime errors by ensuring type correctness at compile time.
          * **Performance:** Avoid boxing and unboxing for value types.
          * **Reusability:** Write once, reuse across different types.
-
+- **Anonymous Methods:** Define inline unnamed functions.
 - **Nullable Types:** Handle `null` for value types.
 - **Iterators (`yield`):** Simplify collection iteration.
 - **Why It Was Significant:**
