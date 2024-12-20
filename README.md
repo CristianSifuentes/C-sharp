@@ -94,10 +94,137 @@ Basic object-oriented programming (OOP) features were introduced, including:
 - **Key Takeaways** C# 1.0 introduced the core object-oriented features that define modern programming: encapsulation, inheritance, polymorphism, and abstraction (via interfaces). These concepts remain fundamental to mastering C# and serve as the building blocks for all advanced language features introduced in subsequent versions.
 
 ## C# 2.0 Features
-- **Generics:** Enable type-safe data structures and methods.
+Introduced Generics, enabling reusable classes and methods for different data types. Also added iterators with `yield` 
+- **Characteristics:**
+     * Focused on reusability and efficiency.
+     * Compatible with .NET Framework 2.0
 - **Anonymous Methods:** Define inline unnamed functions.
+- **Generics:** Enable type-safe data structures and methods. 
+     * **Program.cs:** 
+          ```csharp
+               using System;
+               using System.Collections.Generic;
+
+               // Namespace encapsulating the application
+               namespace GenericsDemo
+               {
+                    // Generic Class Example
+                    public class GenericRepository<T>
+                    {
+                         private readonly List<T> _items = new();
+
+                         // Add item to the repository
+                         public void Add(T item)
+                         {
+                              _items.Add(item);
+                         }
+
+                         // Get all items
+                         public IEnumerable<T> GetAll()
+                         {
+                              return _items;
+                         }
+
+                         // Generic method to find an item by predicate
+                         public T Find(Predicate<T> match)
+                         {
+                              return _items.Find(match);
+                         }
+                    }
+
+                    // Generic Interface Example
+                    public interface IComparableEntity<T>
+                    {
+                         bool Compare(T other);
+                    }
+
+                    // Example of implementing a generic interface
+                    public class Product : IComparableEntity<Product>
+                    {
+                         public string Name { get; set; }
+                         public decimal Price { get; set; }
+
+                         public bool Compare(Product other)
+                         {
+                              return other != null && Price == other.Price;
+                         }
+
+                         public override string ToString()
+                         {
+                              return $"Product: {Name}, Price: {Price:C}";
+                         }
+                    }
+
+                    // Program demonstrating the use of generics
+                    class Program
+                    {
+                         static void Main(string[] args)
+                         {
+                              // Using GenericRepository with integers
+                              var intRepo = new GenericRepository<int>();
+                              intRepo.Add(1);
+                              intRepo.Add(2);
+                              intRepo.Add(3);
+
+                              Console.WriteLine("Integer Repository:");
+                              foreach (var item in intRepo.GetAll())
+                              {
+                                   Console.WriteLine(item);
+                              }
+
+                              // Using GenericRepository with custom type (Product)
+                              var productRepo = new GenericRepository<Product>();
+                              productRepo.Add(new Product { Name = "Laptop", Price = 1500.00m });
+                              productRepo.Add(new Product { Name = "Mouse", Price = 25.00m });
+
+                              Console.WriteLine("\nProduct Repository:");
+                              foreach (var product in productRepo.GetAll())
+                              {
+                                   Console.WriteLine(product);
+                              }
+
+                              // Using the generic method to find a product
+                              var expensiveProduct = productRepo.Find(p => p.Price > 1000);
+                              Console.WriteLine($"\nExpensive Product: {expensiveProduct}");
+
+                              // Using the generic interface
+                              var laptop = new Product { Name = "Laptop", Price = 1500.00m };
+                              var anotherLaptop = new Product { Name = "Laptop Pro", Price = 1500.00m };
+                              Console.WriteLine($"\nAre the products equal in price? {laptop.Compare(anotherLaptop)}");
+
+                              Console.WriteLine("\nC# 2.0 Generics Demonstrated Successfully!");
+                         }
+                    }
+               }
+
+          ```  
+     * **Generic Class:** 
+          * GenericRepository<T> is a generic class that works with any type T.
+          * Provides reusable methods like `Add`, `GetAll`, and `Find`.
+     * **Generic Methods:**
+          * The `Find` method in `GenericRepository<T>` uses a `Predicate<T>` delegate to filter items. 
+     * Generic Interfaces
+          * `IComparableEntity<T>` defines a contract for comparing two objects of type `T`.
+          * Implemented in the `Product` class to compare prices between products.
+     * Custom Generic Type
+          * `Product` demonstrates the use of a generic interface (`IComparableEntity<T>`) to compare objects of its own type.
+     * Reusability
+          * The GenericRepository<T> can work with any type, making it highly reusable across different scenarios.
+     * Why Generics Are Important
+         * **Type Safety:** Prevents runtime errors by ensuring type correctness at compile time.
+         * **Performance:** Avoid boxing and unboxing for value types.
+         * **Reusability:** Write once, reuse across different types.
+
 - **Nullable Types:** Handle `null` for value types.
 - **Iterators (`yield`):** Simplify collection iteration.
+- **Why It Was Significant:**
+     * Made generic programming robust and type-safe.
+     * Enhanced support for collections and algorithms.
+- **Limitations:**
+     * Generics were limited in runtime reflection capabilities.
+     * No generic support for primitive types in runtime.
+- **Takeaways:**
+     * Laid the foundation for LINQ and advanced data handling in the future versions.
 
 
 
