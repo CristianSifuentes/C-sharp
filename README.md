@@ -341,7 +341,9 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Dynamic Binding (`dynamic`):** Allow dynamic types for runtime flexibility.
 - **Named and Optional Parameters:** Simplify method calls with optional arguments.
 - **Covariance and Contravariance:** Enhance type safety in generics and delegates.
-
+- **Why It Was Significant?:** 
+- **Limitations:**
+- **Key Takeaways:**
 ---
 
 ## C# 5.0 Features
@@ -369,6 +371,9 @@ Introduced Generics, enabling reusable classes and methods for different data ty
           * Async/await eliminates the need for complex callback structures, making asynchronous programming more intuitive.
      * Real-World Usability:
           * Ideal for I/O-bound tasks (e.g., web requests, file I/O) and CPU-bound tasks offloaded to background threads.
+- **Why It Was Significant?:** 
+- **Limitations:**
+- **Key Takeaways:**
 ---
 
 ## C# 6.0 Features
@@ -382,7 +387,9 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Simplifies null checks by safely accessing members of an object without throwing a `NullReferenceException`.
      * Enhances safety and reduces repetitive null checks. 
 - **Null-Coalescing Operator (`??`):** Provides a fallback value when a nullable expression evaluates to null.
-
+- **Why It Was Significant?:** 
+- **Limitations:**
+- **Key Takeaways:**
 
 ---
 
@@ -396,6 +403,9 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **`Ref` Returns and `In` Parameters:** Optimize memory usage in performance-critical code.
      * Allows returning a reference to a variable or array element, enabling modifications to the original source.
      * Passes arguments by reference for performance without allowing modifications.
+- **Why It Was Significant?:** 
+- **Limitations:**
+- **Key Takeaways:**
 ---
 
 ## C# 8.0 Features
@@ -406,7 +416,9 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Enables efficient handling of asynchronous data streams, useful for real-time applications, APIs, and data processing.
 - **Default Interface Methods:** Provide default implementations for interface methods. 
      * Simplifies the evolution of interfaces by allowing default behavior, reducing breaking changes when adding new methods.
-
+- **Why It Was Significant?:** 
+- **Limitations:**
+- **Key Takeaways:**
 ---
 
 ## C# 9.0 Features
@@ -419,7 +431,9 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Removes boilerplate for simpler scripts and educational use cases.
 - **Improved Pattern Matching:** Enhance readability with logical patterns. 
      * Enables more expressive and powerful matching scenarios.
-
+- **Why It Was Significant?:** 
+- **Limitations:**
+- **Key Takeaways:**
 
 ---
 
@@ -430,19 +444,60 @@ Introduced Generics, enabling reusable classes and methods for different data ty
     * Improves code readability by reducing indentation and unnecessary braces.
 - **Enhanced Interpolated Strings:** Improve string formatting capabilities. 
     * Adds powerful formatting options directly into string interpolation, making code cleaner and easier to write.
-
+- **Why It Was Significant?:** 
+- **Limitations:**
+- **Key Takeaways:**
 ---
 
 ## C# 11.0 Features
 - **Raw String Literals:** Simplify multiline and escape-heavy strings. 
     * Simplify working with multi-line text and preserve formatting, making code cleaner and easier to maintain.
+     ```csharp 
+          string rawString = """
+          This is a raw string.
+          It preserves indentation and formatting.
+          """;
+          Console.WriteLine(rawString);
+     ```
 - **List Patterns:** Match and deconstruct elements in lists easily. 
     * Enable expressive pattern matching for collections, improving readability and reducing boilerplate code.
+     ```csharp 
+          int[] numbers = { 1, 2, 3, 4, 5 };
+          if (numbers is [1, 2, .., 5]) {
+          Console.WriteLine("Pattern matched!");
+          }
+     ```
 - **Generic Attributes:** Support generic types in attributes. 
-    * Enhance the flexibility of attributes, allowing them to adapt to different types dynamically
+    * Enhance the flexibility of attributes, allowing them to adapt to different types dynamically.
+     ```csharp 
+          public class MyAttribute<T> : Attribute { }
+
+          [MyAttribute<int>]
+          public class MyClass { }
+     ```
 - **Span Improvements:** Optimize memory and performance for `Span` and `Memory`. 
     * Improve performance for string and array manipulation by avoiding unnecessary allocations.
-
+     ```csharp 
+          Span<int> span = stackalloc int[] { 1, 2, 3 };
+          foreach (var num in span) {
+          Console.WriteLine(num);
+          }
+     ```
+- **Why It Was Significant?:** 
+   * Made working with strings, patterns, and generics more expressive and concise:
+     ```csharp 
+          string json = """
+          {
+          "Name": "Alice",
+          "Age": 30
+          }
+          """;
+          Console.WriteLine(json);
+     ```   
+- **Limitations:**
+   * Generic attributes still have limited scenarios compared to runtime-based attribute logic.
+- **Key Takeaways:**
+   * Enhanced the expressiveness of the language, particularly for raw strings and pattern matching.
 ---
 
 ## C# 12.0 Features
