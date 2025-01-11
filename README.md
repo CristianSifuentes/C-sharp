@@ -395,63 +395,199 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 
 ## C# 7.0-7.3 Features
 - **Tuples:** Return multiple values from methods with ease.
+     * Provides a quick way to handle multiple return values without defining custom types.
      * Tuples provide a lightweight way to return multiple values from a method. 
+       ```csharp 
+          (int x, int y) point = (3, 4);
+          Console.WriteLine($"X: {point.x}, Y: {point.y}");
+       ``` 
 - **Pattern Matching:** Simplify conditional checks with patterns.
+     * Simplifies conditional logic, making code more expressive and type-safe.
      * Simplifies type-checking and conditional logic with `is` and `switch`. 
+       ```csharp 
+          object obj = 42;
+          if (obj is int number) {
+          Console.WriteLine($"The number is {number}");
+          }
+       ``` 
 - **Local Functions:** Define functions inside methods for better encapsulation.
+     * Encapsulates functionality within a method for better readability and maintainability.
      * Functions declared within a method, useful for encapsulating logic.
+       ```csharp 
+          void PrintMessage(string message) {
+          Console.WriteLine(message);
+          }
+          PrintMessage("Hello");
+
+       ``` 
 - **`Ref` Returns and `In` Parameters:** Optimize memory usage in performance-critical code.
      * Allows returning a reference to a variable or array element, enabling modifications to the original source.
+     * Enables efficient updates to data structures without copying values.
+     * Improves performance for large structures by avoiding unnecessary copying.
      * Passes arguments by reference for performance without allowing modifications.
+       ```csharp 
+          public ref int Find(int[] numbers, int value) {
+          for (int i = 0; i < numbers.Length; i++) {
+               if (numbers[i] == value) return ref numbers[i];
+          }
+          throw new Exception("Not found");
+          }
+
+       ``` 
 - **Why It Was Significant?:** 
+     * Introduced functional programming capabilities and advanced syntax for modern programming paradigms.
+       ```csharp 
+          var (x, y) = (10, 20);
+          Console.WriteLine($"X: {x}, Y: {y}");
+       ``` 
 - **Limitations:**
+     * Pattern matching was basic compared to other functional languages like F#.
 - **Key Takeaways:**
+     * Expanded the versatility of the language with functional programming elements.
 ---
 
 ## C# 8.0 Features
 - **Nullable Reference Types:** Improve null safety by distinguishing nullable and non-nullable types. 
      * Adds compile-time safety for null reference handling. 
+     * Introduced to make reference types nullable explicitly, reducing potential NullReferenceException.
+     * Nullable reference types are denoted with a `?` (e.g., `string?`).
+     * Non-nullable reference types must be initialized and cannot be assigned `null`.
      * Reduces potential bugs from unhandled null references.
-- **Async Streams:** Simplify asynchronous data streaming with `IAsyncEnumerable`. 
+       ```csharp 
+          string? nullable = null;
+          Console.WriteLine(nullable?.Length); // Safe null access
+       ``` 
+- **Async Streams:** Simplify asynchronous data streaming with `IAsyncEnumerable`.
+     * Enables asynchronous iteration over a collection of data using `IAsyncEnumerable<T>`. 
+     * Combines `async` and `yield` return to produce values asynchronously.
      * Enables efficient handling of asynchronous data streams, useful for real-time applications, APIs, and data processing.
+       ```csharp 
+          public async IAsyncEnumerable<int> GenerateNumbers() {
+          for (int i = 1; i <= 5; i++) {
+               await Task.Delay(100); // Simulate async work
+               yield return i;
+          }
+          }
+       ``` 
 - **Default Interface Methods:** Provide default implementations for interface methods. 
+     * Allows interfaces to define default implementations for methods, reducing the need for implementing boilerplate code in derived classes.
      * Simplifies the evolution of interfaces by allowing default behavior, reducing breaking changes when adding new methods.
+       ```csharp 
+          public interface ILogger {
+          void Log(string message);
+          void LogError(string error) => Console.WriteLine($"Error: {error}");
+          }
+       ``` 
 - **Why It Was Significant?:** 
+     * Addressed null safety comprehensively, making codebases more reliable:
+       ```csharp 
+          string? nullableName = null;
+          Console.WriteLine(nullableName ?? "Unknown");
+       ```
 - **Limitations:**
+     * Enabling nullable reference types required significant codebase changes.
 - **Key Takeaways:**
+     * Brought reliability and scalability to modern codebases with null safety and async streams.
 ---
 
 ## C# 9.0 Features
 - **Records:** Simplify immutable data structures. 
+     * Introduced for immutable data models.
+     * Records provide built-in value equality, meaning two records are considered equal if their properties have the same values.
+     * Supports `with` expressions for creating a modified copy of a record.
      * Ideal for creating immutable data models with concise syntax. 
      * Built-in equality checks simplify comparisons.
+       ```csharp 
+          public record Person(string Name, int Age);
+          var person = new Person("Alice", 25);
+          Console.WriteLine(person);
+       ``` 
 - **Init-Only Properties:** Set properties during initialization only. 
+     * Allows properties to be initialized only during object creation or initialization.
+     * Immutable after initialization, enhancing safety and clarity.
      * Enforces immutability after initialization, making code safer and easier to maintain.
+       ```csharp 
+          public class Person {
+          public string Name { get; init; }
+          }
+          var person = new Person { Name = "Alice" };
+       ``` 
 - **Top-Level Statements:** Write minimal code for simple applications. 
+     * Simplifies console applications by removing boilerplate Main method and class.
+     * Useful for small programs or educational purposes.
      * Removes boilerplate for simpler scripts and educational use cases.
+       ```csharp 
+          Console.WriteLine("Hello World!");
+       ``` 
 - **Improved Pattern Matching:** Enhance readability with logical patterns. 
+     * Adds support for positional patterns, property patterns, and combinatorial logic.
      * Enables more expressive and powerful matching scenarios.
+       ```csharp 
+          object obj = "Hello";
+          if (obj is string s && s.Length > 3) {
+          Console.WriteLine(s);
+          }
+       ``` 
 - **Why It Was Significant?:** 
+  * Simplified immutable data patterns with records:
+       ```csharp 
+          var alice = new Person("Alice", 30);
+          Console.WriteLine(alice); // Output: Person { Name = Alice, Age = 30 }
+       ```  
 - **Limitations:**
+  * Limited support for advanced functional paradigms compared to other languages like F#.
 - **Key Takeaways:**
-
+  * Advanced immutability and concise code structures for modern applications.
 ---
 
 ## C# 10.0 Features
 - **Global Usings:** Simplify common `using` directives across the project. 
-    * Reduces repetitive imports across files in a project, simplifying code maintenance.
+  * Introduced to reduce boilerplate by allowing common using directives to be shared across the entire project.
+  * Reduces repetitive imports across files in a project, simplifying code maintenance.
+     ```csharp 
+          global using System;
+          global using System.Collections.Generic;
+     ```  
 - **File-Scoped Namespaces:** Reduce indentation for better readability. 
-    * Improves code readability by reducing indentation and unnecessary braces.
+  * Simplifies namespace declarations by removing the need for braces and indentation.
+  * Improves code readability by reducing indentation and unnecessary braces.
+     ```csharp 
+          namespace MyApp;
+
+          public class Program {
+          public static void Main() {
+               Console.WriteLine("Hello World!");
+          }
+          }
+     ```  
 - **Enhanced Interpolated Strings:** Improve string formatting capabilities. 
-    * Adds powerful formatting options directly into string interpolation, making code cleaner and easier to write.
+  * Enhances string formatting within interpolated strings, including alignment and formatting options.
+  * Adds powerful formatting options directly into string interpolation, making code cleaner and easier to write.
+     ```csharp 
+          var value = 42;
+          Console.WriteLine($"The value is {value:N}");
+     ```  
 - **Why It Was Significant?:** 
+  * Improved project-wide consistency and code organization:
+     ```csharp 
+          // File-scoped namespaces reduce indentation clutter.
+          namespace MyNamespace;
+
+          public class MyClass {
+          public void MyMethod() => Console.WriteLine("Hello");
+          }
+     ```    
 - **Limitations:**
+  * Focused mainly on usability and organization; fewer runtime performance enhancements.
 - **Key Takeaways:**
+  * Simplified project configuration and improved developer experienced for larger teams.
 ---
 
 ## C# 11.0 Features
 - **Raw String Literals:** Simplify multiline and escape-heavy strings. 
-    * Simplify working with multi-line text and preserve formatting, making code cleaner and easier to maintain.
+  * Allow multi-line strings that preserve formatting and whitespace exactly as written.
+  * Triple quotes `(""")` denote raw string literals.
+  * Simplify working with multi-line text and preserve formatting, making code cleaner and easier to maintain.
      ```csharp 
           string rawString = """
           This is a raw string.
@@ -460,7 +596,9 @@ Introduced Generics, enabling reusable classes and methods for different data ty
           Console.WriteLine(rawString);
      ```
 - **List Patterns:** Match and deconstruct elements in lists easily. 
-    * Enable expressive pattern matching for collections, improving readability and reducing boilerplate code.
+  * Enable matching and deconstructing arrays or lists into specific patterns.
+  * Supports the `..` operator for slicing and `_` for ignoring elements.
+  * Enable expressive pattern matching for collections, improving readability and reducing boilerplate code.
      ```csharp 
           int[] numbers = { 1, 2, 3, 4, 5 };
           if (numbers is [1, 2, .., 5]) {
@@ -468,7 +606,8 @@ Introduced Generics, enabling reusable classes and methods for different data ty
           }
      ```
 - **Generic Attributes:** Support generic types in attributes. 
-    * Enhance the flexibility of attributes, allowing them to adapt to different types dynamically.
+   * Allow attribute to take generic types, making them more flexible and reusable.
+   * Enhance the flexibility of attributes, allowing them to adapt to different types dynamically.
      ```csharp 
           public class MyAttribute<T> : Attribute { }
 
@@ -476,7 +615,8 @@ Introduced Generics, enabling reusable classes and methods for different data ty
           public class MyClass { }
      ```
 - **Span Improvements:** Optimize memory and performance for `Span` and `Memory`. 
-    * Improve performance for string and array manipulation by avoiding unnecessary allocations.
+   * `Span<T>` and `ReadOnlySpan<T>` enable efficient slicing of strings or arrays without allocations.
+   * Improve performance for string and array manipulation by avoiding unnecessary allocations.
      ```csharp 
           Span<int> span = stackalloc int[] { 1, 2, 3 };
           foreach (var num in span) {
@@ -501,47 +641,52 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 ---
 
 ## C# 12.0 Features
-- **Primary Constructors:** Declare constructors directly in class headers. 
+- **Primary Constructors in Non-Record Classes and Structures:** Declare constructors directly in class headers. 
+    * Allows defining constructor parameters directly in the class or struct declaration.
     * Simplifies code by integrating constructor parameters into the class or struct declaration.
-     ```csharp 
+      ```csharp 
           public class Person(string name, int age) {
           public string Name { get; } = name;
           public int Age { get; } = age;
           }
           var person = new Person("Alice", 30);
           Console.WriteLine(person.Name); // Output: Alice
-     ```
+      ```
 - **Collection Expressions:** Simplify collection initialization and manipulation. 
+    * Provides a clean and concise syntax for initializing arrays and collections.
     * Enhances readability and reduces boilerplate when initializing collections.
-     ```csharp 
+      ```csharp 
           var numbers = [1, 2, 3, 4];
           Console.WriteLine(numbers[2]); // Output: 3
-     ```
+      ```
 - **Inline Arrays:** Define array literals inline for better readability. 
+    * Allows defining a fixed-size array directly within a structure.
     * Improves performance and simplifies the definition of fixed-size data structures.
-     ```csharp 
+      ```csharp 
           int[] array = [1, 2, 3, 4];
-     ```    
-- **Type Aliases:** Provide meaningful names for complex types. 
+      ```    
+- **Using Aliases for Any Type:** Provide meaningful names for complex types. 
+    * Extends using directives to alias any type, improving code clarity and maintainability.
     * Improves code clarity by providing custom, meaningful names for complex types.
-     ```csharp 
+      ```csharp 
           using MyString = System.String;
 
           MyString message = "Hello, world!";
           Console.WriteLine(message);
-     ```    
+      ```    
 - **Interceptors (Experimental):** Add hooks for method execution control. 
     * Enables advanced scenarios like logging, validation, or security checks dynamically.
+    * Allows dynamically intercepting method calls to modify their behavior.
     * Allows developers to intercept and modify method behavior (currently experimental and subject to change).
 - **Why It Was Significant?:** 
     * Simplified object initialization and collection handling.
     * Reduced boilerplate for data-centric applications.
-     ```csharp 
+      ```csharp 
           var matrix = [[1, 2], [3, 4], [5, 6]];
           foreach (var row in matrix) {
           Console.WriteLine(string.Join(", ", row));
           }
-     ```   
+      ```   
 - **Limitations:** Benefits mostly data-heavy applications.
     * Experimental features may undergo changes in future updates.
     * Experimental features like interceptors are not finalized and may change in future versions.
