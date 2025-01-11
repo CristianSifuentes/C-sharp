@@ -61,300 +61,231 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 ## C# 1.0 Features
 Basic object-oriented programming (OOP) features were introduced, including:
 - **Classes:** Define blueprints for objects. Classes are the fundamental building block in C#. They encapsulate data (fields) and behavior (methods) into a single entry.
-  *  Characteristics:
+     * Defined using the `class` keyword.
+     * Encapsulate data using fields and properties (`_name` and `Name`).
      * Support for encapsulation through access modifiers (public, private, protected, etc).
      * Can contain fields, methods, constructors, and properties.
      * Enable the creation of objects (instances).
+       ```csharp 
+               public class Animal {
+               public virtual void Speak() {
+                    Console.WriteLine("Animal speaks");
+               }
+               }
+       ```  
 - **Inheritance:** Allow objects to inherit properties from other classes. Enables a class to inherit members (fields and methods) from another class, promoting code reuse and creating a hierarchical structure.
-     * Key Features:
-          * A class can inherit from one base class (single inheritance).
-          * Use the `: base-class-name` syntax.
-          * Override base class methods using the `virtual` and `override` keywords.
+     * A class can inherit from one base class (single inheritance).
+     * Use the `: base-class-name` syntax.
+     * Override base class methods using the `virtual` and `override` keywords.
+       ```csharp 
+          public class Dog : Animal {
+          public override void Speak() {
+               Console.WriteLine("Dog barks");
+          }
+          }
+       ```  
 - **Interfaces:** Define contracts for classes to implement. They allow multiple types to share a common API without requiring inheritance.
-    * Declared using the `interface` keyword.
-    * Can only contain method signatures, properties, events, or indexers (no implementation).
-    * A class can implement multiple interfaces.
+     * Declared using the `interface` keyword.
+     * Can only contain method signatures, properties, events, or indexers (no implementation).
+     * A class can implement multiple interfaces.
+       ```csharp 
+          public interface IAnimal {
+          void Speak();
+          }
+
+          public class Dog : IAnimal {
+          public void Speak() {
+               Console.WriteLine("Dog speaks");
+          }
+          }
+       ```     
 - **Polymorphism** Allows objects to be treated as instances of their base type, enabling dynamic behavior at runtime.
-     * Key Features:
-          * Achieved through method overriding (`virtual` and `override` keywords).
-          * Enables late binding using base class references to derived objects.
+     * Achieved through method overriding (`virtual` and `override` keywords).
+     * Enables late binding using base class references to derived objects.
 - **Encapsulation** Encapsulation hides the internal state of an object and allows controlled access through methods or properties.
-     * Key Features: 
-          * Access modifiers (`public`, `private`, `protected`, `internal`).
-          * Use properties to control field access.
+     * Access modifiers (`public`, `private`, `protected`, `internal`).
+     * Use properties to control field access.
 - **Why It Was Significant?** C# 1.0 laid the foundation for what would become one of the most versatile programming languages
      * It offered a clean and modern syntax, ideal for enterprise and web applications.
      * It integrated seamlessly with the .NET Framework, enabling rapid development.
-     * Its object-oriented design principles made it intuitive and powerful for developers transitioning from C++ or Java.  
+     * Its object-oriented design principles made it intuitive and powerful for developers transitioning from C++ or Java. 
+     * Introduced a modern, type-safe, object-oriented programming paradigm for .NET.
+     * Provided the foundation for the .NET framework with core features like assemblies and namespaces.
+       ```csharp 
+          Dog dog = new Dog();
+          dog.Speak(); // Output: Dog barks
+       ```  
 - **Limitations in C# 1.0** While robust, C# 1.0 lacked some features developers rely on today:
      * No generics (introduced in C# 2.0).
+     * No support for generics, making type safety in collections cumbersome.
      * Limited support for anonymous methods and delegates.
      * Basic error handling without more advanced features like `try-catch-finally`
-
+     * Asynchronous programming required manual threading:
+       ```csharp 
+          // Without generics:
+          ArrayList list = new ArrayList();
+          list.Add(42);
+          int value = (int)list[0]; // Explicit cast required
+       ```  
 - **Key Takeaways** C# 1.0 introduced the core object-oriented features that define modern programming: encapsulation, inheritance, polymorphism, and abstraction (via interfaces). These concepts remain fundamental to mastering C# and serve as the building blocks for all advanced language features introduced in subsequent versions.
+     * Established the baseline for C# development, focusing on object-oriented principles.
 
 ## C# 2.0 Features
 Introduced Generics, enabling reusable classes and methods for different data types. Also added iterators with `yield` 
 - **Characteristics:**
      * Focused on reusability and efficiency.
      * Compatible with .NET Framework 2.0
-- **Generics:** Enable type-safe data structures and methods. 
-     * **Program.cs:** 
-          ```csharp
-               using System;
-               using System.Collections.Generic;
-
-               // Namespace encapsulating the application
-               namespace GenericsDemo
-               {
-                    // Generic Class Example
-                    public class GenericRepository<T>
-                    {
-                         private readonly List<T> _items = new();
-
-                         // Add item to the repository
-                         public void Add(T item)
-                         {
-                              _items.Add(item);
-                         }
-
-                         // Get all items
-                         public IEnumerable<T> GetAll()
-                         {
-                              return _items;
-                         }
-
-                         // Generic method to find an item by predicate
-                         public T Find(Predicate<T> match)
-                         {
-                              return _items.Find(match);
-                         }
-                    }
-
-                    // Generic Interface Example
-                    public interface IComparableEntity<T>
-                    {
-                         bool Compare(T other);
-                    }
-
-                    // Example of implementing a generic interface
-                    public class Product : IComparableEntity<Product>
-                    {
-                         public string Name { get; set; }
-                         public decimal Price { get; set; }
-
-                         public bool Compare(Product other)
-                         {
-                              return other != null && Price == other.Price;
-                         }
-
-                         public override string ToString()
-                         {
-                              return $"Product: {Name}, Price: {Price:C}";
-                         }
-                    }
-
-                    // Program demonstrating the use of generics
-                    class Program
-                    {
-                         static void Main(string[] args)
-                         {
-                              // Using GenericRepository with integers
-                              var intRepo = new GenericRepository<int>();
-                              intRepo.Add(1);
-                              intRepo.Add(2);
-                              intRepo.Add(3);
-
-                              Console.WriteLine("Integer Repository:");
-                              foreach (var item in intRepo.GetAll())
-                              {
-                                   Console.WriteLine(item);
-                              }
-
-                              // Using GenericRepository with custom type (Product)
-                              var productRepo = new GenericRepository<Product>();
-                              productRepo.Add(new Product { Name = "Laptop", Price = 1500.00m });
-                              productRepo.Add(new Product { Name = "Mouse", Price = 25.00m });
-
-                              Console.WriteLine("\nProduct Repository:");
-                              foreach (var product in productRepo.GetAll())
-                              {
-                                   Console.WriteLine(product);
-                              }
-
-                              // Using the generic method to find a product
-                              var expensiveProduct = productRepo.Find(p => p.Price > 1000);
-                              Console.WriteLine($"\nExpensive Product: {expensiveProduct}");
-
-                              // Using the generic interface
-                              var laptop = new Product { Name = "Laptop", Price = 1500.00m };
-                              var anotherLaptop = new Product { Name = "Laptop Pro", Price = 1500.00m };
-                              Console.WriteLine($"\nAre the products equal in price? {laptop.Compare(anotherLaptop)}");
-
-                              Console.WriteLine("\nC# 2.0 Generics Demonstrated Successfully!");
-                         }
-                    }
-               }
-
-          ```  
-     * **Generic Class:** 
-          * `GenericRepository<T>` is a generic class that works with any type `T.
-          * Provides reusable methods like `Add`, `GetAll`, and `Find`.
-     * **Generic Methods:**
-          * The `Find` method in `GenericRepository<T>` uses a `Predicate<T>` delegate to filter items. 
-     * **Generic Interfaces:**
-          * `IComparableEntity<T>` defines a contract for comparing two objects of type `T`.
-          * Implemented in the `Product` class to compare prices between products.
-     * **Custom Generic Type:**
-          * `Product` demonstrates the use of a generic interface (`IComparableEntity<T>`) to compare objects of its own type.
+- **Generics:** Enable type-safe data structures and methods.
+     * **Generic Class:** A Generic Class allows you to define a class with placeholders for data types. This makes the class reusable and type-safe without having to rewrite it for different data types.
+          * The class is a generic when that works with any type `T`.
+          * Provides reusable methods.
+     * **Generic Methods:** A Generic Method allows you to create a method that can operate on different data types without duplicating code. These methods are defined with type parameters.
+          * Reusable methods that work with any data type `T`. 
+     * **Generic Interfaces:** A Generic Interface defines an interface with type parameters, making it flexible for different implementations.
+          * A Generic interface defines a contract for comparing two objects of type `T`.
+          * Flexible contract for various implementations.
+     * **Custom Generic Type:** User-defined types like structs, delegates, or classes leveraging generics for type safety and reusability.
+          * A Custom Generic Type is any user-defined type (class, struct, or delegate) that uses generics for flexibility and type safety.
      * **Reusability:**
           * The GenericRepository<T> can work with any type, making it highly reusable across different scenarios.
      * **Why Generics Are Important:**
          * **Type Safety:** Prevents runtime errors by ensuring type correctness at compile time.
          * **Performance:** Avoid boxing and unboxing for value types.
          * **Reusability:** Write once, reuse across different types.
-- **Anonymous Methods:** Define inline unnamed functions.
-- **Nullable Types:** Handle `null` for value types.
-- **Iterators (`yield`):** Simplify collection iteration.
+- **Anonymous Methods:** Anonymous methods are inline methods defined without a name, often used with delegates. They provide a way to create short, concise methods directly in the context where they are needed, reducing the need to define separate methods.
+     * Define inline unnamed functions.
+       ```csharp 
+               Action<string> print = delegate (string message) {
+               Console.WriteLine(message);
+               };
+               print("Hello");
+       ```  
+- **Nullable Types:** Nullable types allow value types (like `int`, `bool`, `DateTime`) to hold null values, enabling better handling of scenarios where "no value" is meaningful.
+     * Handle `null` for value types.
+       ```csharp 
+               int? nullableInt = null;
+               Console.WriteLine(nullableInt.HasValue); // Output: False
+       ```  
+- **Iterators (`yield`):** Iterators are methods that use the yield keyword to return a sequence of elements one at a time. They simplify the creation of custom enumerators.
+     * Simplify collection iteration.
+       ```csharp 
+               public IEnumerable<int> GetNumbers() {
+               for (int i = 1; i <= 5; i++) {
+                    yield return i;
+               }
+               }
+       ```  
 - **Why It Was Significant:**
      * Made generic programming robust and type-safe.
      * Enhanced support for collections and algorithms.
+     * Enhanced type safety and performance with generics:
+       ```csharp 
+          Dictionary<string, int> dictionary = new Dictionary<string, int> {
+          { "One", 1 },
+          { "Two", 2 }
+          };
+       ```  
 - **Limitations:**
      * Generics were limited in runtime reflection capabilities.
      * No generic support for primitive types in runtime.
+     * LINQ and advanced functional programming capabilities were not yet introduced.
 - **Takeaways:**
      * Laid the foundation for LINQ and advanced data handling in the future versions.
+     * Generics transformed type-safe data structures and algorithms.
 
 ---
 
 ## C# 3.0 Features
 - **Characteristics:**
-      * Focused on `data manipulation and expressive code`.  
-      * Compatible with .NET Framework 3.0.
-- **Program.cs:**
-
-     ```csharp
-                    using System;
-                    using System.Collections.Generic;
-                    using System.Linq;
-
-                    // Namespace encapsulating the application
-                    namespace CSharp3FeaturesDemo
-                    {
-                    // Class with automatic properties
-                    public class Product
-                    {
-                         // Automatic Properties
-                         public string Name { get; set; }
-                         public decimal Price { get; set; }
-
-                         public override string ToString()
-                         {
-                              return $"Product: {Name}, Price: {Price:C}";
-                         }
-                    }
-
-                    // Static class containing extension methods
-                    public static class ProductExtensions
-                    {
-                         // Extension Method for Product
-                         public static bool IsExpensive(this Product product, decimal threshold)
-                         {
-                              return product.Price > threshold;
-                         }
-
-                         // Extension Method for IEnumerable<Product> using LINQ
-                         public static IEnumerable<Product> FilterByPrice(this IEnumerable<Product> products, decimal minPrice)
-                         {
-                              return products.Where(p => p.Price >= minPrice);
-                         }
-                    }
-
-                    // Main Program demonstrating C# 3.0 features
-                    class Program
-                    {
-                         static void Main(string[] args)
-                         {
-                              // Creating a list of products (Automatic Properties)
-                              var products = new List<Product>
-                              {
-                                   new Product { Name = "Laptop", Price = 1500.00m },
-                                   new Product { Name = "Mouse", Price = 25.00m },
-                                   new Product { Name = "Keyboard", Price = 75.00m },
-                                   new Product { Name = "Monitor", Price = 300.00m },
-                                   new Product { Name = "USB Cable", Price = 10.00m }
-                              };
-
-                              // LINQ Query to filter products by price
-                              var expensiveProducts = from p in products
-                                                       where p.Price > 100
-                                                       orderby p.Price descending
-                                                       select p;
-
-                              Console.WriteLine("Products with Price > 100 (Using LINQ Query):");
-                              foreach (var product in expensiveProducts)
-                              {
-                                   Console.WriteLine(product);
-                              }
-
-                              // Lambda Expressions with LINQ
-                              var cheapProducts = products.Where(p => p.Price <= 100);
-                              Console.WriteLine("\nProducts with Price <= 100 (Using Lambda Expressions):");
-                              foreach (var product in cheapProducts)
-                              {
-                                   Console.WriteLine(product);
-                              }
-
-                              // Using Extension Method IsExpensive
-                              var laptop = products.First(p => p.Name == "Laptop");
-                              Console.WriteLine($"\nIs the laptop expensive? {laptop.IsExpensive(1000)}");
-
-                              // Using Extension Method FilterByPrice
-                              var filteredProducts = products.FilterByPrice(300);
-                              Console.WriteLine("\nProducts with Price >= 300 (Using Extension Method):");
-                              foreach (var product in filteredProducts)
-                              {
-                                   Console.WriteLine(product);
-                              }
-
-                              Console.WriteLine("\nC# 3.0 Features Demonstrated Successfully!");
-                         }
-                    }
-               }
-     ```
-
-- **LINQ:** Query data collections in a SQL-like manner.
-- **Lambda Expressions:** Simplify the syntax for anonymous functions.
+     * Focused on `data manipulation and expressive code`.  
+     * Compatible with .NET Framework 3.0.
+- **LINQ:** Is a powerful feature in C# that enables querying data from in-memory collections, databases, XML, and more using a unified, type-safe syntax. It integrates query capabilities directly into the language.
+     * Query data collections in a SQL-like manner
+       ```csharp 
+          var numbers = new List<int> { 1, 2, 3, 4, 5 };
+          var evens = from num in numbers
+                    where num % 2 == 0
+                    select num;
+       ```  
+- **Lambda Expressions:** Lambda expressions are concise, inline expressions or functions that can be passed as arguments to methods or used in LINQ queries. They are defined using the => (goes to) operator.
+     * Simplify the syntax for anonymous functions.
+       ```csharp 
+          Func<int, int> square = x => x * x;
+          Console.WriteLine(square(4)); // Output: 16
+       ```  
 - **Extension Methods:** Add new methods to existing types without modifying them.
-- **Automatic Properties:** Simplify property declarations.
+     * Extension methods allow developers to add new methods to existing types (classes, structs, interfaces) without modifying the source code or creating a derived type.
+       ```csharp 
+          public static class StringExtensions {
+          public static bool IsNullOrEmpty(this string value) {
+               return string.IsNullOrEmpty(value);
+          }
+          }
+          Console.WriteLine("".IsNullOrEmpty()); // Output: True
+       ``` 
+- **Automatic Properties:** Automatic properties simplify the declaration of properties by automatically generating a backing field.
+     * Simplify property declarations.
 - **Why It Was Significant:**
-      * Unified querying across different data sources (SQL, XML, etc.).
-      * Improved code readability and consistency.
+     * Unified querying across different data sources (SQL, XML, etc.).
+     * Improved code readability and consistency.
+     * LINQ unified data querying across in-memory collections, databases, and XML:
+       ```csharp 
+          var names = new[] { "Alice", "Bob", "Charlie" };
+          var filtered = names.Where(name => name.StartsWith("A"));
+       ``` 
 - **Limitations:**
-      * LINQ queries can have performance overhead.
-      * Complex scenarios required manual optimization.
+     * LINQ queries can have performance overhead.
+     * Complex scenarios required manual optimization.
+     * Asynchronous LINQ operations were not supported.
 - **Takeaways:**
-      * Established LINQ as the standard for querying and data handling.
+     * Established LINQ as the standard for querying and data handling.
+     * Revolutionized data querying and manipulation within C#.
+
 ---
 
 ## C# 4.0 Features
 - **Dynamic Binding (`dynamic`):** Allow dynamic types for runtime flexibility.
+     * The `dynamic` keyword allows variables to bypass compile-time type checking, deferring it to runtime.
+     * Useful for scenarios where the type is unknown until runtime, such as COM interop or working with dynamic languages like Python.
+       ```csharp 
+          dynamic obj = "Hello";
+          Console.WriteLine(obj.Length); // Output: 5
+       ```  
+
 - **Named and Optional Parameters:** Simplify method calls with optional arguments.
+     * Optional parameters allow specifying default values for method parameters.
+     * Named parameters let you specify arguments by name instead of position, enhancing readability.
+       ```csharp 
+          void Print(string message, bool urgent = false) {
+          Console.WriteLine(urgent ? "URGENT: " + message : message);
+          }
+          Print("Hello", urgent: true);
+       ```  
 - **Covariance and Contravariance:** Enhance type safety in generics and delegates.
+     * Allows a method or interface to return a more derived type than specified in its declaration.
+     * Introduced with the `out` keyword for generic type parameters in interfaces and delegates.
 - **Why It Was Significant?:** 
+     * Simplified interoperation with dynamic libraries (e.g., COM and Python).
 - **Limitations:**
+     * Overuse of `dynamic` could lead to runtime errors.
 - **Key Takeaways:**
+     * Enhanced flexibility for dynamic scenarios and simplified APIs.
+
 ---
 
 ## C# 5.0 Features
 - **Async and Await:** Simplify asynchronous programming with cleaner syntax.
-     * Key Features:
-          * `async`: Marks a method as asynchronous.
-          * `await`: Suspends the execution of the method until the awaited task is complete, without blocking the main thread.
+     * `async`: Marks a method as asynchronous.
+     * `await`: Suspends the execution of the method until the awaited task is complete, without blocking the main thread.
+       ```csharp 
+          public async Task<int> GetDataAsync() {
+          await Task.Delay(1000);
+          return 42;
+          }
+       ```      
 - **Task-Based Asynchronous Pattern (TAP):** 
-     * Key Features:
-          * The program users `Task` and `Task<T>` to represent asynchronous operations.
-          * Asynchronous methods return a `Task` or `Task<T>`
+     * The program users `Task` and `Task<T>` to represent asynchronous operations.
+     * Asynchronous methods return a `Task` or `Task<T>`
 - **Sequential vs Parallel Execution:** 
      * Sequential execution (using `Result`) blocks the main thread until a task completes.
      * Parallel execution (using `await`) allows other tasks to run concurrently without blocking
@@ -363,7 +294,13 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Real-World Scenarios:**
      * Fetching data for multiple URLs.
      * Offloading CPU-bound task (e.g., calculating factorials) to background threads.
-- **Caller Information Attributes:** Provide information about the caller to methods.
+- **Caller Information Attributes:**
+     * Provide information about the caller to methods
+       ```csharp 
+          void Log(string message, [CallerMemberName] string memberName = "") {
+          Console.WriteLine($"[{memberName}]: {message}");
+          }
+       ```   
 - **Why These Features Are Important?** 
      * Improved Responsiveness:
           * Async/await enables non-blocking operations, making applications more responsive.
@@ -372,24 +309,57 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Real-World Usability:
           * Ideal for I/O-bound tasks (e.g., web requests, file I/O) and CPU-bound tasks offloaded to background threads.
 - **Why It Was Significant?:** 
+     * Simplified asynchronous programming, making it more accessible and readable.
 - **Limitations:**
+     * Could lead to deadlocks if misused in certain synchronization contexts.
 - **Key Takeaways:**
+     * Set the standard for modern asynchronous programming.
+
 ---
 
 ## C# 6.0 Features
 - **Expression-Bodied Members:** Simplify methods and properties. 
      * Reduces boilerplate code, making it more concise and readable.
      * Allows concise definitions for methods, properties, and constructors.
+       ```csharp 
+          public class Person {
+          public string Name { get; set; }
+          public string GetName() => $"Name: {Name}";
+          }
+       ``` 
 - **String Interpolation:** Enhance string formatting with embedded expressions. 
      * Allows embedding expressions directly in string literals using `$"..."`.
      * Simplifies string formatting, improving clarity and maintainability.
+       ```csharp 
+          string name = "Alice";
+          int age = 30;
+          Console.WriteLine($"Name: {name}, Age: {age}");
+       ``` 
 - **Null-Conditional Operators (`?.`):** Simplify null checks in code. 
      * Simplifies null checks by safely accessing members of an object without throwing a `NullReferenceException`.
      * Enhances safety and reduces repetitive null checks. 
+       ```csharp 
+          string? message = null;
+          int length = message?.Length ?? 0;
+          Console.WriteLine(length); // Output: 0
+       ``` 
 - **Null-Coalescing Operator (`??`):** Provides a fallback value when a nullable expression evaluates to null.
+     * Provides a fallback value when a nullable expression evaluates to null.
+- **Static `using` Directives:** Provides a fallback value when a nullable expression evaluates to null.
+       ```csharp 
+          using static System.Console;
+          WriteLine("Hello World!");
+       ``` 
 - **Why It Was Significant?:** 
+     * Simplified and modernized syntax, reducing boilerplate code.
+       ```csharp 
+          string name = "Bob";
+          Console.WriteLine($"Hello, {name}!"); // Output: Hello, Bob!
+       ``` 
 - **Limitations:**
+     * Focused mainly on syntactic sugar; no significant performance improvements. 
 - **Key Takeaways:**
+     * Enhanced developer productivity and readability with concise syntax.
 
 ---
 
