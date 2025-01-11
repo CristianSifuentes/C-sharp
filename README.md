@@ -317,7 +317,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
        ``` 
 - **Automatic Properties:** Automatic properties simplify the declaration of properties by automatically generating a backing field.
      * Simplify property declarations.
-        ```csharp 
+       ```csharp 
           public class Person {
           public string Name { get; set; }
           public int Age { get; private set; }
@@ -329,7 +329,6 @@ Introduced Generics, enabling reusable classes and methods for different data ty
           // Usage
           var person = new Person(30) { Name = "Alice" };
           Console.WriteLine($"{person.Name}, {person.Age}"); // Output: Alice, 30
-
        ```       
 - **Why It Was Significant:**
      * Unified querying across different data sources (SQL, XML, etc.).
