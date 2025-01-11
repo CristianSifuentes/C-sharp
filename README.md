@@ -63,21 +63,20 @@ Basic object-oriented programming (OOP) features were introduced, including:
 - **Classes:** Define blueprints for objects. Classes are the fundamental building block in C#. They encapsulate data (fields) and behavior (methods) into a single entry.
      * Defined using the `class` keyword.
      * Encapsulate data using fields and properties (`_name` and `Name`).
-     * Support for encapsulation through access modifiers (public, private, protected, etc).
+     * Support for encapsulation through access modifiers (`public`, `private`, `protected`, etc).
      * Can contain fields, methods, constructors, and properties.
      * Enable the creation of objects (instances).
-       ```csharp 
-               public class Animal {
-               public virtual void Speak() {
-                    Console.WriteLine("Animal speaks");
-               }
-               }
-       ```  
 - **Inheritance:** Allow objects to inherit properties from other classes. Enables a class to inherit members (fields and methods) from another class, promoting code reuse and creating a hierarchical structure.
      * A class can inherit from one base class (single inheritance).
      * Use the `: base-class-name` syntax.
      * Override base class methods using the `virtual` and `override` keywords.
        ```csharp 
+          public class Animal {
+          public virtual void Speak() {
+               Console.WriteLine("Animal speaks");
+          }
+          }
+
           public class Dog : Animal {
           public override void Speak() {
                Console.WriteLine("Dog barks");
@@ -139,13 +138,99 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * **Generic Class:** A Generic Class allows you to define a class with placeholders for data types. This makes the class reusable and type-safe without having to rewrite it for different data types.
           * The class is a generic when that works with any type `T`.
           * Provides reusable methods.
+            ```csharp 
+               public class GenericClass<T> {
+               public T Data { get; set; }
+
+               public void Display() {
+                    Console.WriteLine($"Data: {Data}");
+               }
+               }
+
+               // Usage
+               var intInstance = new GenericClass<int> { Data = 42 };
+               intInstance.Display(); // Output: Data: 42
+
+               var stringInstance = new GenericClass<string> { Data = "Hello" };
+               stringInstance.Display(); // Output: Data: Hello
+
+            ```             
      * **Generic Methods:** A Generic Method allows you to create a method that can operate on different data types without duplicating code. These methods are defined with type parameters.
           * Reusable methods that work with any data type `T`. 
+            ```csharp 
+               public class Utility {
+               public static void PrintArray<T>(T[] array) {
+                    foreach (var item in array) {
+                         Console.WriteLine(item);
+                    }
+               }
+               }
+
+               // Usage
+               Utility.PrintArray(new int[] { 1, 2, 3 }); // Output: 1 2 3
+               Utility.PrintArray(new string[] { "A", "B", "C" }); // Output: A B C
+
+            ``` 
      * **Generic Interfaces:** A Generic Interface defines an interface with type parameters, making it flexible for different implementations.
           * A Generic interface defines a contract for comparing two objects of type `T`.
           * Flexible contract for various implementations.
+            ```csharp 
+               public interface IRepository<T> {
+               void Add(T item);
+               T Get(int id);
+               }
+
+               public class Repository<T> : IRepository<T> {
+               private readonly Dictionary<int, T> _data = new();
+
+               public void Add(T item) {
+                    _data[_data.Count + 1] = item;
+               }
+
+               public T Get(int id) {
+                    return _data.ContainsKey(id) ? _data[id] : default;
+               }
+               }
+
+               // Usage
+               var intRepo = new Repository<int>();
+               intRepo.Add(42);
+               Console.WriteLine(intRepo.Get(1)); // Output: 42
+
+               var stringRepo = new Repository<string>();
+               stringRepo.Add("Hello");
+               Console.WriteLine(stringRepo.Get(1)); // Output: Hello
+
+            ``` 
      * **Custom Generic Type:** User-defined types like structs, delegates, or classes leveraging generics for type safety and reusability.
           * A Custom Generic Type is any user-defined type (class, struct, or delegate) that uses generics for flexibility and type safety.
+             * **Custom Generic Delegate:**
+               ```csharp 
+                    public delegate T Operation<T>(T a, T b);
+
+                    // Usage
+                    Operation<int> add = (a, b) => a + b;
+                    Console.WriteLine(add(3, 4)); // Output: 7
+
+                    Operation<string> concatenate = (a, b) => a + b;
+                    Console.WriteLine(concatenate("Hello", " World")); // Output: Hello World
+               ``` 
+             * **Custom Generic Struct:**
+               ```csharp 
+                    public struct KeyValuePair<K, V> {
+                    public K Key { get; set; }
+                    public V Value { get; set; }
+
+                    public void Display() {
+                         Console.WriteLine($"Key: {Key}, Value: {Value}");
+                    }
+                    }
+
+                    // Usage
+                    var pair = new KeyValuePair<int, string> { Key = 1, Value = "One" };
+                    pair.Display(); // Output: Key: 1, Value: One
+
+               ``` 
      * **Reusability:**
           * The GenericRepository<T> can work with any type, making it highly reusable across different scenarios.
      * **Why Generics Are Important:**
