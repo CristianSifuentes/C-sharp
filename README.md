@@ -231,8 +231,6 @@ Introduced Generics, enabling reusable classes and methods for different data ty
                     pair.Display(); // Output: Key: 1, Value: One
 
                ``` 
-     * **Reusability:**
-          * The GenericRepository<T> can work with any type, making it highly reusable across different scenarios.
      * **Why Generics Are Important:**
          * **Type Safety:** Prevents runtime errors by ensuring type correctness at compile time.
          * **Performance:** Avoid boxing and unboxing for value types.
@@ -292,11 +290,20 @@ Introduced Generics, enabling reusable classes and methods for different data ty
                     where num % 2 == 0
                     select num;
        ```  
-- **Lambda Expressions:** Lambda expressions are concise, inline expressions or functions that can be passed as arguments to methods or used in LINQ queries. They are defined using the => (goes to) operator.
+- **Lambda Expressions:** Lambda expressions are concise, inline expressions or functions that can be passed as arguments to methods or used in LINQ queries. They are defined using the `=>` (goes to) operator.
      * Simplify the syntax for anonymous functions.
        ```csharp 
+          // Inline function to calculate square
           Func<int, int> square = x => x * x;
-          Console.WriteLine(square(4)); // Output: 16
+          Console.WriteLine(square(5)); // Output: 25
+
+          // Used in LINQ queries
+          var numbers = new List<int> { 1, 2, 3, 4, 5 };
+          var evens = numbers.Where(n => n % 2 == 0);
+          foreach (var num in evens) {
+          Console.WriteLine(num); // Output: 2, 4
+          }
+
        ```  
 - **Extension Methods:** Add new methods to existing types without modifying them.
      * Extension methods allow developers to add new methods to existing types (classes, structs, interfaces) without modifying the source code or creating a derived type.
@@ -310,6 +317,20 @@ Introduced Generics, enabling reusable classes and methods for different data ty
        ``` 
 - **Automatic Properties:** Automatic properties simplify the declaration of properties by automatically generating a backing field.
      * Simplify property declarations.
+        ```csharp 
+          public class Person {
+          public string Name { get; set; }
+          public int Age { get; private set; }
+
+          public Person(int age) {
+               Age = age;
+          }
+          }
+          // Usage
+          var person = new Person(30) { Name = "Alice" };
+          Console.WriteLine($"{person.Name}, {person.Age}"); // Output: Alice, 30
+
+       ```       
 - **Why It Was Significant:**
      * Unified querying across different data sources (SQL, XML, etc.).
      * Improved code readability and consistency.
