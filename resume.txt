@@ -1,0 +1,101 @@
+c# 1
+Established the baseline for C# development, focusing on object-oriented principles.
+
+* Classes
+* Methods
+* Properties 
+* Access Modifiers 
+* Constructors
+* Inheritance
+* Polymorphism (virtual/override)
+* Primitive Types
+---------------------------------------------------------------------------------------------------------------------
+c# 2 ->  .NET Framework 2.0
+Focused on reusability and efficiency.
+* Generic Class
+* Generic Methods
+* Generic Interfaces
+* Custom Generic Type (structs, delegates )
+* Anonymous Methods
+* Nullable Types
+* Iterators (yield)1
+* Partial Classes
+---------------------------------------------------------------------------------------------------------------------
+c# 3 -> .NET Framework 3.0.
+data manipulation and expressive code.
+* LINQ 
+* Lambda Expressions
+* Extension Methods
+* expression trees
+* Automatic Properties
+* Anonymous Types
+---------------------------------------------------------------------------------------------------------------------
+c# 4 -> .NET Framework 4.0.
+* dynamic typing
+* named & optional parameters.
+* Covariance and Contravariance
+
+---------------------------------------------------------------------------------------------------------------------
+c# 5
+* asynchronous programming (async/await)
+* Task-Based Asynchronous Pattern (TAP)
+* Sequential(Result) vs Parallel(await) Execution
+* synchronous Methods Returning Values
+* Caller Information Attributes:
+---------------------------------------------------------------------------------------------------------------------
+c# 6
+* Expression-Bodied Members
+* String Interpolation
+* Null-Conditional Operators (?)
+* Null-Coalescing Operator (??)
+* Static using Directives
+---------------------------------------------------------------------------------------------------------------------
+c# 7
+* Tuples
+* Pattern Matchin 
+* ocal Functions
+---------------------------------------------------------------------------------------------------------------------
+c# 8
+* Nullable Reference Types
+* Async Streams
+* Default Interface Methods
+* Ref Returns and In Parameters
+---------------------------------------------------------------------------------------------------------------------
+c# 9
+* Records
+* Init-Only Properties
+* Top-Level Statements
+* Improved Pattern Matching
+
+---------------------------------------------------------------------------------------------------------------------
+c# 10
+* Global Usings
+* File-Scoped Namespaces
+* Enhanced Interpolated Strings
+---------------------------------------------------------------------------------------------------------------------
+c# 11
+* Raw String Literals
+* List Patterns
+* Generic Attributes
+* Span Improvements
+---------------------------------------------------------------------------------------------------------------------
+c# 12
+* Primary Constructors in Non-Record Classes and Structure
+* Collection Expressions
+* Inline Arrays
+* Using Aliases for Any Type
+* Interceptors (Experimental)
+---------------------------------------------------------------------------------------------------------------------
+
+c# 13
+* Params Span Overloads
+* Optional Parameters in Lambda Expressions
+* Improved Interceptors (Experimental)
+---------------------------------------------------------------------------------------------------------------------
+
+c# 14
+* Partial Parameters
+* Collection Filtering with filter
+* Async Main Pipelines
+* Interface Type Forwarding
+---------------------------------------------------------------------------------------------------------------------
