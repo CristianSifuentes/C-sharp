@@ -16,6 +16,8 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
     - [C# 10.0 Features](#c-100-features)
     - [C# 11.0 Features](#c-110-features)
     - [C# 12.0 Features](#c-120-features)
+    - [C# 13.0 Features](#c-130-features)
+    - [C# 14.0 Features](#c-140-features)
 3. [Creating a Project with .NET CLI](#creating-a-project-with-net-cli)
 4. [Multi Entry Point](#multi-entry-point)
 5. [Additional Resources](#additional-resources)
@@ -38,6 +40,9 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 | **C# 10.0** | 2021 | Global usings, file-scoped namespaces, enhanced interpolated strings. |
 | **C# 11.0** | 2022 | Raw string literals, list patterns, generic attributes, span improvements. |
 | **C# 12.0** | 2023 | Primary constructors, collection expressions, inline arrays, type aliases, interceptors (experimental). |
+| **C# 13.0** | 2024 | Params span overloads, optional parameters for lambda expressions, interceptors enhancements. |
+| **C# 14.0** | 2025 | Partial parameters, collection filtering with `filter`, async main pipelines, and type forwarding for interfaces. |
+
 
 ---
 
@@ -771,7 +776,72 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 
 
 ---
+## C# 13.0 Features
+- **Params Span Overloads:**
+  * Enable methods to accept both traditional arrays and `Span<T>` with a single definition.
+  * Improves performance for methods dealing with large or performance-sensitive collections.
+    ```csharp
+    void Print(params ReadOnlySpan<int> values)
+    {
+        foreach (var val in values)
+            Console.WriteLine(val);
+    }
+    ```
+- **Optional Parameters in Lambda Expressions:**
+  * Adds support for default parameter values inside lambda declarations.
+  * Enables more expressive and reusable anonymous functions.
+    ```csharp
+    var greet = (string name = "Guest") => Console.WriteLine($"Hello, {name}!");
+    greet(); // Output: Hello, Guest!
+    ```
+- **Improved Interceptors (Experimental):**
+  * Enhances the experimental interceptors feature for cleaner integration.
+  * Provides better hooks for pre/post logic injection in method calls.
 
+### Why It Was Significant?
+* Focuses on performance improvements and expressive syntax.
+* Encourages more concise and modern patterns for common programming scenarios.
+* Further refines previously experimental features like interceptors.
+
+### Limitations
+* Interceptors remain experimental and not yet suitable for production in all scenarios.
+* Adoption of `params Span` patterns may require rethinking older APIs.
+
+### Key Takeaways
+* C# 13.0 builds on modern usability, code expressiveness, and performance.
+* Reduces boilerplate while introducing powerful new syntax.
+* Sets the stage for broader runtime enhancements in future versions.
+
+
+---
+
+## C# 14.0 Features
+- **Partial Parameters:**
+  * Allow parameters in methods to be marked as partial, similar to partial classes.
+  * Promotes code generation and separation of concerns in large APIs.
+    ```csharp
+    partial void ConfigureOptions(ref int config);
+    ```
+
+- **Collection Filtering with `filter`:**
+  * Introduces `filter` keyword for inline filtering in collection expressions.
+  * Improves expressiveness for LINQ-like scenarios.
+    ```csharp
+    var evens = [1, 2, 3, 4, 5] filter (x => x % 2 == 0);
+    ```
+
+- **Async Main Pipelines:**
+  * Enables full async pipelines from the entry point.
+  * Enhances performance and startup reliability.
+    ```csharp
+    static async Task Main() => await Pipeline.RunAsync();
+    ```
+
+- **Interface Type Forwarding:**
+  * Allows interfaces to be forwarded across assemblies like classes and structs.
+  * Facilitates modular and version-resilient designs.
+
+---
 ## Creating a Project with .NET CLI
 
 To create a new C# project using the .NET CLI, follow these steps:
