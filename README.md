@@ -60,7 +60,8 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 10. **[C# 10.0](#c-100-features):** Simplified namespaces with file-scoped syntax.
 11. **[C# 11.0](#c-110-features):** Added raw string literals for cleaner multiline strings.
 12. **[C# 12.0](#c-120-features):** Introduced primary constructors and collection expressions.
-
+13. **[C# 13.0](#c-130-features):** Introduced improvements like `params` span overloads and optional parameters for lambdas.
+14. **[C# 14.0](#c-140-features):** Added partial parameters, `filter` clause in collections, async main pipelines, and interface type forwarding.
 ---
 
 ## C# 1.0 Features
