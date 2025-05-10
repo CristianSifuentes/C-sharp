@@ -55,6 +55,10 @@ namespace CSharp4FeaturesDemo
         {
             // Dynamic binding
             Console.WriteLine("Dynamic Binding:");
+            //dynamic is a keyword in C# that allows for dynamic typing
+            // and late binding. It is used to bypass compile-time type checking.
+            // The dynamic type can hold any type of object, and the actual type is resolved at runtime.
+            //Represents an object whose operations will be resolved at runtime.
             dynamic dynamicObject = new DynamicExample();
             dynamicObject.SayHello("Alice"); // Runtime binding
             Console.WriteLine();
@@ -73,6 +77,14 @@ namespace CSharp4FeaturesDemo
             PrintAnimal(dog);
             PrintAnimal(cat);
             Console.WriteLine();
+
+            object exp = "Hello, World!";
+            string str = exp as string; // Using 'as' operator for safe casting
+
+            object anotherObject = str;
+
+
+
 
             Console.WriteLine("C# 4.0 Features Demonstrated Successfully!");
         }
