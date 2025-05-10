@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net.Http;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace AsyncAwaitDemo
 {
@@ -21,6 +21,12 @@ namespace AsyncAwaitDemo
             int number = 5;
             var result = await CalculateFactorialAsync(number);
             Console.WriteLine($"Factorial of {number} is {result}");
+
+            ThreadPool.QueueUserWorkItem(state =>
+            {
+                Console.WriteLine($"Running on Thread Pool thread\r\n: {Thread.CurrentThread.ManagedThreadId}");
+
+            });
 
             Console.WriteLine("\nC# 5.0 Features Demonstrated Successfully!");
 
