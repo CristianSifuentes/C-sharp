@@ -64,7 +64,7 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 14. **[C# 14.0](#c-140-features):** Added partial parameters, `filter` clause in collections, async main pipelines, and interface type forwarding.
 ---
 
-## C# 1.0 Features
+## [C# 1.0 Features](https://github.com/CristianSifuentes/CSharp1) 
 Basic object-oriented programming (OOP) features were introduced, including:
 - **Classes:** Define blueprints for objects. Classes are the fundamental building block in C#. They encapsulate data (fields) and behavior (methods) into a single entry.
      * Defined using the `class` keyword.
@@ -135,7 +135,8 @@ Basic object-oriented programming (OOP) features were introduced, including:
 - **Key Takeaways** C# 1.0 introduced the core object-oriented features that define modern programming: encapsulation, inheritance, polymorphism, and abstraction (via interfaces). These concepts remain fundamental to mastering C# and serve as the building blocks for all advanced language features introduced in subsequent versions.
      * Established the baseline for C# development, focusing on object-oriented principles.
 
-## C# 2.0 Features
+
+## [C# 2.0 Features](https://github.com/CristianSifuentes/CSharp2) 
 Introduced Generics, enabling reusable classes and methods for different data types. Also added iterators with `yield` 
 - **Characteristics:**
      * Focused on reusability and efficiency.
@@ -283,8 +284,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Generics transformed type-safe data structures and algorithms.
 
 ---
-
-## C# 3.0 Features
+## [C# 3.0 Features](https://github.com/CristianSifuentes/CSharp3) 
 - **Characteristics:**
      * Focused on `data manipulation and expressive code`.  
      * Compatible with .NET Framework 3.0.
@@ -353,8 +353,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Revolutionized data querying and manipulation within C#.
 
 ---
-
-## C# 4.0 Features
+## [C# 4.0 Features](https://github.com/CristianSifuentes/CSharp4) 
 - **Dynamic Binding (`dynamic`):** Allow dynamic types for runtime flexibility.
      * The `dynamic` keyword allows variables to bypass compile-time type checking, deferring it to runtime.
      * Useful for scenarios where the type is unknown until runtime, such as COM interop or working with dynamic languages like Python.
@@ -383,8 +382,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Enhanced flexibility for dynamic scenarios and simplified APIs.
 
 ---
-
-## C# 5.0 Features
+## [C# 5.0 Features](https://github.com/CristianSifuentes/CSharp5) 
 - **Async and Await:** Simplify asynchronous programming with cleaner syntax.
      * `async`: Marks a method as asynchronous.
      * `await`: Suspends the execution of the method until the awaited task is complete, without blocking the main thread.
@@ -427,8 +425,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Set the standard for modern asynchronous programming.
 
 ---
-
-## C# 6.0 Features
+## [C# 6.0 Features](https://github.com/CristianSifuentes/CSharp6) 
 - **Expression-Bodied Members:** Simplify methods and properties. 
      * Reduces boilerplate code, making it more concise and readable.
      * Allows concise definitions for methods, properties, and constructors.
@@ -473,8 +470,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
      * Enhanced developer productivity and readability with concise syntax.
 
 ---
-
-## C# 7.0-7.3 Features
+## [C# 7.0-7.3 Features](https://github.com/CristianSifuentes/CSharp7) 
 - **Tuples:** Return multiple values from methods with ease.
      * Provides a quick way to handle multiple return values without defining custom types.
      * Tuples provide a lightweight way to return multiple values from a method. 
@@ -526,8 +522,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Key Takeaways:**
      * Expanded the versatility of the language with functional programming elements.
 ---
-
-## C# 8.0 Features
+## [C# 8.0 Features](https://github.com/CristianSifuentes/CSharp8) 
 - **Nullable Reference Types:** Improve null safety by distinguishing nullable and non-nullable types. 
      * Adds compile-time safety for null reference handling. 
      * Introduced to make reference types nullable explicitly, reducing potential NullReferenceException.
@@ -570,8 +565,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Key Takeaways:**
      * Brought reliability and scalability to modern codebases with null safety and async streams.
 ---
-
-## C# 9.0 Features
+## [C# 9.0 Features](https://github.com/CristianSifuentes/CSharp9) 
 - **Records:** Simplify immutable data structures. 
      * Introduced for immutable data models.
      * Records provide built-in value equality, meaning two records are considered equal if their properties have the same values.
@@ -620,8 +614,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Key Takeaways:**
   * Advanced immutability and concise code structures for modern applications.
 ---
-
-## C# 10.0 Features
+## [C# 10.0 Features](https://github.com/CristianSifuentes/CSharp10) 
 - **Global Usings:** Simplify common `using` directives across the project. 
   * Introduced to reduce boilerplate by allowing common using directives to be shared across the entire project.
   * Reduces repetitive imports across files in a project, simplifying code maintenance.
@@ -663,8 +656,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Key Takeaways:**
   * Simplified project configuration and improved developer experienced for larger teams.
 ---
-
-## C# 11.0 Features
+## [C# 11.0 Features](https://github.com/CristianSifuentes/CSharp11) 
 - **Raw String Literals:** Simplify multiline and escape-heavy strings. 
   * Allow multi-line strings that preserve formatting and whitespace exactly as written.
   * Triple quotes `(""")` denote raw string literals.
@@ -720,8 +712,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 - **Key Takeaways:**
    * Enhanced the expressiveness of the language, particularly for raw strings and pattern matching.
 ---
-
-## C# 12.0 Features
+## [C# 12.0 Features](https://github.com/CristianSifuentes/CSharp12) 
 - **Primary Constructors in Non-Record Classes and Structures:** Declare constructors directly in class headers. 
     * Allows defining constructor parameters directly in the class or struct declaration.
     * Simplifies code by integrating constructor parameters into the class or struct declaration.
@@ -777,7 +768,8 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 
 
 ---
-## C# 13.0 Features
+
+## [C# 13.0 Features](https://github.com/CristianSifuentes/CSharp12) 
 - **Params Span Overloads:**
   * Enable methods to accept both traditional arrays and `Span<T>` with a single definition.
   * Improves performance for methods dealing with large or performance-sensitive collections.
@@ -815,8 +807,7 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 
 
 ---
-
-## C# 14.0 Features
+## [C# 14.0 Features](https://github.com/CristianSifuentes/CSharp14) 
 - **Partial Parameters:**
   * Allow parameters in methods to be marked as partial, similar to partial classes.
   * Promotes code generation and separation of concerns in large APIs.
