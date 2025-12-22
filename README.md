@@ -28,7 +28,7 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 
 | **Version** | **Release** | **Key Features** |
 | --- | --- | --- |
-| **C# 1.0** | 2002 | Core object-oriented features ( [classes](https://github.com/CristianSifuentes/classes), inheritance, interfaces). |
+| **C# 1.0** | 2002 | Core object-oriented features ( [classes](https://github.com/CristianSifuentes/typesOfClassesCSh), inheritance, interfaces). |
 | **C# 2.0** | 2005 | Generics, anonymous methods, nullable types, iterators (`yield`). |
 | **C# 3.0** | 2007 | LINQ, extension methods, lambda expressions, automatic properties. |
 | **C# 4.0** | 2010 | Dynamic binding (`dynamic`), named and optional parameters, covariance. |
