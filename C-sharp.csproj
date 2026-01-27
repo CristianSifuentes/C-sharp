@@ -6,6 +6,9 @@
     <RootNamespace>C_sharp</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<IsPackable>false</IsPackable>
+	<Optimize>true</Optimize>
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
