@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using C_sharp;
 using MatrixMul;
 
 public static class Program

@@ -1,24 +1,9 @@
 using System;
+using System;
 using System.Buffers;
 using System.Numerics;
 
-namespace MatrixMul;
-
-#region MatrixException
-// ---------- Errors (sentinel-style) ----------
-public sealed class MatrixException: Exception
-{
-    public MatrixException(string message): base(message)
-    {
-        
-    }
-    public static MatrixException EmptyMatrix() => new ("matrix cannot be empty");
-    public static MatrixException DimensionMismatch() => new ("matrix dimension mismatch");
-
-
-}
-
-#endregion
+namespace C_sharp;
 
 #region Matrix
 // ---------- Matrix type with methods (generics + value semantics-ish) ----------
@@ -92,29 +77,3 @@ public sealed class Matrix<T> where T : unmanaged, INumber<T>
 
 #endregion
 
-#region MatrixFill
-// ---------- Deterministic fill helper (not crypto, just stable) ----------
-public static class MatrixFill
-#endregion
-
-{
-    public static Matrix<T> FillDeterministic<T>(Matrix<T> m, T seed) where T: unmanaged, INumber<T>
-    {
-        var outM = m.Clone();
-        var v = seed;
-
-        // Similar to your Go "LCG-ish progression"
-        // v = v*1.0001 + 0.0003
-        var mul = T.CreateChecked(1.00001);
-        var add = T.CreateChecked(0.00003);
-
-        for (int i = 0; i < outM.Data.Length; i++)
-        {
-            v = (v * mul) + add;
-            outM.Data[i] = v;
-        }
-
-        return outM;
-    }
-
-}

@@ -1,101 +1,7 @@
 using System;
-using System.Numerics;
-using System.Threading;
 using System.Threading.Channels;
-using System.Threading.Tasks;
 
-namespace MatrixMul;
-
-#region MulOptions
-/*
-When applied to a class, the sealed modifier prevents other classes from inheriting from it. In the following example, class B inherits from class A, but no class can inherit from class B.
-
-class A {}
-sealed class B : A {}
-
-*/
-
-// ---------- Option pattern (production-friendly config) ----------
-public sealed class MulOptions
-{
-    public int Workers { get; init; } = Math.Max(1, Environment.ProcessorCount);
-    public int BlockRows { get; init; } = 16; // tune: how manu rows per job
-    public int ChannelCapacity { get; init; } = 256;
-}
-
-#endregion
-
-#region MulOption
-public static class MulOption
-{
-    public static Action<MulOptionsBuilder> WithWorkers(int n) =>
-        b =>
-        {
-            if (n > 0)
-                b.Workers = n;
-        };
-
-    public static Action<MulOptionsBuilder> WithBlockRows(int n) =>
-        b =>
-        {
-            if (n > 0)
-                b.BlockRows = n;
-        };
-
-    public static Action<MulOptionsBuilder> WithChaneelCapacity(int n) =>
-        b =>
-        {
-            if (n > 0)
-                b.ChannelCapacity = n;
-        };
-}
-
-#endregion
-
-#region MulOptionsBuilder
-public sealed class MulOptionsBuilder
-{
-    public int Workers { get; set; } = Math.Max(1, Environment.ProcessorCount);
-    public int BlockRows { get; set; } = 16;
-    public int ChannelCapacity { get; set; } = 256;
-
-    public MulOptions Build() =>
-        new()
-        {
-            Workers = Workers,
-            BlockRows = BlockRows,
-            ChannelCapacity = ChannelCapacity,
-        };
-}
-
-#endregion
-
-#region RowBlock
-// ---------- Concurrency: worker pool + channel + cancellation ----------
-
-/*
-A record in C# is a concise class type for immutable data models, emphasizing value-based equality (data is equal if its contents are equal, not if it is the same instance in memory) and automatically generating useful methods such as ToString() and equality comparisons, facilitating work with DTOs (Data Transfer Objects) and immutability, available since C# 9. It allows non-destructive mutation with the with expression, deconstruction, and can be defined as a reference type (record class) or a value type (record struct).
-*/
-
-/*
-The `internal` keyword is an access modifier for types and type members.
-
-This page is about the `internal` access modifier. The `internal` keyword is also part of the `protected internal` access modifier.
-
-Internal types and members can only be accessed within files of the same assembly, as in this example:
-
-C#
-public class BaseClass
-{
-// Only accessible within the same assembly.
-internal static int x = 0;
-
-}
-
-*/
-internal readonly record struct RowBlock(int Start, int EndExclusive);
-
-#endregion
+namespace C_sharp;
 
 #region MatrixMultiply
 public static class MatrixMultiply
@@ -214,8 +120,6 @@ public static class MatrixMultiply
 
         return outM;
         
-
-
     }
 }
 

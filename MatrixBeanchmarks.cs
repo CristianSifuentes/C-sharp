@@ -9,6 +9,8 @@ using BenchmarkDotNet.Running;
 using MatrixMul;
 using Microsoft.Extensions.Options;
 
+namespace C_sharp;
+
 [MemoryDiagnoser]
 public class MatrixBenchmarks
 {
@@ -33,26 +35,6 @@ public class MatrixBenchmarks
 }
 
 
-public sealed class DebugConfig: ManualConfig
-{
-    public DebugConfig()
-    {
-        AddJob(Job.ShortRun
-            .WithId("Debug")
-            .WithRuntime(CoreRuntime.Core80)
-            .WithGcServer(true)
-            .WithJit(Jit.RyuJit)
-            .WithPlatform(Platform.X64)
-            .WithEnvironmentVariable(
-              new EnvironmentVariable("COMPlus_TieredCompilation", "0")
-            ));
-        Options |= ConfigOptions.DisableOptimizationsValidator;
 
-    }
-
-}
-
-public static class BenchmarkProgram
-{
     public static void Main(string[] args) => BenchmarkRunner.Run<MatrixBenchmarks>();
 }
