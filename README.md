@@ -18,6 +18,7 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
     - [C# 12.0 Features](#c-120-features)
     - [C# 13.0 Features](#c-130-features)
     - [C# 14.0 Features](#c-140-features)
+    - [C# 15.0 Preview Features](#c-150-preview-features)
 3. [Creating a Project with .NET CLI](#creating-a-project-with-net-cli)
 4. [Multi Entry Point](#multi-entry-point)
 5. [Additional Resources](#additional-resources)
@@ -40,8 +41,9 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 | **C# 10.0** | 2021 | Global usings, file-scoped namespaces, enhanced interpolated strings. |
 | **C# 11.0** | 2022 | Raw string literals, list patterns, generic attributes, span improvements. |
 | **C# 12.0** | 2023 | Primary constructors, collection expressions, inline arrays, type aliases, interceptors (experimental). |
-| **C# 13.0** | 2024 | Params span overloads, optional parameters for lambda expressions, interceptors enhancements. |
-| **C# 14.0** | 2025 | Partial parameters, collection filtering with `filter`, async main pipelines, and type forwarding for interfaces. |
+| **C# 13.0** | 2024 | `params` collections, new `System.Threading.Lock` semantics, `\e` escape sequence, ref/unsafe improvements in iterators and async methods, ref structs implementing interfaces, partial properties and indexers. |
+| **C# 14.0** | 2025 | Extension members, null-conditional assignment, `nameof` with unbound generic types, implicit span conversions, simple lambda parameter modifiers, field-backed properties, partial events and constructors, user-defined compound assignment operators. |
+| **C# 15.0** | Preview | Collection expression arguments and union types in .NET 11 preview SDKs. |
 
 
 ---
@@ -60,8 +62,9 @@ C# (pronounced "C-sharp") is a modern, object-oriented programming language deve
 10. **[C# 10.0](#c-100-features):** Simplified namespaces with file-scoped syntax.
 11. **[C# 11.0](#c-110-features):** Added raw string literals for cleaner multiline strings.
 12. **[C# 12.0](#c-120-features):** Introduced primary constructors and collection expressions.
-13. **[C# 13.0](#c-130-features):** Introduced improvements like `params` span overloads and optional parameters for lambdas.
-14. **[C# 14.0](#c-140-features):** Added partial parameters, `filter` clause in collections, async main pipelines, and interface type forwarding.
+13. **[C# 13.0](#c-130-features):** Expanded `params` beyond arrays, improved locking, and advanced ref-safe programming scenarios.
+14. **[C# 14.0](#c-140-features):** Added extension members, null-conditional assignment, field-backed properties, and more partial-member support.
+15. **[C# 15.0 Preview](#c-150-preview-features):** Introduces preview work on collection expression arguments and union types.
 ---
 
 ## [C# 1.0 Features](https://github.com/CristianSifuentes/CSharp1) 
@@ -769,10 +772,10 @@ Introduced Generics, enabling reusable classes and methods for different data ty
 
 ---
 
-## [C# 13.0 Features](https://github.com/CristianSifuentes/CSharp12) 
-- **Params Span Overloads:**
-  * Enable methods to accept both traditional arrays and `Span<T>` with a single definition.
-  * Improves performance for methods dealing with large or performance-sensitive collections.
+## [C# 13.0 Features](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-13) 
+- **`params` Collections:**
+  * Extends `params` beyond arrays to other recognized collection types, including `Span<T>`, `ReadOnlySpan<T>`, and supported collection interfaces.
+  * Helps API authors offer allocation-conscious call patterns without separate overloads for every collection shape.
     ```csharp
     void Print(params ReadOnlySpan<int> values)
     {
@@ -780,58 +783,122 @@ Introduced Generics, enabling reusable classes and methods for different data ty
             Console.WriteLine(val);
     }
     ```
-- **Optional Parameters in Lambda Expressions:**
-  * Adds support for default parameter values inside lambda declarations.
-  * Enables more expressive and reusable anonymous functions.
+- **New `System.Threading.Lock` Semantics:**
+  * When the target of a `lock` statement is `System.Threading.Lock`, the compiler uses the newer lock pattern based on `EnterScope()`.
+  * Improves the clarity and performance path for modern synchronization code while preserving the existing `lock` statement syntax.
     ```csharp
-    var greet = (string name = "Guest") => Console.WriteLine($"Hello, {name}!");
-    greet(); // Output: Hello, Guest!
+    private readonly System.Threading.Lock _lock = new();
+
+    void Update()
+    {
+        lock (_lock)
+        {
+            Console.WriteLine("Protected work");
+        }
+    }
     ```
-- **Improved Interceptors (Experimental):**
-  * Enhances the experimental interceptors feature for cleaner integration.
-  * Provides better hooks for pre/post logic injection in method calls.
+- **Escape Sequence `\e`:**
+  * Adds a readable escape sequence for the ESCAPE character (`U+001B`).
+  * Useful for terminal control sequences without relying on numeric escape forms.
+    ```csharp
+    string reset = "\e[0m";
+    ```
+- **Ref-Safe and Partial-Type Improvements:**
+  * Allows `ref` locals and `unsafe` contexts in iterators and async methods.
+  * Allows `ref struct` types to implement interfaces and be used as generic type arguments when the type parameter allows ref structs.
+  * Adds partial properties and indexers in partial types.
 
 ### Why It Was Significant?
-* Focuses on performance improvements and expressive syntax.
-* Encourages more concise and modern patterns for common programming scenarios.
-* Further refines previously experimental features like interceptors.
+* Focuses on performance-oriented APIs and safer low-level programming patterns.
+* Makes synchronization and terminal-oriented code more direct.
+* Gives library and code-generation authors more options through partial properties, partial indexers, and overload resolution priority.
 
 ### Limitations
-* Interceptors remain experimental and not yet suitable for production in all scenarios.
-* Adoption of `params Span` patterns may require rethinking older APIs.
+* Some features matter most to library authors, performance-sensitive code, and generated-code scenarios.
+* Adoption of `params` collection patterns may require rethinking older overload sets.
 
 ### Key Takeaways
 * C# 13.0 builds on modern usability, code expressiveness, and performance.
-* Reduces boilerplate while introducing powerful new syntax.
-* Sets the stage for broader runtime enhancements in future versions.
+* It is the default language version for projects targeting .NET 9.
+* It broadens C# support for allocation-conscious APIs and ref-safe abstractions.
 
 
 ---
-## [C# 14.0 Features](https://github.com/CristianSifuentes/CSharp14) 
-- **Partial Parameters:**
-  * Allow parameters in methods to be marked as partial, similar to partial classes.
-  * Promotes code generation and separation of concerns in large APIs.
+## [C# 14.0 Features](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-14) 
+- **Extension Members:**
+  * Adds extension blocks that can declare extension properties, extension methods, and static extension members.
+  * Evolves extension methods into a broader model for adding instance-like or type-like members to existing types.
     ```csharp
-    partial void ConfigureOptions(ref int config);
+    public static class EnumerableExtensions
+    {
+        extension<T>(IEnumerable<T> source)
+        {
+            public bool IsEmpty => !source.Any();
+        }
+    }
     ```
 
-- **Collection Filtering with `filter`:**
-  * Introduces `filter` keyword for inline filtering in collection expressions.
-  * Improves expressiveness for LINQ-like scenarios.
+- **Null-Conditional Assignment:**
+  * Allows `?.` and `?[]` on the left side of assignment and compound assignment.
+  * Evaluates the right side only when the receiver is not null.
     ```csharp
-    var evens = [1, 2, 3, 4, 5] filter (x => x % 2 == 0);
+    customer?.Order = GetCurrentOrder();
     ```
 
-- **Async Main Pipelines:**
-  * Enables full async pipelines from the entry point.
-  * Enhances performance and startup reliability.
+- **Field-Backed Properties:**
+  * Adds the `field` keyword inside property accessors to refer to the compiler-generated backing field.
+  * Reduces boilerplate when a property needs custom validation in one accessor.
     ```csharp
-    static async Task Main() => await Pipeline.RunAsync();
+    public string Message
+    {
+        get;
+        set => field = value ?? throw new ArgumentNullException(nameof(value));
+    }
     ```
 
-- **Interface Type Forwarding:**
-  * Allows interfaces to be forwarded across assemblies like classes and structs.
-  * Facilitates modular and version-resilient designs.
+- **Span, Lambda, `nameof`, and Partial-Member Improvements:**
+  * Adds more implicit conversions for `Span<T>` and `ReadOnlySpan<T>`.
+  * Allows `nameof(List<>)` for unbound generic types.
+  * Allows modifiers such as `ref`, `in`, `out`, `scoped`, and `ref readonly` on simple lambda parameters.
+  * Adds partial events and constructors, plus user-defined compound assignment operators.
+
+### Why It Was Significant?
+* C# 14.0 expands everyday expressiveness through extension members and null-conditional assignment.
+* It improves performance-oriented code by making span conversions more natural.
+* It continues the partial-member evolution used by source generators and large APIs.
+
+### Limitations
+* Some C# 14.0 features require .NET 10 runtime or library support.
+* The `field` keyword can be confusing in types that already contain a member named `field`; use `@field` or rename the existing member when needed.
+
+### Key Takeaways
+* C# 14.0 is the latest stable C# release.
+* It is the default language version for projects targeting .NET 10.
+* It replaces several previously rumored or proposed ideas with the actual shipped feature set.
+
+---
+## [C# 15.0 Preview Features](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-15)
+- **Collection Expression Arguments:**
+  * Allows a `with(...)` element as the first element in a collection expression.
+  * Passes constructor or factory arguments such as capacity or comparers to the underlying collection.
+    ```csharp
+    string[] values = ["one", "two", "three"];
+    List<string> names = [with(capacity: values.Length * 2), .. values];
+    ```
+
+- **Union Types:**
+  * Introduces preview support for declaring values that can be one of several case types.
+  * Helps the compiler reason about exhaustive `switch` expressions over the known cases.
+    ```csharp
+    public record class Cat(string Name);
+    public record class Dog(string Name);
+
+    public union Pet(Cat, Dog);
+    ```
+
+### Preview Status
+* C# 15.0 is a preview language version for .NET 11 preview SDKs.
+* Preview features can change before final release, so they should be treated differently from stable C# 14.0 features.
 
 ---
 ## Creating a Project with .NET CLI
