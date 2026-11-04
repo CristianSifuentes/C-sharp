@@ -1,0 +1,873 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1752 1576" width="1752" height="1576" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" role="img" aria-labelledby="pt">
+<title id="pt">Tabla periódica de las características de C#, edición noviembre 2026</title>
+<defs><linearGradient id="pf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B0620"/><stop offset="0.6" stop-color="#160B33"/><stop offset="1" stop-color="#21104A"/></linearGradient></defs>
+<rect width="1752" height="1576" fill="url(#pf)"/>
+<text x="40" y="74" font-size="46" font-weight="700" fill="#F8FAFC">Tabla periódica de C#</text>
+<text x="40" y="112" font-size="20" fill="#C4B5FD">128 características clave, de C# 1 a C# 15 · cada columna es una versión del lenguaje · edición noviembre 2026</text>
+<rect x="40" y="138" width="16" height="16" rx="4" fill="#A78BFA"/>
+<text x="64" y="151" font-size="15" fill="#E2E8F0">Tipos y genéricos</text>
+<rect x="340" y="138" width="16" height="16" rx="4" fill="#F472B6"/>
+<text x="364" y="151" font-size="15" fill="#E2E8F0">Modelado de datos</text>
+<rect x="640" y="138" width="16" height="16" rx="4" fill="#22D3EE"/>
+<text x="664" y="151" font-size="15" fill="#E2E8F0">Funciones y LINQ</text>
+<rect x="940" y="138" width="16" height="16" rx="4" fill="#FB923C"/>
+<text x="964" y="151" font-size="15" fill="#E2E8F0">Patrones</text>
+<rect x="1240" y="138" width="16" height="16" rx="4" fill="#FACC15"/>
+<text x="1264" y="151" font-size="15" fill="#E2E8F0">Nulabilidad</text>
+<rect x="40" y="164" width="16" height="16" rx="4" fill="#34D399"/>
+<text x="64" y="177" font-size="15" fill="#E2E8F0">Asincronía</text>
+<rect x="340" y="164" width="16" height="16" rx="4" fill="#F87171"/>
+<text x="364" y="177" font-size="15" fill="#E2E8F0">Memoria y rendimiento</text>
+<rect x="640" y="164" width="16" height="16" rx="4" fill="#2DD4BF"/>
+<text x="664" y="177" font-size="15" fill="#E2E8F0">Colecciones</text>
+<rect x="940" y="164" width="16" height="16" rx="4" fill="#60A5FA"/>
+<text x="964" y="177" font-size="15" fill="#E2E8F0">Ergonomía</text>
+<rect x="1240" y="164" width="16" height="16" rx="4" fill="#CBD5E1"/>
+<text x="1264" y="177" font-size="15" fill="#E2E8F0">Metaprogramación e interop</text>
+<text x="92" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 1</text>
+<text x="92" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2002</text>
+<g transform="translate(40,242)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Cl</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Clases</text>
+</g>
+<g transform="translate(40,354)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">St</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Structs</text>
+</g>
+<g transform="translate(40,466)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">If</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Interfaces</text>
+</g>
+<g transform="translate(40,578)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Pr</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Propiedades</text>
+</g>
+<g transform="translate(40,690)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">De</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Delegados</text>
+</g>
+<g transform="translate(40,802)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Ev</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Eventos</text>
+</g>
+<g transform="translate(40,914)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">At</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Atributos</text>
+</g>
+<g transform="translate(40,1026)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Us</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">unsafe</text>
+</g>
+<g transform="translate(40,1138)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">1.2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Df</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Dispose</text>
+</g>
+<text x="204" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 2</text>
+<text x="204" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2005</text>
+<g transform="translate(152,242)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Ge</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Genéricos</text>
+</g>
+<g transform="translate(152,354)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Rg</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">where</text>
+</g>
+<g transform="translate(152,466)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Yi</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">yield</text>
+</g>
+<g transform="translate(152,578)">
+<rect width="104" height="104" rx="10" fill="#FACC15" fill-opacity="0.13" stroke="#FACC15" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FACC15" text-anchor="middle">Nv</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">T?</text>
+</g>
+<g transform="translate(152,690)">
+<rect width="104" height="104" rx="10" fill="#FACC15" fill-opacity="0.13" stroke="#FACC15" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FACC15" text-anchor="middle">Fu</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">??</text>
+</g>
+<g transform="translate(152,802)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Ma</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Anónimos</text>
+</g>
+<g transform="translate(152,914)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Pa</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">partial</text>
+</g>
+<g transform="translate(152,1026)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Ce</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">static</text>
+</g>
+<text x="316" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 3</text>
+<text x="316" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2007</text>
+<g transform="translate(264,242)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Va</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">var</text>
+</g>
+<g transform="translate(264,354)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Ap</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Auto</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">props</text>
+</g>
+<g transform="translate(264,466)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Io</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Inicial.</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">objeto</text>
+</g>
+<g transform="translate(264,578)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Ic</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Inicial.</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">colección</text>
+</g>
+<g transform="translate(264,690)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">An</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Anónimos</text>
+</g>
+<g transform="translate(264,802)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">La</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Lambdas</text>
+</g>
+<g transform="translate(264,914)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Ae</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Expression</text>
+</g>
+<g transform="translate(264,1026)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Me</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Extensión</text>
+</g>
+<g transform="translate(264,1138)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Lq</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">LINQ</text>
+</g>
+<g transform="translate(264,1250)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Mp</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Métodos</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">parciales</text>
+</g>
+<text x="428" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 4</text>
+<text x="428" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2010</text>
+<g transform="translate(376,242)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">4</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Dy</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">dynamic</text>
+</g>
+<g transform="translate(376,354)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">4</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Ar</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Con nombre</text>
+</g>
+<g transform="translate(376,466)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">4</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Po</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Opcionales</text>
+</g>
+<g transform="translate(376,578)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">4</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Vg</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">in</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">out</text>
+</g>
+<g transform="translate(376,690)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">4</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Np</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">NoPIA</text>
+</g>
+<text x="540" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 5</text>
+<text x="540" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2012</text>
+<g transform="translate(488,242)">
+<rect width="104" height="104" rx="10" fill="#34D399" fill-opacity="0.13" stroke="#34D399" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">5</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#34D399" text-anchor="middle">Aw</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">async</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">await</text>
+</g>
+<g transform="translate(488,354)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">5</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Ci</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Caller</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">Info</text>
+</g>
+<g transform="translate(488,466)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">5</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Vf</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">foreach</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">clausura</text>
+</g>
+<text x="652" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 6</text>
+<text x="652" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2015</text>
+<g transform="translate(600,242)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Ro</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Roslyn</text>
+</g>
+<g transform="translate(600,354)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Si</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Interpolación</text>
+</g>
+<g transform="translate(600,466)">
+<rect width="104" height="104" rx="10" fill="#FACC15" fill-opacity="0.13" stroke="#FACC15" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FACC15" text-anchor="middle">Cn</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">?.</text>
+</g>
+<g transform="translate(600,578)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">No</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">nameof</text>
+</g>
+<g transform="translate(600,690)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Xf</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">when</text>
+</g>
+<g transform="translate(600,802)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Eb</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Cuerpo =&gt;</text>
+</g>
+<g transform="translate(600,914)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Ip</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Inicial.</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">propiedad</text>
+</g>
+<g transform="translate(600,1026)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Ui</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">using</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">static</text>
+</g>
+<g transform="translate(600,1138)">
+<rect width="104" height="104" rx="10" fill="#34D399" fill-opacity="0.13" stroke="#34D399" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">6</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#34D399" text-anchor="middle">Ac</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">await</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">catch</text>
+</g>
+<text x="764" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 7</text>
+<text x="764" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2017</text>
+<g transform="translate(712,242)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Tu</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Tuplas</text>
+</g>
+<g transform="translate(712,354)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Dc</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Deconstr.</text>
+</g>
+<g transform="translate(712,466)">
+<rect width="104" height="104" rx="10" fill="#FB923C" fill-opacity="0.13" stroke="#FB923C" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FB923C" text-anchor="middle">Pt</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">is T x</text>
+</g>
+<g transform="translate(712,578)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Fl</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Funciones</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">locales</text>
+</g>
+<g transform="translate(712,690)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Rr</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">ref</text>
+</g>
+<g transform="translate(712,802)">
+<rect width="104" height="104" rx="10" fill="#34D399" fill-opacity="0.13" stroke="#34D399" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.0</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#34D399" text-anchor="middle">Vt</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">ValueTask</text>
+</g>
+<g transform="translate(712,914)">
+<rect width="104" height="104" rx="10" fill="#34D399" fill-opacity="0.13" stroke="#34D399" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.1</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#34D399" text-anchor="middle">Am</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">async</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">Main</text>
+</g>
+<g transform="translate(712,1026)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Sp</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Span&lt;T&gt;</text>
+</g>
+<g transform="translate(712,1138)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">In</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">in</text>
+</g>
+<g transform="translate(712,1250)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.2</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Rs</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">readonly</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">struct</text>
+</g>
+<g transform="translate(712,1362)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">7.3</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Un</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">unmanaged</text>
+</g>
+<text x="876" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 8</text>
+<text x="876" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2019</text>
+<g transform="translate(824,242)">
+<rect width="104" height="104" rx="10" fill="#FACC15" fill-opacity="0.13" stroke="#FACC15" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FACC15" text-anchor="middle">Nr</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">string?</text>
+</g>
+<g transform="translate(824,354)">
+<rect width="104" height="104" rx="10" fill="#FB923C" fill-opacity="0.13" stroke="#FB923C" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FB923C" text-anchor="middle">Sw</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">switch</text>
+</g>
+<g transform="translate(824,466)">
+<rect width="104" height="104" rx="10" fill="#FB923C" fill-opacity="0.13" stroke="#FB923C" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FB923C" text-anchor="middle">Rp</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Patrones</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">recursivos</text>
+</g>
+<g transform="translate(824,578)">
+<rect width="104" height="104" rx="10" fill="#34D399" fill-opacity="0.13" stroke="#34D399" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#34D399" text-anchor="middle">As</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">await</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">foreach</text>
+</g>
+<g transform="translate(824,690)">
+<rect width="104" height="104" rx="10" fill="#34D399" fill-opacity="0.13" stroke="#34D399" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#34D399" text-anchor="middle">Au</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">await</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">using</text>
+</g>
+<g transform="translate(824,802)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Rn</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">^ ..</text>
+</g>
+<g transform="translate(824,914)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Di</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">DIM</text>
+</g>
+<g transform="translate(824,1026)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Ud</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">using var</text>
+</g>
+<g transform="translate(824,1138)">
+<rect width="104" height="104" rx="10" fill="#FACC15" fill-opacity="0.13" stroke="#FACC15" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FACC15" text-anchor="middle">Fa</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">??=</text>
+</g>
+<g transform="translate(824,1250)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Mr</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">readonly</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">miembro</text>
+</g>
+<g transform="translate(824,1362)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">8</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Fs</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">static</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">local</text>
+</g>
+<text x="988" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 9</text>
+<text x="988" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2020</text>
+<g transform="translate(936,242)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Re</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">record</text>
+</g>
+<g transform="translate(936,354)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Ih</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">init</text>
+</g>
+<g transform="translate(936,466)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Wi</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">with</text>
+</g>
+<g transform="translate(936,578)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Tl</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Nivel</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">superior</text>
+</g>
+<g transform="translate(936,690)">
+<rect width="104" height="104" rx="10" fill="#FB923C" fill-opacity="0.13" stroke="#FB923C" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FB923C" text-anchor="middle">Pl</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">and or</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">not</text>
+</g>
+<g transform="translate(936,802)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Nt</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">new()</text>
+</g>
+<g transform="translate(936,914)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Nn</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">nint</text>
+</g>
+<g transform="translate(936,1026)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Pf</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">delegate*</text>
+</g>
+<g transform="translate(936,1138)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Sg</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Generadores</text>
+</g>
+<g transform="translate(936,1250)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Rc</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Retorno</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">covariante</text>
+</g>
+<g transform="translate(936,1362)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">9</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Ls</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">static</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">lambda</text>
+</g>
+<text x="1100" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 10</text>
+<text x="1100" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2021</text>
+<g transform="translate(1048,242)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Rt</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">record</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">struct</text>
+</g>
+<g transform="translate(1048,354)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Ms</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">struct+</text>
+</g>
+<g transform="translate(1048,466)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Gu</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">global</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">using</text>
+</g>
+<g transform="translate(1048,578)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Fn</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">namespace;</text>
+</g>
+<g transform="translate(1048,690)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Hd</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Handler</text>
+</g>
+<g transform="translate(1048,802)">
+<rect width="104" height="104" rx="10" fill="#FB923C" fill-opacity="0.13" stroke="#FB923C" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FB923C" text-anchor="middle">Pe</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">A.B:</text>
+</g>
+<g transform="translate(1048,914)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Tn</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Lambda</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">natural</text>
+</g>
+<g transform="translate(1048,1026)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">10</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Ca</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Caller</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">Arg</text>
+</g>
+<text x="1212" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 11</text>
+<text x="1212" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2022</text>
+<g transform="translate(1160,242)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Sb</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">static</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">abstract</text>
+</g>
+<g transform="translate(1160,354)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Gm</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">INumber&lt;T&gt;</text>
+</g>
+<g transform="translate(1160,466)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Rw</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Raw</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">string</text>
+</g>
+<g transform="translate(1160,578)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Ut</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">u8</text>
+</g>
+<g transform="translate(1160,690)">
+<rect width="104" height="104" rx="10" fill="#FB923C" fill-opacity="0.13" stroke="#FB923C" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FB923C" text-anchor="middle">Li</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">[a .. z]</text>
+</g>
+<g transform="translate(1160,802)">
+<rect width="104" height="104" rx="10" fill="#FACC15" fill-opacity="0.13" stroke="#FACC15" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FACC15" text-anchor="middle">Rq</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">required</text>
+</g>
+<g transform="translate(1160,914)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Fr</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Campos</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">ref</text>
+</g>
+<g transform="translate(1160,1026)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Sc</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">scoped</text>
+</g>
+<g transform="translate(1160,1138)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Ag</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Attr&lt;T&gt;</text>
+</g>
+<g transform="translate(1160,1250)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">11</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Ft</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">file</text>
+</g>
+<text x="1324" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 12</text>
+<text x="1324" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2023</text>
+<g transform="translate(1272,242)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Cp</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Const.</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">primario</text>
+</g>
+<g transform="translate(1272,354)">
+<rect width="104" height="104" rx="10" fill="#2DD4BF" fill-opacity="0.13" stroke="#2DD4BF" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#2DD4BF" text-anchor="middle">Ex</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">[ ]</text>
+</g>
+<g transform="translate(1272,466)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Ia</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Inline</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">Array</text>
+</g>
+<g transform="translate(1272,578)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Lp</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Lambda</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">defecto</text>
+</g>
+<g transform="translate(1272,690)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Rd</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">ref</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">readonly</text>
+</g>
+<g transform="translate(1272,802)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Al</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">using</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">alias</text>
+</g>
+<g transform="translate(1272,914)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Xp</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Experim.</text>
+</g>
+<g transform="translate(1272,1026)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">12</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">It</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Intercept.</text>
+</g>
+<text x="1436" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 13</text>
+<text x="1436" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2024</text>
+<g transform="translate(1384,242)">
+<rect width="104" height="104" rx="10" fill="#2DD4BF" fill-opacity="0.13" stroke="#2DD4BF" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#2DD4BF" text-anchor="middle">Pc</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">params</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">Span</text>
+</g>
+<g transform="translate(1384,354)">
+<rect width="104" height="104" rx="10" fill="#34D399" fill-opacity="0.13" stroke="#34D399" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#34D399" text-anchor="middle">Lk</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Lock</text>
+</g>
+<g transform="translate(1384,466)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Es</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">\e</text>
+</g>
+<g transform="translate(1384,578)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Fi</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">[^1]</text>
+</g>
+<g transform="translate(1384,690)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Ri</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">ref async</text>
+</g>
+<g transform="translate(1384,802)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Aq</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">allows</text>
+</g>
+<g transform="translate(1384,914)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Rf</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">ref struct</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">interfaz</text>
+</g>
+<g transform="translate(1384,1026)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Pq</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">partial</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">prop</text>
+</g>
+<g transform="translate(1384,1138)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">13</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Or</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">Priority</text>
+</g>
+<text x="1548" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 14</text>
+<text x="1548" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2025</text>
+<g transform="translate(1496,242)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Xt</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">extension</text>
+</g>
+<g transform="translate(1496,354)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Fd</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">field</text>
+</g>
+<g transform="translate(1496,466)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Ss</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Span</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">implícito</text>
+</g>
+<g transform="translate(1496,578)">
+<rect width="104" height="104" rx="10" fill="#FACC15" fill-opacity="0.13" stroke="#FACC15" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#FACC15" text-anchor="middle">Cq</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">?. =</text>
+</g>
+<g transform="translate(1496,690)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Op</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">operator</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">+=</text>
+</g>
+<g transform="translate(1496,802)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Lm</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Lambda</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">out</text>
+</g>
+<g transform="translate(1496,914)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Nu</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">nameof</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">&lt;&gt;</text>
+</g>
+<g transform="translate(1496,1026)">
+<rect width="104" height="104" rx="10" fill="#CBD5E1" fill-opacity="0.13" stroke="#CBD5E1" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#CBD5E1" text-anchor="middle">Pv</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">partial</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">ctor</text>
+</g>
+<g transform="translate(1496,1138)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" />
+<text x="9" y="17" font-size="11" fill="#CBD5E1">14</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Fb</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">#:</text>
+</g>
+<text x="1660" y="212" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 15</text>
+<text x="1660" y="231" font-size="13" fill="#A5B4FC" text-anchor="middle">2026</text>
+<g transform="translate(1608,242)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="9" y="17" font-size="11" fill="#CBD5E1">15</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Uo</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">union</text>
+</g>
+<g transform="translate(1608,354)">
+<rect width="104" height="104" rx="10" fill="#F472B6" fill-opacity="0.13" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="9" y="17" font-size="11" fill="#CBD5E1">15</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F472B6" text-anchor="middle">Cc</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">closed</text>
+</g>
+<g transform="translate(1608,466)">
+<rect width="104" height="104" rx="10" fill="#2DD4BF" fill-opacity="0.13" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="9" y="17" font-size="11" fill="#CBD5E1">15</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#2DD4BF" text-anchor="middle">Wc</text>
+<text x="52" y="80" font-size="12" fill="#F8FAFC" text-anchor="middle">with(…)</text>
+</g>
+<g transform="translate(1608,578)">
+<rect width="104" height="104" rx="10" fill="#22D3EE" fill-opacity="0.13" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="9" y="17" font-size="11" fill="#CBD5E1">15</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#22D3EE" text-anchor="middle">Xi</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">extension</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">this[]</text>
+</g>
+<g transform="translate(1608,690)">
+<rect width="104" height="104" rx="10" fill="#60A5FA" fill-opacity="0.13" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="9" y="17" font-size="11" fill="#CBD5E1">15</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#60A5FA" text-anchor="middle">Bl</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">break</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">etiqueta</text>
+</g>
+<g transform="translate(1608,802)">
+<rect width="104" height="104" rx="10" fill="#A78BFA" fill-opacity="0.13" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="9" y="17" font-size="11" fill="#CBD5E1">15</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#A78BFA" text-anchor="middle">Sv</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">static</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">interfaz</text>
+</g>
+<g transform="translate(1608,914)">
+<rect width="104" height="104" rx="10" fill="#F87171" fill-opacity="0.13" stroke="#F87171" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="9" y="17" font-size="11" fill="#CBD5E1">15</text>
+<text x="52" y="50" font-size="30" font-weight="700" fill="#F87171" text-anchor="middle">Mm</text>
+<text x="52" y="72" font-size="12" fill="#F8FAFC" text-anchor="middle">Memory</text>
+<text x="52" y="86" font-size="12" fill="#F8FAFC" text-anchor="middle">Safety</text>
+</g>
+<text x="40" y="1542" font-size="14" fill="#94A3B8">Borde discontinuo: C# 15, en release candidate o preview al 4 de noviembre de 2026. Fuente: data/caracteristicas.csv. Guía no oficial.</text>
+</svg>

@@ -1,0 +1,155 @@
+nombre,version,familia,clase,estado,descripcion,simbolo,etiqueta,poster
+Clases y herencia simple,1.0,tipos,C,GA,"Tipos de referencia, herencia simple y virtual explícito",Cl,Clases,1
+Structs,1.0,tipos,C,GA,Tipos de valor con semántica de copia,St,Structs,1
+Interfaces,1.0,tipos,C,GA,Contratos con implementación múltiple,If,Interfaces,1
+Enumeraciones,1.0,tipos,C,GA,Conjuntos de constantes con nombre,En,Enums,0
+Propiedades,1.0,ergonomia,C,GA,get y set como concepto del lenguaje,Pr,Propiedades,1
+Indexadores,1.0,ergonomia,C,GA,Acceso por índice sobre objetos,Ix,Indexadores,0
+Delegados,1.0,funcional,C,GA,Referencias a métodos seguras y multidifusión,De,Delegados,1
+Eventos,1.0,funcional,C,GA,Publicación y suscripción protegidas,Ev,Eventos,1
+Atributos,1.0,meta,C,GA,Metadatos declarativos en el ensamblado,At,Atributos,1
+Código unsafe y punteros,1.0,memoria,C,GA,Punteros y stackalloc bajo decisión explícita,Us,unsafe,1
+using y lock,1.0,ergonomia,C,GA,try/finally generado para recursos y monitores,Ul,using|lock,0
+foreach,1.0,ergonomia,C,GA,Recorrido por patrón GetEnumerator,Fe,foreach,0
+Dispose en foreach,1.2,ergonomia,C,GA,foreach llama a Dispose sobre el enumerador,Df,Dispose,1
+Genéricos,2,tipos,R,GA,Tipos y métodos parametrizados y reificados en el CLR,Ge,Genéricos,1
+Restricciones genéricas,2,tipos,C,GA,"where T : class, struct, new() y herencia",Rg,where,1
+Iteradores,2,funcional,C,GA,yield return genera una máquina de estados,Yi,yield,1
+Tipos de valor anulables,2,nulos,B,GA,"T? sobre Nullable<T> con operadores elevados",Nv,T?,1
+Operador de fusión nula,2,nulos,C,GA,a ?? b,Fu,??,1
+Métodos anónimos,2,funcional,C,GA,delegate { } con clausuras,Ma,Anónimos,1
+Tipos parciales,2,meta,C,GA,Un tipo repartido en varios archivos,Pa,partial,1
+Clases estáticas,2,tipos,C,GA,Sin instancias ni herencia,Ce,static,1
+Accesibilidad por accesor,2,ergonomia,C,GA,Modificadores distintos en get y set,Aa,Accesores,0
+Varianza de delegados,2,funcional,C,GA,Conversión de grupos de métodos más flexible,Vd,Varianza|delegados,0
+Variables implícitas,3,ergonomia,C,GA,var con tipado estático,Va,var,1
+Propiedades automáticas,3,ergonomia,C,GA,Campo oculto generado,Ap,Auto|props,1
+Inicializadores de objeto,3,ergonomia,C,GA,new T { A = 1 },Io,Inicial.|objeto,1
+Inicializadores de colección,3,ergonomia,C,GA,new List<int> { 1 },Ic,Inicial.|colección,1
+Tipos anónimos,3,datos,C,GA,Clases generadas con igualdad por valor,An,Anónimos,1
+Expresiones lambda,3,funcional,C,GA,x => x + 1,La,Lambdas,1
+Árboles de expresión,3,funcional,B,GA,Código representado como datos,Ae,Expression,1
+Métodos de extensión,3,funcional,C,GA,this en el primer parámetro,Me,Extensión,1
+Expresiones de consulta,3,funcional,C,GA,from where select,Lq,LINQ,1
+Métodos parciales,3,meta,C,GA,Declaración e implementación separadas,Mp,Métodos|parciales,1
+dynamic,4,meta,B,GA,Enlace en ejecución con el DLR,Dy,dynamic,1
+Argumentos con nombre,4,ergonomia,C,GA,M(puerto: 80),Ar,Con nombre,1
+Parámetros opcionales,4,ergonomia,C,GA,Valores por defecto copiados en el llamador,Po,Opcionales,1
+Varianza genérica,4,tipos,R,GA,in y out en interfaces y delegados,Vg,in|out,1
+Tipos de interoperabilidad incrustados,4,meta,C,GA,NoPIA para COM,Np,NoPIA,1
+async y await,5,async,B,GA,Máquina de estados sobre Task,Aw,async|await,1
+Información del llamador,5,meta,C,GA,CallerMemberName y compañía,Ci,Caller|Info,1
+Variable de foreach por iteración,5,funcional,C,GA,Clausuras correctas en foreach,Vf,foreach|clausura,1
+Compilador Roslyn,6,meta,C,GA,Compilador escrito en C# y expuesto como API,Ro,Roslyn,1
+Interpolación de cadenas,6,ergonomia,C,GA,"$""{x}""",Si,Interpolación,1
+Operador condicional nulo,6,nulos,C,GA,a?.b y a?[i],Cn,?.,1
+nameof,6,ergonomia,C,GA,Nombre de un símbolo en compilación,No,nameof,1
+Filtros de excepción,6,ergonomia,C,GA,catch when sin desenrollar la pila,Xf,when,1
+Miembros con cuerpo de expresión,6,ergonomia,C,GA,int X => 1;,Eb,Cuerpo =>,1
+Inicializadores de propiedad,6,ergonomia,C,GA,{ get; } = valor,Ip,Inicial.|propiedad,1
+using static,6,ergonomia,C,GA,Importa miembros estáticos,Ui,using|static,1
+Inicializadores de índice,6,ergonomia,C,GA,["a"] = 1,Ii,Inicial.|índice,0
+await en catch y finally,6,async,C,GA,await donde antes no se permitía,Ac,await|catch,1
+Tuplas,7.0,datos,B,GA,ValueTuple con nombres en compilación,Tu,Tuplas,1
+Deconstrucción,7.0,datos,C,GA,var (a b) = x,Dc,Deconstr.,1
+Variables out en línea,7.0,ergonomia,C,GA,M(out var x),Ov,out var,0
+Descartes,7.0,ergonomia,C,GA,_ ignora un valor,Ds,_,0
+Patrones de tipo y constante,7.0,patrones,C,GA,is T x y switch por tipo,Pt,is T x,1
+Funciones locales,7.0,funcional,C,GA,Funciones dentro de métodos,Fl,Funciones|locales,1
+ref locales y retornos,7.0,memoria,C,GA,Referencias a ubicaciones,Rr,ref,1
+Expresiones throw,7.0,nulos,C,GA,x ?? throw,Th,throw,0
+Literales binarios y separadores,7.0,ergonomia,C,GA,0b1010_1010,Lb,0b_,0
+Retornos async generalizados,7.0,async,B,GA,ValueTask<T>,Vt,ValueTask,1
+async Main,7.1,async,C,GA,Punto de entrada asíncrono,Am,async|Main,1
+Literal default,7.1,ergonomia,C,GA,int n = default;,Dl,default,0
+Nombres de tupla inferidos,7.1,datos,C,GA,Nombre tomado de la variable,Ni,Nombres|inferidos,0
+Span y ref struct,7.2,memoria,B,GA,Vistas de memoria que viven en la pila,Sp,Span<T>,1
+Parámetros in,7.2,memoria,C,GA,Por referencia y de solo lectura,In,in,1
+readonly struct,7.2,memoria,C,GA,Inmutabilidad garantizada,Rs,readonly|struct,1
+private protected,7.2,tipos,C,GA,Derivadas del mismo ensamblado,Pp,private|protected,0
+Argumentos con nombre no finales,7.2,ergonomia,C,GA,M(a: 1 2),Nf,Nombre|no final,0
+Restricciones unmanaged Enum y Delegate,7.3,tipos,C,GA,Nuevas restricciones genéricas,Un,unmanaged,1
+Igualdad de tuplas,7.3,datos,C,GA,== elemento a elemento,Eq,Tupla ==,0
+Reasignación de ref,7.3,memoria,C,GA,r = ref otra,Ra,ref =,0
+Inicializadores de stackalloc,7.3,memoria,C,GA,stackalloc[] { 1 2 },Sa,stackalloc,0
+Tipos de referencia anulables,8,nulos,C,GA,string? con análisis de flujo,Nr,string?,1
+Expresiones switch,8,patrones,C,GA,x switch { },Sw,switch,1
+Patrones recursivos,8,patrones,C,GA,"Propiedad, posicional y tupla",Rp,Patrones|recursivos,1
+Flujos asíncronos,8,async,B,GA,IAsyncEnumerable<T> y await foreach,As,await|foreach,1
+await using,8,async,C,GA,IAsyncDisposable,Au,await|using,1
+Índices y rangos,8,ergonomia,B,GA,^1 y a..b,Rn,^ ..,1
+Miembros de interfaz por defecto,8,tipos,R,GA,Interfaces con implementación,Di,DIM,1
+Declaraciones using,8,ergonomia,C,GA,using var x = …;,Ud,using var,1
+Asignación de fusión nula,8,nulos,C,GA,a ??= b,Fa,??=,1
+Miembros readonly,8,memoria,C,GA,Evitan copias defensivas,Mr,readonly|miembro,1
+Funciones locales estáticas,8,funcional,C,GA,Sin capturas,Fs,static|local,1
+record,9,datos,C,GA,Clases con igualdad por valor,Re,record,1
+init,9,datos,B,GA,Propiedades de solo inicialización,Ih,init,1
+Expresiones with,9,datos,C,GA,Copia no destructiva,Wi,with,1
+Instrucciones de nivel superior,9,ergonomia,C,GA,Programas sin Main,Tl,Nivel|superior,1
+Patrones relacionales y lógicos,9,patrones,C,GA,"< > and or not",Pl,and or|not,1
+new con tipo de destino,9,ergonomia,C,GA,List<int> a = new();,Nt,new(),1
+Enteros nativos,9,memoria,C,GA,nint y nuint,Nn,nint,1
+Punteros a función,9,memoria,R,GA,delegate*,Pf,delegate*,1
+SkipLocalsInit,9,memoria,C,GA,Omite poner a cero las variables locales,Sl,SkipLocals,0
+Inicializadores de módulo,9,meta,C,GA,Código al cargar el ensamblado,Mi,Module|Init,0
+Generadores de código,9,meta,C,GA,Añaden código durante la compilación,Sg,Generadores,1
+Retornos covariantes,9,tipos,R,GA,override con un tipo más derivado,Rc,Retorno|covariante,1
+Lambdas estáticas,9,funcional,C,GA,Prohíben la captura,Ls,static|lambda,1
+Métodos parciales ampliados,9,meta,C,GA,Con accesibilidad y retorno,Mx,partial+,0
+record struct,10,datos,C,GA,Registros como tipos de valor,Rt,record|struct,1
+Mejoras en struct,10,tipos,C,GA,Constructor sin parámetros e inicializadores,Ms,struct+,1
+global using,10,ergonomia,C,GA,Importación para todo el proyecto,Gu,global|using,1
+Espacio de nombres de archivo,10,ergonomia,C,GA,namespace X;,Fn,namespace;,1
+Manejadores de interpolación,10,memoria,B,GA,Interpolación sin cadenas temporales,Hd,Handler,1
+Patrones de propiedad extendidos,10,patrones,C,GA,{ A.B: 1 },Pe,A.B:,1
+Tipo natural de lambdas,10,funcional,C,GA,var f = (int x) => x;,Tn,Lambda|natural,1
+CallerArgumentExpression,10,meta,C,GA,Texto del argumento,Ca,Caller|Arg,1
+const interpolado,10,ergonomia,C,GA,Constantes con interpolación,Ko,const $,0
+Miembros static abstract,11,tipos,R,GA,Polimorfismo estático en interfaces,Sb,static|abstract,1
+Matemática genérica,11,tipos,B,GA,INumber<T> y familia,Gm,INumber<T>,1
+Operadores checked definidos,11,tipos,C,GA,operator checked,Oc,checked,0
+Desplazamiento sin signo,11,ergonomia,C,GA,>>>,Dz,>>>,0
+Cadenas sin formato,11,ergonomia,C,GA,"Triple comilla y $$",Rw,Raw|string,1
+Literales UTF-8,11,memoria,C,GA,"""x""u8",Ut,u8,1
+Saltos de línea en interpolación,11,ergonomia,C,GA,Expresiones en varias líneas,Sn,Salto|en $,0
+Patrones de lista,11,patrones,C,GA,[a .. z],Li,[a .. z],1
+required,11,nulos,B,GA,Propiedades obligatorias,Rq,required,1
+Campos ref,11,memoria,R,GA,Referencias dentro de ref struct,Fr,Campos|ref,1
+scoped,11,memoria,C,GA,La referencia no escapa,Sc,scoped,1
+Atributos genéricos,11,meta,C,GA,[Attr<T>],Ag,Attr<T>,1
+Tipos file,11,meta,C,GA,Visibles solo en su archivo,Ft,file,1
+Structs con valor por defecto automático,11,tipos,C,GA,Pone a cero los campos sin asignar,Sd,struct|default,0
+Constructores primarios,12,datos,C,GA,class C(int x),Cp,Const.|primario,1
+Expresiones de colección,12,colecciones,C,GA,[1 2 .. otra],Ex,[ ],1
+Arreglos en línea,12,memoria,R,GA,InlineArray,Ia,Inline|Array,1
+Parámetros por defecto en lambdas,12,funcional,C,GA,(int x = 1) => x,Lp,Lambda|defecto,1
+ref readonly parámetros,12,memoria,C,GA,Exige una variable,Rd,ref|readonly,1
+Alias de cualquier tipo,12,ergonomia,C,GA,using P = (int int);,Al,using|alias,1
+Atributo Experimental,12,meta,B,GA,Marca API experimentales,Xp,Experim.,1
+Interceptores,12,meta,C,GA,Sustituyen llamadas en compilación; estables desde el SDK 9.0.2xx,It,Intercept.,1
+Colecciones params,13,colecciones,C,GA,params Span y otras colecciones,Pc,params|Span,1
+System.Threading.Lock,13,async,B,GA,lock con EnterScope,Lk,Lock,1
+Secuencia de escape \e,13,ergonomia,C,GA,U+001B,Es,\e,1
+Índice desde el final en inicializadores,13,ergonomia,C,GA,[^1] = 0,Fi,[^1],1
+ref en async e iteradores,13,memoria,C,GA,Sin cruzar await ni yield,Ri,ref async,1
+allows ref struct,13,memoria,R,GA,Antirrestricción genérica,Aq,allows,1
+ref struct con interfaces,13,memoria,C,GA,Implementan sin convertirse,Rf,ref struct|interfaz,1
+Propiedades parciales,13,meta,C,GA,Propiedades e indexadores parciales,Pq,partial|prop,1
+OverloadResolutionPriority,13,meta,B,GA,Orienta la resolución de sobrecargas,Or,Priority,1
+Miembros de extensión,14,funcional,C,GA,"Bloques extension: propiedades, estáticos y operadores",Xt,extension,1
+field,14,ergonomia,C,GA,Campo sintetizado de una propiedad,Fd,field,1
+Conversiones implícitas de Span,14,memoria,C,GA,Soporte de primera clase,Ss,Span|implícito,1
+Asignación condicional nula,14,nulos,C,GA,a?.b = c,Cq,?. =,1
+Operadores compuestos definidos,14,memoria,C,GA,operator += en instancia,Op,operator|+=,1
+Modificadores en lambdas simples,14,funcional,C,GA,"(a, out b) => …",Lm,Lambda|out,1
+nameof con genéricos sin enlazar,14,ergonomia,C,GA,nameof(List<>),Nu,nameof|<>,1
+Constructores y eventos parciales,14,meta,C,GA,Completa la serie de partial,Pv,partial|ctor,1
+Directivas de apps de un archivo,14,ergonomia,C,GA,"#:package, #:property y dotnet run app.cs",Fb,#:,1
+Uniones,15,datos,B,RC,union T(A B),Uo,union,1
+Jerarquías cerradas,15,datos,C,RC,closed class,Cc,closed,1
+Argumentos de colección,15,colecciones,C,RC,[with(…) …],Wc,with(…),1
+Indexadores de extensión,15,funcional,C,RC,this[…] en extension,Xi,extension|this[],1
+break y continue con etiqueta,15,ergonomia,C,RC,break externo;,Bl,break|etiqueta,1
+Estáticos de interfaz en runtimes antiguos,15,tipos,C,RC,Sin soporte de DIM,Sv,static|interfaz,1
+Seguridad de memoria,15,memoria,C,Preview,Nuevo modelo de unsafe,Mm,Memory|Safety,1

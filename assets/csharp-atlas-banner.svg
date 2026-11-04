@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" width="1600" height="420" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" role="img" aria-labelledby="bt">
+<title id="bt">C# Atlas · Guía técnica de la evolución del lenguaje C#</title>
+<defs><linearGradient id="bf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B0620"/><stop offset="0.6" stop-color="#1A0B3B"/><stop offset="1" stop-color="#3B1A7A"/></linearGradient><radialGradient id="bh" cx="0.8" cy="0.42" r="0.5"><stop offset="0" stop-color="#9B4F96" stop-opacity="0.45"/><stop offset="1" stop-color="#9B4F96" stop-opacity="0"/></radialGradient><pattern id="bp" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#FFFFFF" fill-opacity="0.05"/></pattern><linearGradient id="bm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C4B5FD"/><stop offset="1" stop-color="#9B4F96"/></linearGradient></defs>
+<rect width="1600" height="420" fill="url(#bf)"/><rect width="1600" height="420" fill="url(#bh)"/><rect width="1600" height="420" fill="url(#bp)"/>
+<g transform="translate(72,70)"><path d="M46 0 L92 26 L92 78 L46 104 L0 78 L0 26 Z" fill="#68217A" fill-opacity="0.55" stroke="url(#bm)" stroke-width="3.5"/><text x="46" y="68" font-size="42" font-weight="700" fill="#F8FAFC" text-anchor="middle">C#</text></g>
+<text x="190" y="118" font-size="72" font-weight="700" fill="#F8FAFC">C# Atlas</text>
+<text x="192" y="162" font-size="26" fill="#DDD6FE">La evolución del lenguaje, versión por versión</text>
+<text x="192" y="198" font-size="19" fill="#A5B4FC">De C# 1 a C# 15 · 154 características · ejemplos compilados · noviembre 2026</text>
+<line x1="90" y1="310" x2="1510" y2="310" stroke="url(#bm)" stroke-width="3"/>
+<circle cx="90" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="90" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 2</text>
+<text x="90" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">Genéricos</text>
+<circle cx="248" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="248" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 3</text>
+<text x="248" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">LINQ</text>
+<circle cx="406" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="406" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 5</text>
+<text x="406" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">async</text>
+<circle cx="563" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="563" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 7</text>
+<text x="563" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">Tuplas</text>
+<circle cx="721" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="721" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 8</text>
+<text x="721" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">string?</text>
+<circle cx="879" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="879" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 9</text>
+<text x="879" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">record</text>
+<circle cx="1037" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="1037" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 11</text>
+<text x="1037" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">INumber</text>
+<circle cx="1194" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="1194" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 12</text>
+<text x="1194" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">[ ]</text>
+<circle cx="1352" cy="310" r="11" fill="#1A0B3B" stroke="#C4B5FD" stroke-width="3"/>
+<text x="1352" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 14</text>
+<text x="1352" y="348" font-size="16" fill="#C4B5FD" text-anchor="middle">extension</text>
+<circle cx="1510" cy="310" r="11" fill="#1A0B3B" stroke="#FACC15" stroke-width="3"/>
+<text x="1510" y="286" font-size="19" font-weight="700" fill="#F8FAFC" text-anchor="middle">C# 15</text>
+<text x="1510" y="348" font-size="16" fill="#FACC15" text-anchor="middle">union</text>
+</svg>

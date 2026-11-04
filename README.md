@@ -1,996 +1,410 @@
-# C-sharp
-C# (pronounced "C-sharp") is a modern, object-oriented programming language developed by Microsoft, designed to run on the .NET platform. It combines the power of C++ with the simplicity of Visual Basic, making it versatile for a wide range of applications, including web, desktop, mobile, gaming, and cloud services.
+<p align="center">
+  <img src="assets/csharp-atlas-banner.svg" alt="C# Atlas: la evolución del lenguaje C#, versión por versión" width="100%">
+</p>
 
-## Table of Contents
-1. [C# Versions and Features](#c-versions-and-features)
-2. [Explanation of Features](#explanation-of-features)
-    - [C# 1.0 Features](#c-10-features)
-    - [C# 2.0 Features](#c-20-features)
-    - [C# 3.0 Features](#c-30-features)
-    - [C# 4.0 Features](#c-40-features)
-    - [C# 5.0 Features](#c-50-features)
-    - [C# 6.0 Features](#c-60-features)
-    - [C# 7.0-7.3 Features](#c-70-73-features)
-    - [C# 8.0 Features](#c-80-features)
-    - [C# 9.0 Features](#c-90-features)
-    - [C# 10.0 Features](#c-100-features)
-    - [C# 11.0 Features](#c-110-features)
-    - [C# 12.0 Features](#c-120-features)
-    - [C# 13.0 Features](#c-130-features)
-    - [C# 14.0 Features](#c-140-features)
-    - [C# 15.0 Preview Features](#c-150-preview-features)
-3. [Creating a Project with .NET CLI](#creating-a-project-with-net-cli)
-4. [Multi Entry Point](#multi-entry-point)
-5. [Additional Resources](#additional-resources)
+<p align="center">
+  <img alt="Actualizado al 4 de noviembre de 2026" src="https://img.shields.io/badge/actualizado-4_nov_2026-68217A?style=for-the-badge">
+  <img alt="Idioma: español" src="https://img.shields.io/badge/idioma-espa%C3%B1ol-2A1272?style=for-the-badge">
+  <img alt="19 capítulos" src="https://img.shields.io/badge/cap%C3%ADtulos-19-9B4F96?style=for-the-badge">
+  <img alt="154 características catalogadas" src="https://img.shields.io/badge/caracter%C3%ADsticas-154-512BD4?style=for-the-badge">
+  <img alt="Ejemplos compilados" src="https://img.shields.io/badge/ejemplos_compilados-140-22D3EE?style=for-the-badge">
+  <img alt="Diagramas Mermaid" src="https://img.shields.io/badge/diagramas-21-F472B6?style=for-the-badge">
+  <img alt="Licencia Apache 2.0" src="https://img.shields.io/badge/licencia-Apache_2.0-34D399?style=for-the-badge">
+</p>
+
+<p align="center">
+  <b>C# Atlas</b> es una guía técnica en español sobre la <b>evolución del lenguaje C#</b>:<br>
+  cada versión, de la 1.0 a la 15, con el problema que resolvía, su código antes y después, su semántica,<br>
+  su costo, sus cambios incompatibles y el runtime y Visual Studio en que debutó, verificado al <b>4 de noviembre de 2026</b>.
+</p>
 
 ---
 
-## C# Versions and Features
+## Contenido
 
-| **Version** | **Release** | **Key Features** |
-| --- | --- | --- |
-| **C# 1.0** | 2002 | Core object-oriented features ( [classes](https://github.com/CristianSifuentes/typesOfClassesCSh), inheritance, [interfaces](https://github.com/CristianSifuentes/abstract-classes-vs-interfaces-csh)      ). |
-| **C# 2.0** | 2005 | Generics, anonymous methods, nullable types, iterators (`yield`). |
-| **C# 3.0** | 2007 | LINQ, extension methods, lambda expressions, automatic properties. |
-| **C# 4.0** | 2010 | Dynamic binding (`dynamic`), named and optional parameters, covariance. |
-| **C# 5.0** | 2012 | Asynchronous programming (`async` and `await`). |
-| **C# 6.0** | 2015 | Expression-bodied members, interpolated strings, null-conditional operators (`?.`). |
-| **C# 7.0-7.3** | 2017-2018 | Tuples, pattern matching, local functions, `ref` returns, `in` parameters. |
-| **C# 8.0** | 2019 | Nullable reference types, async streams, default interface methods. |
-| **C# 9.0** | 2020 | Records, init-only properties, top-level statements, improved pattern matching. |
-| **C# 10.0** | 2021 | Global usings, file-scoped namespaces, enhanced interpolated strings. |
-| **C# 11.0** | 2022 | Raw string literals, list patterns, generic attributes, span improvements. |
-| **C# 12.0** | 2023 | Primary constructors, collection expressions, inline arrays, type aliases, interceptors (experimental). |
-| **C# 13.0** | 2024 | `params` collections, new `System.Threading.Lock` semantics, `\e` escape sequence, ref/unsafe improvements in iterators and async methods, ref structs implementing interfaces, partial properties and indexers. |
-| **C# 14.0** | 2025 | Extension members, null-conditional assignment, `nameof` with unbound generic types, implicit span conversions, simple lambda parameter modifiers, field-backed properties, partial events and constructors, user-defined compound assignment operators. |
-| **C# 15.0** | Preview | Collection expression arguments and union types in .NET 11 preview SDKs. |
-
+- [¿Qué es C#?](#qué-es-c)
+- [Estado actual del lenguaje](#estado-actual-del-lenguaje)
+- [Cómo usar este atlas](#cómo-usar-este-atlas)
+- [El universo C# en un mapa](#el-universo-c-en-un-mapa)
+- [Tabla periódica de características](#tabla-periódica-de-características)
+- [Índice de capítulos](#índice-de-capítulos)
+- [Línea de tiempo: versión a versión](#línea-de-tiempo-versión-a-versión)
+- [Antes y después en una línea](#antes-y-después-en-una-línea)
+- [Las ocho grandes ideas](#las-ocho-grandes-ideas)
+- [C# en cifras](#c-en-cifras)
+- [Qué cambió en 2025–2026](#qué-cambió-en-20252026)
+- [Plazos que no puedes ignorar](#plazos-que-no-puedes-ignorar)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Convenciones](#convenciones)
+- [Metodología y fuentes](#metodología-y-fuentes)
 
 ---
 
-## Explanation of Features
+## ¿Qué es C#?
 
-1. **[C# 1.0](#c-10-features):** Introduced basic OOP features like classes, methods, and inheritance.
-2. **[C# 2.0](#c-20-features):** Introduced generics for reusable data structures.
-3. **[C# 3.0](#c-30-features):** Added LINQ and lambda expressions for querying data collections.
-4. **[C# 4.0](#c-40-features):** Added support for optional parameters and dynamic typing.
-5. **[C# 5.0](#c-50-features):** Simplified asynchronous programming with `async` and `await`.
-6. **[C# 6.0](#c-60-features):** Improved code readability with expression-bodied members and string interpolation.
-7. **[C# 7.0-7.3](#c-70-73-features):** Introduced tuples, pattern matching, and `in` parameters.
-8. **[C# 8.0](#c-80-features):** Introduced nullable reference types and async streams.
-9. **[C# 9.0](#c-90-features):** Introduced records and init-only properties for immutable data.
-10. **[C# 10.0](#c-100-features):** Simplified namespaces with file-scoped syntax.
-11. **[C# 11.0](#c-110-features):** Added raw string literals for cleaner multiline strings.
-12. **[C# 12.0](#c-120-features):** Introduced primary constructors and collection expressions.
-13. **[C# 13.0](#c-130-features):** Expanded `params` beyond arrays, improved locking, and advanced ref-safe programming scenarios.
-14. **[C# 14.0](#c-140-features):** Added extension members, null-conditional assignment, field-backed properties, and more partial-member support.
-15. **[C# 15.0 Preview](#c-150-preview-features):** Introduces preview work on collection expression arguments and union types.
----
+**C#** es un lenguaje de propósito general, con tipado estático y orientado a objetos y a componentes, creado en Microsoft por un equipo que dirigió Anders Hejlsberg y publicado
+en 2002. Compila a un lenguaje intermedio que ejecuta el runtime de .NET, y está estandarizado como **ECMA-334** e **ISO/IEC 23270**. Su compilador, **Roslyn**, es de código abierto y el diseño del
+lenguaje se discute en público en [`dotnet/csharplang`](https://github.com/dotnet/csharplang).
 
-## [C# 1.0 Features](https://github.com/CristianSifuentes/CSharp1) 
-Basic object-oriented programming (OOP) features were introduced, including:
-- **Classes:** Define blueprints for objects. Classes are the fundamental building block in C#. They encapsulate data (fields) and behavior (methods) into a single entry.
-     * Defined using the `class` keyword.
-     * Encapsulate data using fields and properties (`_name` and `Name`).
-     * Support for encapsulation through access modifiers (`public`, `private`, `protected`, etc).
-     * Can contain fields, methods, constructors, and properties.
-     * Enable the creation of objects (instances).
-- **Inheritance:** Allow objects to inherit properties from other classes. Enables a class to inherit members (fields and methods) from another class, promoting code reuse and creating a hierarchical structure.
-     * A class can inherit from one base class (single inheritance).
-     * Use the `: base-class-name` syntax.
-     * Override base class methods using the `virtual` and `override` keywords.
-       ```csharp 
-          public class Animal {
-          public virtual void Speak() {
-               Console.WriteLine("Animal speaks");
-          }
-          }
+Lo que hace singular su historia es que **ha cambiado de paradigma sin romper a sus usuarios**: nació parecido a Java, incorporó programación declarativa con LINQ, popularizó `async`/`await`,
+adoptó *pattern matching* y tipos de datos funcionales, y hoy compite en rendimiento con `Span<T>` y matemática genérica. El código de 2002 sigue compilando.
 
-          public class Dog : Animal {
-          public override void Speak() {
-               Console.WriteLine("Dog barks");
-          }
-          }
-       ```  
-- **Interfaces:** Define contracts for classes to implement. They allow multiple types to share a common API without requiring inheritance.
-     * Declared using the `interface` keyword.
-     * Can only contain method signatures, properties, events, or indexers (no implementation).
-     * A class can implement multiple interfaces.
-       ```csharp 
-          public interface IAnimal {
-          void Speak();
-          }
-
-          public class Dog : IAnimal {
-          public void Speak() {
-               Console.WriteLine("Dog speaks");
-          }
-          }
-       ```     
-- **Polymorphism** Allows objects to be treated as instances of their base type, enabling dynamic behavior at runtime.
-     * Achieved through method overriding (`virtual` and `override` keywords).
-     * Enables late binding using base class references to derived objects.
-- **Encapsulation** Encapsulation hides the internal state of an object and allows controlled access through methods or properties.
-     * Access modifiers (`public`, `private`, `protected`, `internal`).
-     * Use properties to control field access.
-- **Why It Was Significant?** C# 1.0 laid the foundation for what would become one of the most versatile programming languages
-     * It offered a clean and modern syntax, ideal for enterprise and web applications.
-     * It integrated seamlessly with the .NET Framework, enabling rapid development.
-     * Its object-oriented design principles made it intuitive and powerful for developers transitioning from C++ or Java. 
-     * Introduced a modern, type-safe, object-oriented programming paradigm for .NET.
-     * Provided the foundation for the .NET framework with core features like assemblies and namespaces.
-       ```csharp 
-          Dog dog = new Dog();
-          dog.Speak(); // Output: Dog barks
-       ```  
-- **Limitations in C# 1.0** While robust, C# 1.0 lacked some features developers rely on today:
-     * No generics (introduced in C# 2.0).
-     * No support for generics, making type safety in collections cumbersome.
-     * Limited support for anonymous methods and delegates.
-     * Basic error handling without more advanced features like `try-catch-finally`
-     * Asynchronous programming required manual threading:
-       ```csharp 
-          // Without generics:
-          ArrayList list = new ArrayList();
-          list.Add(42);
-          int value = (int)list[0]; // Explicit cast required
-       ```  
-- **Key Takeaways** C# 1.0 introduced the core object-oriented features that define modern programming: encapsulation, inheritance, polymorphism, and abstraction (via interfaces). These concepts remain fundamental to mastering C# and serve as the building blocks for all advanced language features introduced in subsequent versions.
-     * Established the baseline for C# development, focusing on object-oriented principles.
-
-
-## [C# 2.0 Features](https://github.com/CristianSifuentes/CSharp2) 
-Introduced Generics, enabling reusable classes and methods for different data types. Also added iterators with `yield` 
-- **Characteristics:**
-     * Focused on reusability and efficiency.
-     * Compatible with .NET Framework 2.0
-- **Generics:** Enable type-safe data structures and methods.
-     * **Generic Class:** A Generic Class allows you to define a class with placeholders for data types. This makes the class reusable and type-safe without having to rewrite it for different data types.
-          * The class is a generic when that works with any type `T`.
-          * Provides reusable methods.
-            ```csharp 
-               public class GenericClass<T> {
-               public T Data { get; set; }
-
-               public void Display() {
-                    Console.WriteLine($"Data: {Data}");
-               }
-               }
-
-               // Usage
-               var intInstance = new GenericClass<int> { Data = 42 };
-               intInstance.Display(); // Output: Data: 42
-
-               var stringInstance = new GenericClass<string> { Data = "Hello" };
-               stringInstance.Display(); // Output: Data: Hello
-
-            ```             
-     * **Generic Methods:** A Generic Method allows you to create a method that can operate on different data types without duplicating code. These methods are defined with type parameters.
-          * Reusable methods that work with any data type `T`. 
-            ```csharp 
-               public class Utility {
-               public static void PrintArray<T>(T[] array) {
-                    foreach (var item in array) {
-                         Console.WriteLine(item);
-                    }
-               }
-               }
-
-               // Usage
-               Utility.PrintArray(new int[] { 1, 2, 3 }); // Output: 1 2 3
-               Utility.PrintArray(new string[] { "A", "B", "C" }); // Output: A B C
-
-            ``` 
-     * **Generic Interfaces:** A Generic Interface defines an interface with type parameters, making it flexible for different implementations.
-          * A Generic interface defines a contract for comparing two objects of type `T`.
-          * Flexible contract for various implementations.
-            ```csharp 
-               public interface IRepository<T> {
-               void Add(T item);
-               T Get(int id);
-               }
-
-               public class Repository<T> : IRepository<T> {
-               private readonly Dictionary<int, T> _data = new();
-
-               public void Add(T item) {
-                    _data[_data.Count + 1] = item;
-               }
-
-               public T Get(int id) {
-                    return _data.ContainsKey(id) ? _data[id] : default;
-               }
-               }
-
-               // Usage
-               var intRepo = new Repository<int>();
-               intRepo.Add(42);
-               Console.WriteLine(intRepo.Get(1)); // Output: 42
-
-               var stringRepo = new Repository<string>();
-               stringRepo.Add("Hello");
-               Console.WriteLine(stringRepo.Get(1)); // Output: Hello
-
-            ``` 
-     * **Custom Generic Type:** User-defined types like structs, delegates, or classes leveraging generics for type safety and reusability.
-          * A Custom Generic Type is any user-defined type (class, struct, or delegate) that uses generics for flexibility and type safety.
-             * **Custom Generic Delegate:**
-               ```csharp 
-                    public delegate T Operation<T>(T a, T b);
-
-                    // Usage
-                    Operation<int> add = (a, b) => a + b;
-                    Console.WriteLine(add(3, 4)); // Output: 7
-
-                    Operation<string> concatenate = (a, b) => a + b;
-                    Console.WriteLine(concatenate("Hello", " World")); // Output: Hello World
-               ``` 
-             * **Custom Generic Struct:**
-               ```csharp 
-                    public struct KeyValuePair<K, V> {
-                    public K Key { get; set; }
-                    public V Value { get; set; }
-
-                    public void Display() {
-                         Console.WriteLine($"Key: {Key}, Value: {Value}");
-                    }
-                    }
-
-                    // Usage
-                    var pair = new KeyValuePair<int, string> { Key = 1, Value = "One" };
-                    pair.Display(); // Output: Key: 1, Value: One
-
-               ``` 
-     * **Why Generics Are Important:**
-         * **Type Safety:** Prevents runtime errors by ensuring type correctness at compile time.
-         * **Performance:** Avoid boxing and unboxing for value types.
-         * **Reusability:** Write once, reuse across different types.
-- **Anonymous Methods:** Anonymous methods are inline methods defined without a name, often used with delegates. They provide a way to create short, concise methods directly in the context where they are needed, reducing the need to define separate methods.
-     * Define inline unnamed functions.
-       ```csharp 
-               Action<string> print = delegate (string message) {
-               Console.WriteLine(message);
-               };
-               print("Hello");
-       ```  
-- **Nullable Types:** Nullable types allow value types (like `int`, `bool`, `DateTime`) to hold null values, enabling better handling of scenarios where "no value" is meaningful.
-     * Handle `null` for value types.
-       ```csharp 
-               int? nullableInt = null;
-               Console.WriteLine(nullableInt.HasValue); // Output: False
-       ```  
-- **Iterators (`yield`):** Iterators are methods that use the yield keyword to return a sequence of elements one at a time. They simplify the creation of custom enumerators.
-     * Simplify collection iteration.
-       ```csharp 
-               public IEnumerable<int> GetNumbers() {
-               for (int i = 1; i <= 5; i++) {
-                    yield return i;
-               }
-               }
-       ```  
-- **Why It Was Significant:**
-     * Made generic programming robust and type-safe.
-     * Enhanced support for collections and algorithms.
-     * Enhanced type safety and performance with generics:
-       ```csharp 
-          Dictionary<string, int> dictionary = new Dictionary<string, int> {
-          { "One", 1 },
-          { "Two", 2 }
-          };
-       ```  
-- **Limitations:**
-     * Generics were limited in runtime reflection capabilities.
-     * No generic support for primitive types in runtime.
-     * LINQ and advanced functional programming capabilities were not yet introduced.
-- **Takeaways:**
-     * Laid the foundation for LINQ and advanced data handling in the future versions.
-     * Generics transformed type-safe data structures and algorithms.
-
----
-## [C# 3.0 Features](https://github.com/CristianSifuentes/CSharp3) 
-- **Characteristics:**
-     * Focused on `data manipulation and expressive code`.  
-     * Compatible with .NET Framework 3.0.
-- **LINQ:** Is a powerful feature in C# that enables querying data from in-memory collections, databases, XML, and more using a unified, type-safe syntax. It integrates query capabilities directly into the language.
-     * Query data collections in a SQL-like manner
-       ```csharp 
-          var numbers = new List<int> { 1, 2, 3, 4, 5 };
-          var evens = from num in numbers
-                    where num % 2 == 0
-                    select num;
-       ```  
-- **Lambda Expressions:** Lambda expressions are concise, inline expressions or functions that can be passed as arguments to methods or used in LINQ queries. They are defined using the `=>` (goes to) operator.
-     * Simplify the syntax for anonymous functions.
-       ```csharp 
-          // Inline function to calculate square
-          Func<int, int> square = x => x * x;
-          Console.WriteLine(square(5)); // Output: 25
-
-          // Used in LINQ queries
-          var numbers = new List<int> { 1, 2, 3, 4, 5 };
-          var evens = numbers.Where(n => n % 2 == 0);
-          foreach (var num in evens) {
-          Console.WriteLine(num); // Output: 2, 4
-          }
-
-       ```  
-- **Extension Methods:** Add new methods to existing types without modifying them.
-     * Extension methods allow developers to add new methods to existing types (classes, structs, interfaces) without modifying the source code or creating a derived type.
-       ```csharp 
-          public static class StringExtensions {
-          public static bool IsNullOrEmpty(this string value) {
-               return string.IsNullOrEmpty(value);
-          }
-          }
-          Console.WriteLine("".IsNullOrEmpty()); // Output: True
-       ``` 
-- **Automatic Properties:** Automatic properties simplify the declaration of properties by automatically generating a backing field.
-     * Simplify property declarations.
-       ```csharp 
-          public class Person {
-          public string Name { get; set; }
-          public int Age { get; private set; }
-
-          public Person(int age) {
-               Age = age;
-          }
-          }
-          // Usage
-          var person = new Person(30) { Name = "Alice" };
-          Console.WriteLine($"{person.Name}, {person.Age}"); // Output: Alice, 30
-       ```       
-- **Why It Was Significant:**
-     * Unified querying across different data sources (SQL, XML, etc.).
-     * Improved code readability and consistency.
-     * LINQ unified data querying across in-memory collections, databases, and XML:
-       ```csharp 
-          var names = new[] { "Alice", "Bob", "Charlie" };
-          var filtered = names.Where(name => name.StartsWith("A"));
-       ``` 
-- **Limitations:**
-     * LINQ queries can have performance overhead.
-     * Complex scenarios required manual optimization.
-     * Asynchronous LINQ operations were not supported.
-- **Takeaways:**
-     * Established LINQ as the standard for querying and data handling.
-     * Revolutionized data querying and manipulation within C#.
-
----
-## [C# 4.0 Features](https://github.com/CristianSifuentes/CSharp4) 
-- **Dynamic Binding (`dynamic`):** Allow dynamic types for runtime flexibility.
-     * The `dynamic` keyword allows variables to bypass compile-time type checking, deferring it to runtime.
-     * Useful for scenarios where the type is unknown until runtime, such as COM interop or working with dynamic languages like Python.
-       ```csharp 
-          dynamic obj = "Hello";
-          Console.WriteLine(obj.Length); // Output: 5
-       ```  
-
-- **Named and Optional Parameters:** Simplify method calls with optional arguments.
-     * Optional parameters allow specifying default values for method parameters.
-     * Named parameters let you specify arguments by name instead of position, enhancing readability.
-       ```csharp 
-          void Print(string message, bool urgent = false) {
-          Console.WriteLine(urgent ? "URGENT: " + message : message);
-          }
-          Print("Hello", urgent: true);
-       ```  
-- **Covariance and Contravariance:** Enhance type safety in generics and delegates.
-     * Allows a method or interface to return a more derived type than specified in its declaration.
-     * Introduced with the `out` keyword for generic type parameters in interfaces and delegates.
-- **Why It Was Significant?:** 
-     * Simplified interoperation with dynamic libraries (e.g., COM and Python).
-- **Limitations:**
-     * Overuse of `dynamic` could lead to runtime errors.
-- **Key Takeaways:**
-     * Enhanced flexibility for dynamic scenarios and simplified APIs.
-
----
-## [C# 5.0 Features](https://github.com/CristianSifuentes/CSharp5) 
-- **Async and Await:** Simplify asynchronous programming with cleaner syntax.
-     * `async`: Marks a method as asynchronous.
-     * `await`: Suspends the execution of the method until the awaited task is complete, without blocking the main thread.
-       ```csharp 
-          public async Task<int> GetDataAsync() {
-          await Task.Delay(1000);
-          return 42;
-          }
-       ```      
-- **Task-Based Asynchronous Pattern (TAP):** 
-     * The program users `Task` and `Task<T>` to represent asynchronous operations.
-     * Asynchronous methods return a `Task` or `Task<T>`
-- **Sequential vs Parallel Execution:** 
-     * Sequential execution (using `Result`) blocks the main thread until a task completes.
-     * Parallel execution (using `await`) allows other tasks to run concurrently without blocking
-- **Asynchronous Methods Returning Values:**
-     * Demonstrates using Task<T> to return a computed value asynchronously.
-- **Real-World Scenarios:**
-     * Fetching data for multiple URLs.
-     * Offloading CPU-bound task (e.g., calculating factorials) to background threads.
-- **Caller Information Attributes:**
-     * Provide information about the caller to methods
-       ```csharp 
-          void Log(string message, [CallerMemberName] string memberName = "") {
-          Console.WriteLine($"[{memberName}]: {message}");
-          }
-       ```   
-- **Why These Features Are Important?** 
-     * Improved Responsiveness:
-          * Async/await enables non-blocking operations, making applications more responsive.
-     * Simplified Asynchronous Code:
-          * Async/await eliminates the need for complex callback structures, making asynchronous programming more intuitive.
-     * Real-World Usability:
-          * Ideal for I/O-bound tasks (e.g., web requests, file I/O) and CPU-bound tasks offloaded to background threads.
-- **Why It Was Significant?:** 
-     * Simplified asynchronous programming, making it more accessible and readable.
-- **Limitations:**
-     * Could lead to deadlocks if misused in certain synchronization contexts.
-- **Key Takeaways:**
-     * Set the standard for modern asynchronous programming.
-
----
-## [C# 6.0 Features](https://github.com/CristianSifuentes/CSharp6) 
-- **Expression-Bodied Members:** Simplify methods and properties. 
-     * Reduces boilerplate code, making it more concise and readable.
-     * Allows concise definitions for methods, properties, and constructors.
-       ```csharp 
-          public class Person {
-          public string Name { get; set; }
-          public string GetName() => $"Name: {Name}";
-          }
-       ``` 
-- **String Interpolation:** Enhance string formatting with embedded expressions. 
-     * Allows embedding expressions directly in string literals using `$"..."`.
-     * Simplifies string formatting, improving clarity and maintainability.
-       ```csharp 
-          string name = "Alice";
-          int age = 30;
-          Console.WriteLine($"Name: {name}, Age: {age}");
-       ``` 
-- **Null-Conditional Operators (`?.`):** Simplify null checks in code. 
-     * Simplifies null checks by safely accessing members of an object without throwing a `NullReferenceException`.
-     * Enhances safety and reduces repetitive null checks. 
-       ```csharp 
-          string? message = null;
-          int length = message?.Length ?? 0;
-          Console.WriteLine(length); // Output: 0
-       ``` 
-- **Null-Coalescing Operator (`??`):** Provides a fallback value when a nullable expression evaluates to null.
-     * Provides a fallback value when a nullable expression evaluates to null.
-- **Static `using` Directives:** Provides a fallback value when a nullable expression evaluates to null.
-       ```csharp 
-          using static System.Console;
-          WriteLine("Hello World!");
-       ``` 
-- **Why It Was Significant?:** 
-     * Simplified and modernized syntax, reducing boilerplate code.
-       ```csharp 
-          string name = "Bob";
-          Console.WriteLine($"Hello, {name}!"); // Output: Hello, Bob!
-       ``` 
-- **Limitations:**
-     * Focused mainly on syntactic sugar; no significant performance improvements. 
-- **Key Takeaways:**
-     * Enhanced developer productivity and readability with concise syntax.
-
----
-## [C# 7.0-7.3 Features](https://github.com/CristianSifuentes/CSharp7) 
-- **Tuples:** Return multiple values from methods with ease.
-     * Provides a quick way to handle multiple return values without defining custom types.
-     * Tuples provide a lightweight way to return multiple values from a method. 
-       ```csharp 
-          (int x, int y) point = (3, 4);
-          Console.WriteLine($"X: {point.x}, Y: {point.y}");
-       ``` 
-- **Pattern Matching:** Simplify conditional checks with patterns.
-     * Simplifies conditional logic, making code more expressive and type-safe.
-     * Simplifies type-checking and conditional logic with `is` and `switch`. 
-       ```csharp 
-          object obj = 42;
-          if (obj is int number) {
-          Console.WriteLine($"The number is {number}");
-          }
-       ``` 
-- **Local Functions:** Define functions inside methods for better encapsulation.
-     * Encapsulates functionality within a method for better readability and maintainability.
-     * Functions declared within a method, useful for encapsulating logic.
-       ```csharp 
-          void PrintMessage(string message) {
-          Console.WriteLine(message);
-          }
-          PrintMessage("Hello");
-
-       ``` 
-- **`Ref` Returns and `In` Parameters:** Optimize memory usage in performance-critical code.
-     * Allows returning a reference to a variable or array element, enabling modifications to the original source.
-     * Enables efficient updates to data structures without copying values.
-     * Improves performance for large structures by avoiding unnecessary copying.
-     * Passes arguments by reference for performance without allowing modifications.
-       ```csharp 
-          public ref int Find(int[] numbers, int value) {
-          for (int i = 0; i < numbers.Length; i++) {
-               if (numbers[i] == value) return ref numbers[i];
-          }
-          throw new Exception("Not found");
-          }
-
-       ``` 
-- **Why It Was Significant?:** 
-     * Introduced functional programming capabilities and advanced syntax for modern programming paradigms.
-       ```csharp 
-          var (x, y) = (10, 20);
-          Console.WriteLine($"X: {x}, Y: {y}");
-       ``` 
-- **Limitations:**
-     * Pattern matching was basic compared to other functional languages like F#.
-- **Key Takeaways:**
-     * Expanded the versatility of the language with functional programming elements.
----
-## [C# 8.0 Features](https://github.com/CristianSifuentes/CSharp8) 
-- **Nullable Reference Types:** Improve null safety by distinguishing nullable and non-nullable types. 
-     * Adds compile-time safety for null reference handling. 
-     * Introduced to make reference types nullable explicitly, reducing potential NullReferenceException.
-     * Nullable reference types are denoted with a `?` (e.g., `string?`).
-     * Non-nullable reference types must be initialized and cannot be assigned `null`.
-     * Reduces potential bugs from unhandled null references.
-       ```csharp 
-          string? nullable = null;
-          Console.WriteLine(nullable?.Length); // Safe null access
-       ``` 
-- **Async Streams:** Simplify asynchronous data streaming with `IAsyncEnumerable`.
-     * Enables asynchronous iteration over a collection of data using `IAsyncEnumerable<T>`. 
-     * Combines `async` and `yield` return to produce values asynchronously.
-     * Enables efficient handling of asynchronous data streams, useful for real-time applications, APIs, and data processing.
-       ```csharp 
-          public async IAsyncEnumerable<int> GenerateNumbers() {
-          for (int i = 1; i <= 5; i++) {
-               await Task.Delay(100); // Simulate async work
-               yield return i;
-          }
-          }
-       ``` 
-- **Default Interface Methods:** Provide default implementations for interface methods. 
-     * Allows interfaces to define default implementations for methods, reducing the need for implementing boilerplate code in derived classes.
-     * Simplifies the evolution of interfaces by allowing default behavior, reducing breaking changes when adding new methods.
-       ```csharp 
-          public interface ILogger {
-          void Log(string message);
-          void LogError(string error) => Console.WriteLine($"Error: {error}");
-          }
-       ``` 
-- **Why It Was Significant?:** 
-     * Addressed null safety comprehensively, making codebases more reliable:
-       ```csharp 
-          string? nullableName = null;
-          Console.WriteLine(nullableName ?? "Unknown");
-       ```
-- **Limitations:**
-     * Enabling nullable reference types required significant codebase changes.
-- **Key Takeaways:**
-     * Brought reliability and scalability to modern codebases with null safety and async streams.
----
-## [C# 9.0 Features](https://github.com/CristianSifuentes/CSharp9) 
-- **Records:** Simplify immutable data structures. 
-     * Introduced for immutable data models.
-     * Records provide built-in value equality, meaning two records are considered equal if their properties have the same values.
-     * Supports `with` expressions for creating a modified copy of a record.
-     * Ideal for creating immutable data models with concise syntax. 
-     * Built-in equality checks simplify comparisons.
-       ```csharp 
-          public record Person(string Name, int Age);
-          var person = new Person("Alice", 25);
-          Console.WriteLine(person);
-       ``` 
-- **Init-Only Properties:** Set properties during initialization only. 
-     * Allows properties to be initialized only during object creation or initialization.
-     * Immutable after initialization, enhancing safety and clarity.
-     * Enforces immutability after initialization, making code safer and easier to maintain.
-       ```csharp 
-          public class Person {
-          public string Name { get; init; }
-          }
-          var person = new Person { Name = "Alice" };
-       ``` 
-- **Top-Level Statements:** Write minimal code for simple applications. 
-     * Simplifies console applications by removing boilerplate Main method and class.
-     * Useful for small programs or educational purposes.
-     * Removes boilerplate for simpler scripts and educational use cases.
-       ```csharp 
-          Console.WriteLine("Hello World!");
-       ``` 
-- **Improved Pattern Matching:** Enhance readability with logical patterns. 
-     * Adds support for positional patterns, property patterns, and combinatorial logic.
-     * Enables more expressive and powerful matching scenarios.
-       ```csharp 
-          object obj = "Hello";
-          if (obj is string s && s.Length > 3) {
-          Console.WriteLine(s);
-          }
-       ``` 
-- **Why It Was Significant?:** 
-  * Simplified immutable data patterns with records:
-       ```csharp 
-          var alice = new Person("Alice", 30);
-          Console.WriteLine(alice); // Output: Person { Name = Alice, Age = 30 }
-       ```  
-- **Limitations:**
-  * Limited support for advanced functional paradigms compared to other languages like F#.
-- **Key Takeaways:**
-  * Advanced immutability and concise code structures for modern applications.
----
-## [C# 10.0 Features](https://github.com/CristianSifuentes/CSharp10) 
-- **Global Usings:** Simplify common `using` directives across the project. 
-  * Introduced to reduce boilerplate by allowing common using directives to be shared across the entire project.
-  * Reduces repetitive imports across files in a project, simplifying code maintenance.
-     ```csharp 
-          global using System;
-          global using System.Collections.Generic;
-     ```  
-- **File-Scoped Namespaces:** Reduce indentation for better readability. 
-  * Simplifies namespace declarations by removing the need for braces and indentation.
-  * Improves code readability by reducing indentation and unnecessary braces.
-     ```csharp 
-          namespace MyApp;
-
-          public class Program {
-          public static void Main() {
-               Console.WriteLine("Hello World!");
-          }
-          }
-     ```  
-- **Enhanced Interpolated Strings:** Improve string formatting capabilities. 
-  * Enhances string formatting within interpolated strings, including alignment and formatting options.
-  * Adds powerful formatting options directly into string interpolation, making code cleaner and easier to write.
-     ```csharp 
-          var value = 42;
-          Console.WriteLine($"The value is {value:N}");
-     ```  
-- **Why It Was Significant?:** 
-  * Improved project-wide consistency and code organization:
-     ```csharp 
-          // File-scoped namespaces reduce indentation clutter.
-          namespace MyNamespace;
-
-          public class MyClass {
-          public void MyMethod() => Console.WriteLine("Hello");
-          }
-     ```    
-- **Limitations:**
-  * Focused mainly on usability and organization; fewer runtime performance enhancements.
-- **Key Takeaways:**
-  * Simplified project configuration and improved developer experienced for larger teams.
----
-## [C# 11.0 Features](https://github.com/CristianSifuentes/CSharp11) 
-- **Raw String Literals:** Simplify multiline and escape-heavy strings. 
-  * Allow multi-line strings that preserve formatting and whitespace exactly as written.
-  * Triple quotes `(""")` denote raw string literals.
-  * Simplify working with multi-line text and preserve formatting, making code cleaner and easier to maintain.
-     ```csharp 
-          string rawString = """
-          This is a raw string.
-          It preserves indentation and formatting.
-          """;
-          Console.WriteLine(rawString);
-     ```
-- **List Patterns:** Match and deconstruct elements in lists easily. 
-  * Enable matching and deconstructing arrays or lists into specific patterns.
-  * Supports the `..` operator for slicing and `_` for ignoring elements.
-  * Enable expressive pattern matching for collections, improving readability and reducing boilerplate code.
-     ```csharp 
-          int[] numbers = { 1, 2, 3, 4, 5 };
-          if (numbers is [1, 2, .., 5]) {
-          Console.WriteLine("Pattern matched!");
-          }
-     ```
-- **Generic Attributes:** Support generic types in attributes. 
-   * Allow attribute to take generic types, making them more flexible and reusable.
-   * Enhance the flexibility of attributes, allowing them to adapt to different types dynamically.
-     ```csharp 
-          public class MyAttribute<T> : Attribute { }
-
-          [MyAttribute<int>]
-          public class MyClass { }
-     ```
-- **Span Improvements:** Optimize memory and performance for `Span` and `Memory`. 
-   * `Span<T>` and `ReadOnlySpan<T>` enable efficient slicing of strings or arrays without allocations.
-   * Improve performance for string and array manipulation by avoiding unnecessary allocations.
-     ```csharp 
-          Span<int> span = stackalloc int[] { 1, 2, 3 };
-          foreach (var num in span) {
-          Console.WriteLine(num);
-          }
-     ```
-- **Why It Was Significant?:** 
-   * Made working with strings, patterns, and generics more expressive and concise:
-     ```csharp 
-          string json = """
-          {
-          "Name": "Alice",
-          "Age": 30
-          }
-          """;
-          Console.WriteLine(json);
-     ```   
-- **Limitations:**
-   * Generic attributes still have limited scenarios compared to runtime-based attribute logic.
-- **Key Takeaways:**
-   * Enhanced the expressiveness of the language, particularly for raw strings and pattern matching.
----
-## [C# 12.0 Features](https://github.com/CristianSifuentes/CSharp12) 
-- **Primary Constructors in Non-Record Classes and Structures:** Declare constructors directly in class headers. 
-    * Allows defining constructor parameters directly in the class or struct declaration.
-    * Simplifies code by integrating constructor parameters into the class or struct declaration.
-      ```csharp 
-          public class Person(string name, int age) {
-          public string Name { get; } = name;
-          public int Age { get; } = age;
-          }
-          var person = new Person("Alice", 30);
-          Console.WriteLine(person.Name); // Output: Alice
-      ```
-- **Collection Expressions:** Simplify collection initialization and manipulation. 
-    * Provides a clean and concise syntax for initializing arrays and collections.
-    * Enhances readability and reduces boilerplate when initializing collections.
-      ```csharp 
-          var numbers = [1, 2, 3, 4];
-          Console.WriteLine(numbers[2]); // Output: 3
-      ```
-- **Inline Arrays:** Define array literals inline for better readability. 
-    * Allows defining a fixed-size array directly within a structure.
-    * Improves performance and simplifies the definition of fixed-size data structures.
-      ```csharp 
-          int[] array = [1, 2, 3, 4];
-      ```    
-- **Using Aliases for Any Type:** Provide meaningful names for complex types. 
-    * Extends using directives to alias any type, improving code clarity and maintainability.
-    * Improves code clarity by providing custom, meaningful names for complex types.
-      ```csharp 
-          using MyString = System.String;
-
-          MyString message = "Hello, world!";
-          Console.WriteLine(message);
-      ```    
-- **Interceptors (Experimental):** Add hooks for method execution control. 
-    * Enables advanced scenarios like logging, validation, or security checks dynamically.
-    * Allows dynamically intercepting method calls to modify their behavior.
-    * Allows developers to intercept and modify method behavior (currently experimental and subject to change).
-- **Why It Was Significant?:** 
-    * Simplified object initialization and collection handling.
-    * Reduced boilerplate for data-centric applications.
-      ```csharp 
-          var matrix = [[1, 2], [3, 4], [5, 6]];
-          foreach (var row in matrix) {
-          Console.WriteLine(string.Join(", ", row));
-          }
-      ```   
-- **Limitations:** Benefits mostly data-heavy applications.
-    * Experimental features may undergo changes in future updates.
-    * Experimental features like interceptors are not finalized and may change in future versions.
-- **Key Takeaways:** Ideal for modern, clean, and scalable architectures.
-    * Focused on simplifying object-oriented and collection-based programming.
-    * Focused on improving the ease of working with collections and simplifying object-oriented patterns.
-
+> [!IMPORTANT]
+> **Este atlas se organiza por versiones del lenguaje, no por versiones de .NET.** C# 14 y .NET 10 están relacionados, pero son cosas distintas: consulta
+> [01 · El modelo de versiones](docs/01-modelo-de-versiones.md).
 
 ---
 
-## [C# 13.0 Features](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-13) 
-- **`params` Collections:**
-  * Extends `params` beyond arrays to other recognized collection types, including `Span<T>`, `ReadOnlySpan<T>`, and supported collection interfaces.
-  * Helps API authors offer allocation-conscious call patterns without separate overloads for every collection shape.
-    ```csharp
-    void Print(params ReadOnlySpan<int> values)
+## Estado actual del lenguaje
+
+| | Versión | Runtime | Estado al 4-nov-2026 |
+|---|---|---|---|
+| 🟢 **Estable** | **C# 14** | .NET 10 LTS (soporte hasta el 14-nov-2028) | Recomendada para producción |
+| 🟡 **Próxima** | **C# 15** | .NET 11, en RC3 con licencia *go-live* | Disponibilidad general prevista en noviembre de 2026 |
+| 🟣 ***Preview*** | `LangVersion=preview` | SDK de .NET 11 | Modelo de seguridad de memoria: no apto para producción |
+
+---
+
+## Cómo usar este atlas
+
+| Si eres… | Empieza por | Sigue con | Termina en |
+|---|---|---|---|
+| **Nuevo en C#** | [02 · C# 1](docs/02-csharp-1-cimientos.md) | [14 · Hilos evolutivos](docs/14-hilos-evolutivos.md) | [19 · Referencia](docs/19-referencia-rapida-y-glosario.md) |
+| **Desarrollador/a con experiencia** | [12 · C# 14](docs/12-csharp-14-extensiones.md) y [13 · C# 15](docs/13-csharp-15-uniones.md) | [16 · Decisiones](docs/16-guias-de-decision.md) | [15 · Bajo el capó](docs/15-bajo-el-capo-y-rendimiento.md) |
+| **Arquitecto/a** | [01 · Modelo de versiones](docs/01-modelo-de-versiones.md) | [16 · Decisiones](docs/16-guias-de-decision.md) | [18 · Migración](docs/18-migracion-y-ciclo-de-vida.md) |
+| **Quien migra código antiguo** | [18 · Migración](docs/18-migracion-y-ciclo-de-vida.md) | Capítulo de cada versión que cruces | [17 · Catálogo](docs/17-catalogo-a-z.md) |
+| **Interesado en rendimiento** | [15 · Bajo el capó](docs/15-bajo-el-capo-y-rendimiento.md) | [07 · `Span<T>`](docs/07-csharp-7-tuplas-patrones-y-ref.md#8-c-72-spant-y-la-familia-ref) | [10 · C# 11](docs/10-csharp-11-matematica-generica.md) |
+
+```mermaid
+flowchart LR
+    M["01<br/>Modelo de<br/>versiones"] --> F["02–05<br/>Fundación:<br/>C# 1 a 5"]
+    F --> A["06–08<br/>Apertura:<br/>C# 6 a 8"]
+    A --> Y["09–13<br/>Ciclo anual:<br/>C# 9 a 15"]
+    Y --> T["14–16<br/>Hilos, internos<br/>y decisiones"]
+    T --> R["17–19<br/>Catálogo, migración<br/>y referencia"]
+    classDef base fill:#2A1272,color:#fff,stroke:#150838
+    classDef era fill:#68217A,color:#fff,stroke:#3B0F47
+    classDef tr fill:#00B7C3,color:#04121a,stroke:#006B74
+    classDef ref fill:#512BD4,color:#fff,stroke:#2A1272
+    class M base
+    class F,A,Y era
+    class T tr
+    class R ref
+```
+
+---
+
+## El universo C# en un mapa
+
+```mermaid
+mindmap
+  root((C#))
+    Tipos
+      class y struct
+      Genéricos
+      Interfaces por defecto
+      static abstract
+      Matemática genérica
+    Datos
+      Tuplas
+      record
+      required
+      Constructores primarios
+      union y closed
+    Funciones
+      Delegados
+      Lambdas
+      LINQ
+      Miembros de extensión
+    Patrones
+      Tipo y constante
+      switch expresión
+      Relacionales y lógicos
+      Listas
+      Exhaustividad
+    Nulabilidad
+      T?
+      Operadores ?. ?? ??=
+      string?
+      Asignación condicional
+    Asincronía
+      async y await
+      ValueTask
+      IAsyncEnumerable
+      Runtime Async
+    Memoria
+      Span
+      ref struct
+      Campos ref
+      InlineArray
+      Seguridad de memoria
+    Compilador
+      Roslyn
+      Analizadores
+      Generadores
+      Interceptores
+      Native AOT
+```
+
+---
+
+## Tabla periódica de características
+
+Las características más relevantes, una columna por versión del lenguaje y un color por familia. El catálogo completo tiene 154 entradas. Haz clic para ver el póster a tamaño completo.
+
+<p align="center">
+  <a href="assets/csharp-atlas-tabla-periodica.svg">
+    <img src="assets/csharp-atlas-tabla-periodica.svg" alt="Tabla periódica de las características de C#, edición noviembre 2026" width="100%">
+  </a>
+</p>
+
+> [!TIP]
+> El póster y el [catálogo A–Z](docs/17-catalogo-a-z.md) se generan desde [`data/caracteristicas.csv`](data/caracteristicas.csv)
+> con `python3 tools/generar_atlas.py`. Para actualizar una entrada, edita una fila y vuelve a ejecutar el script.
+
+---
+
+## Índice de capítulos
+
+| # | Capítulo | Lo que encontrarás | Protagonistas |
+|---|---|---|---|
+| 01 | [**El modelo de versiones**](docs/01-modelo-de-versiones.md) | Lenguaje, compilador, biblioteca, runtime e IDE; tabla maestra; `LangVersion`; estandarización | `LangVersion`, TFM |
+| 02 | [C# 1.0 y 1.2: los cimientos](docs/02-csharp-1-cimientos.md) | Sistema de tipos, *boxing*, propiedades, delegados, eventos, polimorfismo, atributos | `class`, `struct`, `event` |
+| 03 | [C# 2.0: los genéricos](docs/03-csharp-2-genericos.md) | Reificación frente a borrado de tipos, restricciones, iteradores, `T?`, clausuras | `List<T>`, `yield` |
+| 04 | [C# 3.0: LINQ](docs/04-csharp-3-linq.md) | Lambdas, extensiones, consultas, ejecución diferida, árboles de expresión | LINQ, `var` |
+| 05 | [C# 4.0 y 5.0: dinamismo y asincronía](docs/05-csharp-4-5-dinamismo-y-asincronia.md) | `dynamic`, varianza, máquina de estados, reglas de producción, cambio en `foreach` | `async`, `await` |
+| 06 | [C# 6.0: Roslyn](docs/06-csharp-6-roslyn.md) | El compilador como plataforma, `?.`, interpolación, `nameof`, filtros de excepción | Roslyn, `?.` |
+| 07 | [C# 7.0–7.3: tuplas, patrones y `ref`](docs/07-csharp-7-tuplas-patrones-y-ref.md) | Tuplas, deconstrucción, funciones locales, `Span<T>`, copia defensiva | `Span<T>`, `in` |
+| 08 | [C# 8.0: nulabilidad y flujos asíncronos](docs/08-csharp-8-nulabilidad-y-streams.md) | `string?`, patrones recursivos, `IAsyncEnumerable<T>`, rangos, interfaces por defecto | `string?`, `switch` |
+| 09 | [C# 9 y 10: `record`](docs/09-csharp-9-10-records.md) | `record`, `init`, patrones lógicos, generadores, `global using`, manejadores de interpolación | `record`, `with` |
+| 10 | [C# 11: matemática genérica](docs/10-csharp-11-matematica-generica.md) | `static abstract`, `INumber<T>`, cadenas sin formato, patrones de lista, campos `ref` | `INumber<T>`, `required` |
+| 11 | [C# 12 y 13: colecciones](docs/11-csharp-12-13-colecciones.md) | Constructores primarios, `[…]`, interceptores, `params` de colección, `Lock`, `allows ref struct` | `[…]`, `Lock` |
+| 12 | [**C# 14: miembros de extensión**](docs/12-csharp-14-extensiones.md) | `extension`, `field`, `Span` implícito, `?.=`, `operator +=`, aplicaciones de un archivo | `extension`, `field` |
+| 13 | [**C# 15: uniones**](docs/13-csharp-15-uniones.md) | `union`, `closed`, `with(...)`, saltos con etiqueta, seguridad de memoria, lo que viene | `union`, `closed` |
+| 14 | [Hilos evolutivos](docs/14-hilos-evolutivos.md) | Un mismo programa en cinco épocas; patrones, datos, memoria y más, a través del tiempo | — |
+| 15 | [Bajo el capó y rendimiento](docs/15-bajo-el-capo-y-rendimiento.md) | Traducción del compilador, mapa de costos, seguridad de referencias, Native AOT, caso real | — |
+| 16 | [Guías de decisión](docs/16-guias-de-decision.md) | Árboles para datos, uniones, errores, colecciones, concurrencia, versión y TFM | — |
+| 17 | [Catálogo A–Z](docs/17-catalogo-a-z.md) | 154 características con versión, familia, requisito y estado | Todas |
+| 18 | [Migración y ciclo de vida](docs/18-migracion-y-ciclo-de-vida.md) | Soporte de .NET, método de migración, cambios incompatibles versión por versión | — |
+| 19 | [Referencia rápida y glosario](docs/19-referencia-rapida-y-glosario.md) | CLI, varios puntos de entrada, operadores, código del repositorio y glosario | — |
+
+---
+
+## Línea de tiempo: versión a versión
+
+| C# | Fecha | Visual Studio | Runtime de debut | Características clave | Laboratorio |
+|---|---|---|---|---|---|
+| [**1.0**](docs/02-csharp-1-cimientos.md) | ene-2002 | VS .NET 2002 | .NET Framework 1.0 | Clases, `struct`, interfaces, propiedades, delegados, eventos, atributos | [CSharp1](https://github.com/CristianSifuentes/CSharp1) |
+| [**1.2**](docs/02-csharp-1-cimientos.md#8-c-12-dispose-en-foreach) | abr-2003 | VS .NET 2003 | .NET Framework 1.1 | `Dispose` en `foreach` | — |
+| [**2.0**](docs/03-csharp-2-genericos.md) | nov-2005 | VS 2005 | .NET Framework 2.0 | Genéricos, iteradores, `T?`, métodos anónimos, `partial` | [CSharp2](https://github.com/CristianSifuentes/CSharp2) |
+| [**3.0**](docs/04-csharp-3-linq.md) | nov-2007 | VS 2008 | .NET Framework 3.5 | LINQ, lambdas, extensiones, `var`, tipos anónimos | [CSharp3](https://github.com/CristianSifuentes/CSharp3) |
+| [**4.0**](docs/05-csharp-4-5-dinamismo-y-asincronia.md) | abr-2010 | VS 2010 | .NET Framework 4.0 | `dynamic`, argumentos con nombre, varianza genérica | [CSharp4](https://github.com/CristianSifuentes/CSharp4) |
+| [**5.0**](docs/05-csharp-4-5-dinamismo-y-asincronia.md#5-c-5-el-problema-de-la-asincronía) | ago-2012 | VS 2012 | .NET Framework 4.5 | `async`/`await`, información del llamador | [CSharp5](https://github.com/CristianSifuentes/CSharp5) |
+| [**6.0**](docs/06-csharp-6-roslyn.md) | jul-2015 | VS 2015 | .NET Framework 4.6 | Roslyn, `?.`, interpolación, `nameof`, filtros | [CSharp6](https://github.com/CristianSifuentes/CSharp6) |
+| [**7.0–7.3**](docs/07-csharp-7-tuplas-patrones-y-ref.md) | 2017–2018 | VS 2017 | .NET Framework 4.7 · .NET Core 2.x | Tuplas, patrones, `Span<T>`, `in`, `ref struct`, `async Main` | [CSharp7](https://github.com/CristianSifuentes/CSharp7) |
+| [**8.0**](docs/08-csharp-8-nulabilidad-y-streams.md) | sep-2019 | VS 2019 16.3 | .NET Core 3.0 | `string?`, `switch` expresión, flujos asíncronos, rangos | [CSharp8](https://github.com/CristianSifuentes/CSharp8) |
+| [**9**](docs/09-csharp-9-10-records.md) | nov-2020 | VS 2019 16.8 | .NET 5 | `record`, `init`, nivel superior, patrones lógicos | [CSharp9](https://github.com/CristianSifuentes/CSharp9) |
+| [**10**](docs/09-csharp-9-10-records.md#7-c-10-organización-del-código) | nov-2021 | VS 2022 17.0 | .NET 6 | `record struct`, `global using`, `namespace X;`, manejadores | [CSharp10](https://github.com/CristianSifuentes/CSharp10) |
+| [**11**](docs/10-csharp-11-matematica-generica.md) | nov-2022 | VS 2022 17.4 | .NET 7 | `INumber<T>`, `"""`, patrones de lista, `required`, campos `ref` | [CSharp11](https://github.com/CristianSifuentes/CSharp11) |
+| [**12**](docs/11-csharp-12-13-colecciones.md) | nov-2023 | VS 2022 17.8 | .NET 8 | Constructores primarios, `[…]`, `InlineArray`, alias | [CSharp12](https://github.com/CristianSifuentes/CSharp12) |
+| [**13**](docs/11-csharp-12-13-colecciones.md#6-c-13-colecciones-params) | nov-2024 | VS 2022 17.12 | .NET 9 | `params` de colección, `Lock`, `allows ref struct` | [CSharp13](https://github.com/CristianSifuentes/CSharp13) |
+| [**14** 🟢](docs/12-csharp-14-extensiones.md) | nov-2025 | VS 2026 18.0 | .NET 10 | `extension`, `field`, `Span` implícito, `?.=`, `+=` definido | [CSharp14](https://github.com/CristianSifuentes/CSharp14) |
+| [**15** 🟡](docs/13-csharp-15-uniones.md) | RC, nov-2026 | VS 2026 18.8+ | .NET 11 | `union`, `closed`, `with(...)`, `break` con etiqueta | — |
+
+---
+
+## Antes y después en una línea
+
+El mismo pensamiento, en dos épocas. Son formas resumidas y no se compilan por separado: los ejemplos completos y verificados están en cada capítulo y en [14 · Hilos evolutivos](docs/14-hilos-evolutivos.md).
+
+| Versión | Antes | Después |
+|---|---|---|
+| **C# 2** | `int n = (int)lista[0];` | `int n = lista[0];` |
+| **C# 3** | `delegate(int x) { return x > 1; }` | `x => x > 1` |
+| **C# 5** | `t.ContinueWith(r => Usar(r.Result));` | `Usar(await t);` |
+| **C# 6** | `string.Format("{0}", x)` | `$"{x}"` |
+| **C# 6** | `if (a != null) a.Invoke();` | `a?.Invoke();` |
+| **C# 7** | `int n; int.TryParse(s, out n);` | `int.TryParse(s, out int n);` |
+| **C# 8** | `if (x == null) x = new();` | `x ??= new();` |
+| **C# 9** | `List<int> a = new List<int>();` | `List<int> a = new();` |
+| **C# 10** | `namespace A { … }` | `namespace A;` |
+| **C# 11** | `"{\"a\": 1}"` | `"""{"a": 1}"""` |
+| **C# 12** | `new List<int> { 1, 2 }` | `[1, 2]` |
+| **C# 14** | `if (c != null) c.Total = 1;` | `c?.Total = 1;` |
+| **C# 15** | `interface I { }` + `_ => throw` | `union U(A, B);` |
+
+```csharp cs=15 run
+// C# 15 en una mirada: datos, patrones y colecciones trabajando juntos
+List<Evento> eventos = [new Alta("Ana"), new Baja("Luis", "impago"), new Alta("Eva")];
+
+foreach (var e in eventos)
+{
+    Console.WriteLine(e switch
     {
-        foreach (var val in values)
-            Console.WriteLine(val);
-    }
-    ```
-- **New `System.Threading.Lock` Semantics:**
-  * When the target of a `lock` statement is `System.Threading.Lock`, the compiler uses the newer lock pattern based on `EnterScope()`.
-  * Improves the clarity and performance path for modern synchronization code while preserving the existing `lock` statement syntax.
-    ```csharp
-    private readonly System.Threading.Lock _lock = new();
+        Alta(var nombre) => $"+ {nombre}",
+        Baja(var nombre, var motivo) => $"- {nombre} ({motivo})",
+        null => "?",
+    });
+    // → + Ana
+    // → - Luis (impago)
+    // → + Eva
+}
 
-    void Update()
-    {
-        lock (_lock)
-        {
-            Console.WriteLine("Protected work");
-        }
-    }
-    ```
-- **Escape Sequence `\e`:**
-  * Adds a readable escape sequence for the ESCAPE character (`U+001B`).
-  * Useful for terminal control sequences without relying on numeric escape forms.
-    ```csharp
-    string reset = "\e[0m";
-    ```
-- **Ref-Safe and Partial-Type Improvements:**
-  * Allows `ref` locals and `unsafe` contexts in iterators and async methods.
-  * Allows `ref struct` types to implement interfaces and be used as generic type arguments when the type parameter allows ref structs.
-  * Adds partial properties and indexers in partial types.
-
-### Why It Was Significant?
-* Focuses on performance-oriented APIs and safer low-level programming patterns.
-* Makes synchronization and terminal-oriented code more direct.
-* Gives library and code-generation authors more options through partial properties, partial indexers, and overload resolution priority.
-
-### Limitations
-* Some features matter most to library authors, performance-sensitive code, and generated-code scenarios.
-* Adoption of `params` collection patterns may require rethinking older overload sets.
-
-### Key Takeaways
-* C# 13.0 builds on modern usability, code expressiveness, and performance.
-* It is the default language version for projects targeting .NET 9.
-* It broadens C# support for allocation-conscious APIs and ref-safe abstractions.
-
-
----
-## [C# 14.0 Features](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-14) 
-- **Extension Members:**
-  * Adds extension blocks that can declare extension properties, extension methods, and static extension members.
-  * Evolves extension methods into a broader model for adding instance-like or type-like members to existing types.
-    ```csharp
-    public static class EnumerableExtensions
-    {
-        extension<T>(IEnumerable<T> source)
-        {
-            public bool IsEmpty => !source.Any();
-        }
-    }
-    ```
-
-- **Null-Conditional Assignment:**
-  * Allows `?.` and `?[]` on the left side of assignment and compound assignment.
-  * Evaluates the right side only when the receiver is not null.
-    ```csharp
-    customer?.Order = GetCurrentOrder();
-    ```
-
-- **Field-Backed Properties:**
-  * Adds the `field` keyword inside property accessors to refer to the compiler-generated backing field.
-  * Reduces boilerplate when a property needs custom validation in one accessor.
-    ```csharp
-    public string Message
-    {
-        get;
-        set => field = value ?? throw new ArgumentNullException(nameof(value));
-    }
-    ```
-
-- **Span, Lambda, `nameof`, and Partial-Member Improvements:**
-  * Adds more implicit conversions for `Span<T>` and `ReadOnlySpan<T>`.
-  * Allows `nameof(List<>)` for unbound generic types.
-  * Allows modifiers such as `ref`, `in`, `out`, `scoped`, and `ref readonly` on simple lambda parameters.
-  * Adds partial events and constructors, plus user-defined compound assignment operators.
-
-### Why It Was Significant?
-* C# 14.0 expands everyday expressiveness through extension members and null-conditional assignment.
-* It improves performance-oriented code by making span conversions more natural.
-* It continues the partial-member evolution used by source generators and large APIs.
-
-### Limitations
-* Some C# 14.0 features require .NET 10 runtime or library support.
-* The `field` keyword can be confusing in types that already contain a member named `field`; use `@field` or rename the existing member when needed.
-
-### Key Takeaways
-* C# 14.0 is the latest stable C# release.
-* It is the default language version for projects targeting .NET 10.
-* It replaces several previously rumored or proposed ideas with the actual shipped feature set.
-
----
-## [C# 15.0 Preview Features](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-15)
-- **Collection Expression Arguments:**
-  * Allows a `with(...)` element as the first element in a collection expression.
-  * Passes constructor or factory arguments such as capacity or comparers to the underlying collection.
-    ```csharp
-    string[] values = ["one", "two", "three"];
-    List<string> names = [with(capacity: values.Length * 2), .. values];
-    ```
-
-- **Union Types:**
-  * Introduces preview support for declaring values that can be one of several case types.
-  * Helps the compiler reason about exhaustive `switch` expressions over the known cases.
-    ```csharp
-    public record class Cat(string Name);
-    public record class Dog(string Name);
-
-    public union Pet(Cat, Dog);
-    ```
-
-### Preview Status
-* C# 15.0 is a preview language version for .NET 11 preview SDKs.
-* Preview features can change before final release, so they should be treated differently from stable C# 14.0 features.
-
----
-## Creating a Project with .NET CLI
-
-To create a new C# project using the .NET CLI, follow these steps:
-
-1. **Install the .NET SDK**:
-   Ensure you have the .NET SDK installed. You can download it from [Microsoft's official site](https://dotnet.microsoft.com/).
-
-2. **Create a Solution (.sln)**:
-   Open your terminal and navigate to the directory where you want to create the solution:
-   ```bash
-   dotnet new sln -n MySln
-   ```
-   Replace `MySln` with the desired name of your solution.
-
-3. **Create a New Project**:
-   Run the following command to create a new console application:
-   ```bash
-   dotnet new console -n MyApp
-   ```
-   Replace `MyApp` with the desired name of your project.
-
-4. **Add the Project to the Solution**:
-   Return to the root of your solution (where the `.sln` file is located).
-   ```bash
-   dotnet sln add MyApp/MyApp.csproj
-   ```
-   Or
-   ```bash
-    
-   dotnet sln MySln.sln add MyApp/MyApp.csproj
-   ```
-5. **Open the Project in Visual Studio Code**:
-   Open the project in Visual Studio Code using the next command.
-   ```bash
-    code .
-   ```
-   Ensure that the **C# Extension Pack** is installed in Visual Studio Code to enable IntelliSense and additional features.
-
-6. **Restore and Run the Project**:
-   Restore the required packages by running the next command:
-   ```bash
-     dotnet restore
-   ```
-   Run the project to test using the next command:
-   ```bash
-     dotnet run --project YourProjectName
-   ```
-   This will execute the `Program.cs` file and display the output.
+record Alta(string Nombre);
+record Baja(string Nombre, string Motivo);
+union Evento(Alta, Baja);
+```
 
 ---
 
+## Las ocho grandes ideas
 
-## Multi Entry Point
+> C# no avanza por versiones aisladas, sino por **hilos** que se extienden durante años. Un `union` de 2026 es el último eslabón de una cadena iniciada con las tuplas de 2017.
 
-C# projects traditionally have a single entry point defined in the `Main` method. However, it's possible to create multiple entry points and choose which one to execute. Here's how:
+| Hilo | De dónde viene | A dónde ha llegado | Matiz de experto |
+|---|---|---|---|
+| **① Tipos** | Genéricos reificados (C# 2) | `static abstract` e `INumber<T>` (C# 11) | El JIT especializa por tipo de valor: la abstracción no cuesta en ejecución |
+| **② Datos** | `class` y tipos anónimos | `record` y `union` | `with` es copia superficial, y un `record` compara arreglos por referencia |
+| **③ Funciones** | Delegados (C# 1) | Miembros de extensión (C# 14) | Una clausura asigna; `static` lo convierte en error visible |
+| **④ Patrones** | `is T x` (C# 7) | Exhaustividad sobre uniones (C# 15) | `not` tiene más prioridad que `or` |
+| **⑤ Nulabilidad** | `int?` (C# 2) | `string?` y `?.=` | Es análisis estático: `string?` no existe en ejecución |
+| **⑥ Asincronía** | `BeginX`/`EndX` | `IAsyncEnumerable<T>` y Runtime Async | `await` no crea hilos |
+| **⑦ Memoria** | `unsafe` (C# 1) | `Span<T>` y seguridad de memoria | Un `struct` no `readonly` pasado como `in` genera copias ocultas |
+| **⑧ Generación** | `partial` (C# 2) | Generadores e interceptores | Son la base práctica de Native AOT |
 
-1. **Define Multiple `Main` Methods**:
-   Create different classes with their own `Main` method:
-   ```csharp
-   class Program1
-   {
-       public static void Main(string[] args)
-       {
-           Console.WriteLine("This is Program 1");
-       }
-   }
-
-   class Program2
-   {
-       public static void Main(string[] args)
-       {
-           Console.WriteLine("This is Program 2");
-       }
-   }
-   ```
-
-2. **Specify the Entry Point**:
-   Use the `dotnet run` command with the `--launch-profile` option or modify the `launchSettings.json` file in the `Properties` folder to set the desired entry point.
-
-   Alternatively, compile the project using the `csc` (C# Compiler) command and specify the desired class:
-   ```bash
-   csc Program1.cs
-   ```
+```mermaid
+flowchart LR
+    S["Código C#"] --> R{{"⑧ Roslyn y generadores"}}
+    R --> T["① Tipos y genéricos"]
+    R --> D["② Datos y ④ Patrones"]
+    T & D --> M["⑦ Memoria segura"]
+    M --> A["⑥ Asincronía"]
+    R -.-> N["⑤ Nulabilidad<br/>análisis estático"]
+    R -.-> F["③ Funciones y extensiones"]
+    classDef c fill:#512BD4,stroke:#2A1272,color:#fff
+    classDef d fill:#68217A,stroke:#3B0F47,color:#fff
+    classDef m fill:#CA5010,stroke:#7A2E06,color:#fff
+    classDef a fill:#00B7C3,stroke:#006B74,color:#04121a
+    class R c
+    class T,D,F,N d
+    class M m
+    class A a
+```
 
 ---
 
+## C# en cifras
 
-## Additional Resources
+| Indicador (nov-2026) | Valor |
+|---|---|
+| Años desde C# 1.0 | **24** |
+| Versiones con número propio | **19** (de 1.0 a 15, incluidas 1.2 y 7.1–7.3) |
+| Versiones publicadas cada noviembre | **6** seguidas: de C# 9 a C# 14, con C# 15 a punto |
+| Características en este catálogo | **154** |
+| Ediciones de ECMA-334 | **7**; la última es de diciembre de 2023 |
+| Versión por defecto en .NET Framework | **C# 7.3** |
+| Runtimes de .NET con soporte hoy | **3** (.NET 8, 9 y 10), y solo **.NET 10** tras el 10-nov-2026 hasta la GA de .NET 11 |
 
-- [Official C# Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
-- [C# Programming Guide](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/)
-- [C# Language Specification](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/)
-- [Roslyn GitHub Repository](https://github.com/dotnet/roslyn)
+---
+
+## Qué cambió en 2025–2026
+
+| Área | Novedad | Versión | Estado |
+|---|---|---|---|
+| Extensiones | Bloques `extension`: propiedades, estáticos y operadores | C# 14 | 🟢 |
+| Propiedades | `field`: fin del campo manual en propiedades con lógica | C# 14 | 🟢 |
+| Rendimiento | `Span<T>` de primera clase; `operator +=` en el sitio | C# 14 | 🟢 |
+| Nulabilidad | `a?.b = c` | C# 14 | 🟢 |
+| Herramientas | `dotnet run app.cs`, sin proyecto y con Native AOT al publicar | SDK 10 | 🟢 |
+| Tipos | **`union`**: tipos suma nativos | C# 15 | 🟡 |
+| Tipos | **`closed`**: jerarquías cerradas y exhaustivas | C# 15 | 🟡 |
+| Colecciones | `[with(capacity: n), …]` | C# 15 | 🟡 |
+| Extensiones | Indexadores de extensión | C# 15 | 🟡 |
+| Control de flujo | `break` y `continue` con etiqueta | C# 15 | 🟡 |
+| Runtime | **Runtime Async**: asincronía en el runtime, sin cambiar la sintaxis | .NET 11 | 🟡 |
+| JSON | `System.Text.Json` entiende uniones | .NET 11 | 🟡 |
+| Memoria | Nuevo modelo de `unsafe` | `preview` | 🟣 |
+
+---
+
+## Plazos que no puedes ignorar
+
+| Fecha | Qué ocurre | Acción |
+|---|---|---|
+| **10-nov-2026** | Fin de soporte de **.NET 8** (C# 12) y **.NET 9** (C# 13) · fin del RC3 de .NET 11 | Migrar a **.NET 10 LTS** |
+| **nov-2026** | Disponibilidad general prevista de **.NET 11** y **C# 15** | Evaluar; STS con dos años de soporte |
+| **14-nov-2028** | Fin de soporte de **.NET 10** (C# 14) | Planificar el salto al siguiente LTS |
+
+> [!WARNING]
+> Una versión de C# no caduca, pero **su runtime sí**. Lista completa de cambios incompatibles y método de migración: [18 · Migración y ciclo de vida](docs/18-migracion-y-ciclo-de-vida.md).
+
+---
+
+## Estructura del repositorio
+
+```text
+.
+├── README.md                     ← estás aquí (portada e índice)
+├── docs/                         ← 19 capítulos
+│   ├── 01-modelo-de-versiones.md
+│   ├── 02 … 13                   ← un capítulo por versión o par de versiones
+│   ├── 14-hilos-evolutivos.md
+│   ├── 15-bajo-el-capo-y-rendimiento.md
+│   ├── 16-guias-de-decision.md
+│   ├── 17-catalogo-a-z.md        ← generado desde data/caracteristicas.csv
+│   ├── 18-migracion-y-ciclo-de-vida.md
+│   └── 19-referencia-rapida-y-glosario.md
+├── data/caracteristicas.csv      ← fuente única del catálogo y del póster
+├── tools/
+│   ├── generar_atlas.py          ← regenera catálogo, póster y banner (Python 3, sin dependencias)
+│   └── verificar_ejemplos.py     ← compila cada ejemplo con su versión exacta de C#
+├── assets/                       ← banner y tabla periódica en SVG
+├── *.cs, Matrix.Test/            ← caso práctico: multiplicación concurrente de matrices
+└── LICENSE                       ← Apache 2.0
+```
+
+```bash
+# Regenerar catálogo A–Z, póster y banner después de editar data/caracteristicas.csv
+python3 tools/generar_atlas.py
+
+# Compilar y ejecutar todos los ejemplos (requiere el SDK de .NET 11 o posterior)
+python3 tools/verificar_ejemplos.py --dotnet /ruta/a/dotnet
+```
+
+---
+
+## Convenciones
+
+| Símbolo | Significado |
+|---|---|
+| 🟢 | Estable |
+| 🟡 | *Release candidate* |
+| 🟣 | *Preview* |
+| 🟠 | Soporte a punto de terminar |
+| ⛔ | Sin soporte |
+| ⚠️ | Cambio de comportamiento sin error de compilación |
+| `// → texto` | Salida real del programa, comprobada al ejecutarlo |
+| Recuadros *Note*, *Tip*, *Important*, *Warning*, *Caution* | Notas, consejos, puntos clave, advertencias y precauciones |
+
+Colores de los diagramas: **morado** = lenguaje · **índigo** = compilador y herramientas · **turquesa** = runtime · **naranja** = datos y patrones.
+
+---
+
+## Metodología y fuentes
+
+- **Fecha de corte:** 4 de noviembre de 2026. C# 14 es la última versión estable; C# 15 se documenta tal como está en .NET 11 RC3. Las novedades posteriores, incluida la GA de .NET 11, no están incluidas.
+- **Ejemplos verificados:** 140 de los 143 bloques ```` ```csharp ```` se compilaron con el SDK `11.0.100-rc.3.26522.148` y **con el `-langversion` de su época**: un ejemplo de C# 7.3 demuestra que solo usa sintaxis de C# 7.3. De ellos, 104 se ejecutan y su salida se compara
+  con los comentarios `// →`, y 13 deben fallar con el código exacto que documentan. Los 3 restantes son formas ilustrativas o requieren paquetes externos. Un compilador moderno no reproduce cada particularidad de los compiladores históricos, y los fragmentos dentro de tablas no se verifican.
+- **Fuentes:** Microsoft Learn (*What's new*, *The history of C#*, *Language versioning*, referencia del lenguaje), listas de *breaking changes* de Roslyn, `Language-Version-History.md` de `dotnet/csharplang`, *Language Feature Status* de Roslyn, política de soporte de .NET y
+  el estándar ECMA-334. Algunas semánticas de C# 15 se comprobaron por reflexión sobre el RC3.
+- **Límites:** la columna "runtime de debut" es orientativa, sobre todo en C# 7.x. Los detalles de C# 15 y de *preview* pueden cambiar. Este atlas no es documentación oficial de Microsoft.
+- **Correcciones respecto a versiones anteriores de este README:** este atlas sustituye al README en inglés. Su contenido se conserva y se amplía, se corrigieron ejemplos que no compilaban y varias características se
+  reasignaron a su versión real. Las correcciones de C# 13 y C# 14 ya se habían hecho en mayo de 2026.
+- **Contribuir:** abre un *issue* o *pull request*. Para el catálogo, edita `data/caracteristicas.csv` y ejecuta el generador; para los ejemplos, ejecuta el verificador.
+
+---
+
+<p align="center">
+  Hecho con 💜 para la comunidad hispanohablante · Licencia <a href="LICENSE">Apache 2.0</a> ·
+  <a href="https://learn.microsoft.com/dotnet/csharp/">learn.microsoft.com/dotnet/csharp</a>
+</p>
