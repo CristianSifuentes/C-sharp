@@ -146,10 +146,10 @@ Modificadores en lambdas simples,14,funcional,C,GA,"(a, out b) => …",Lm,Lambda
 nameof con genéricos sin enlazar,14,ergonomia,C,GA,nameof(List<>),Nu,nameof|<>,1
 Constructores y eventos parciales,14,meta,C,GA,Completa la serie de partial,Pv,partial|ctor,1
 Directivas de apps de un archivo,14,ergonomia,C,GA,"#:package, #:property y dotnet run app.cs",Fb,#:,1
-Uniones,15,datos,B,RC,union T(A B),Uo,union,1
-Jerarquías cerradas,15,datos,C,RC,closed class,Cc,closed,1
-Argumentos de colección,15,colecciones,C,RC,[with(…) …],Wc,with(…),1
-Indexadores de extensión,15,funcional,C,RC,this[…] en extension,Xi,extension|this[],1
-break y continue con etiqueta,15,ergonomia,C,RC,break externo;,Bl,break|etiqueta,1
-Estáticos de interfaz en runtimes antiguos,15,tipos,C,RC,Sin soporte de DIM,Sv,static|interfaz,1
+Uniones,15,datos,B,GA,union T(A B),Uo,union,1
+Jerarquías cerradas,15,datos,C,GA,closed class,Cc,closed,1
+Argumentos de colección,15,colecciones,C,GA,[with(…) …],Wc,with(…),1
+Indexadores de extensión,15,funcional,C,GA,this[…] en extension,Xi,extension|this[],1
+break y continue con etiqueta,15,ergonomia,C,GA,break externo;,Bl,break|etiqueta,1
+Estáticos de interfaz en runtimes antiguos,15,tipos,C,GA,Sin soporte de DIM,Sv,static|interfaz,1
 Seguridad de memoria,15,memoria,C,Preview,Nuevo modelo de unsafe,Mm,Memory|Safety,1

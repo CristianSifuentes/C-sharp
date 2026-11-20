@@ -146,7 +146,7 @@ Junto al atlas, la raíz contiene una multiplicación concurrente de matrices, a
 | `Matrix.Test/` | Pruebas con xUnit |
 
 > [!WARNING]
-> **Estado a 4-nov-2026: el proyecto no compila.** El refactor que separó el código en varios archivos dejó pendientes:
+> **Estado a 20-nov-2026: el proyecto no compila.** El refactor que separó el código en varios archivos dejó pendientes:
 >
 > - `MatrixBeanchmarks.cs:35` tiene una llave de cierre y un `Main` sobrantes (CS1519). Es el único error de compilación actual.
 > - Una vez corregido, `Program.cs` y `BenchmarkProgram.cs` declaran dos `Main`: hará falta `<StartupObject>`.

@@ -10,20 +10,19 @@
 
 <!-- cs=15 -->
 
-| Ficha | C# 15 🟡 |
+| Ficha | C# 15 🟢 |
 |---|---|
-| **Estado al 4-nov-2026** | **Prelanzamiento.** .NET 11 RC3, con soporte *go-live* |
-| **Publicación prevista** | Noviembre de 2026, junto con .NET 11 |
+| **Estado al 20-nov-2026** | **Estable.** Última versión del lenguaje |
+| **Publicación** | 10 de noviembre de 2026, junto con .NET 11 |
 | **Visual Studio** | VS 2026 18.8 o posterior |
-| **Runtime** | .NET 11 (STS, número impar) |
+| **Runtime** | .NET 11 STS (número impar), soporte hasta el **14-nov-2028** |
 | **`LangVersion` actual** | `15.0`, por defecto en `net11.0` |
-| **Compilador de este capítulo** | SDK `11.0.100-rc.3.26522.148` |
+| **Compilador de este capítulo** | SDK `11.0.100` (GA) |
 | **Laboratorio** | [CristianSifuentes/CSharp15](https://github.com/CristianSifuentes/CSharp15) |
 
-> [!WARNING]
-> **C# 15 todavía no es estable.** La documentación oficial indica que el SDK de .NET 11 sigue en prelanzamiento, y la disponibilidad general se
-> espera en noviembre de 2026. La política de soporte fija el fin del RC3 el 10-nov-2026, pero en las fuentes consultadas no consta una fecha de GA confirmada. Todo este
-> capítulo se compiló con el RC3; algún detalle aún podría cambiar.
+> [!NOTE]
+> **C# 15 es estable desde el 10 de noviembre de 2026**, con la GA de .NET 11. Este capítulo se escribió sobre el RC3 y se volvió a verificar con el SDK `11.0.100`:
+> todos los ejemplos dan el mismo resultado. Solo la seguridad de memoria (sección 9) sigue en *preview*.
 
 ---
 
@@ -113,7 +112,7 @@ union EnteroOTexto(int, string);
 
 ### Qué genera el compilador
 
-Comprobado con reflexión sobre el RC3:
+Comprobado con reflexión sobre la GA de .NET 11:
 
 | Hecho | Detalle |
 |---|---|
@@ -274,7 +273,7 @@ public record class Abierta(float Porcentaje) : Compuerta;
 | Implícito | Una clase `closed` es **implícitamente `abstract`** |
 | Incompatible | No se combina con `sealed`, `static` ni un `abstract` explícito |
 | **No transitivo** | Un hijo no cerrado puede derivarse desde otros ensamblados |
-| Metadatos | El RC3 emite `IsClosedTypeAttribute` |
+| Metadatos | El compilador emite `IsClosedTypeAttribute` |
 | Palabra clave | Contextual; un tipo llamado `closed` necesita `@` |
 
 ### ¿`union` o `closed`?
@@ -448,9 +447,9 @@ Según *Language Feature Status* de Roslyn. **Trabajo en curso, sin versión ni 
 | Escenario | Recomendación |
 |---|---|
 | Producción con LTS | Permanece en **.NET 10 / C# 14** hasta 2028 si valoras el soporte a largo plazo |
-| Biblioteca | Espera a la GA, y recuerda que C# 15 solo está soportado en .NET 11 o posterior |
-| Producto que se actualiza con frecuencia | Prueba el RC ahora; adopta tras la GA |
-| Aprendizaje | Hoy mismo, con el SDK del RC |
+| Biblioteca | Solo si apunta a .NET 11 o posterior: C# 15 no está soportado en runtimes anteriores |
+| Producto que se actualiza con frecuencia | Adóptalo ya; planifica el salto a .NET 12 LTS antes del 14-nov-2028 |
+| Aprendizaje | Hoy mismo, con el SDK `11.0.100` |
 
 ---
 

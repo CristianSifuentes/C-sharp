@@ -63,7 +63,7 @@ Una consecuencia práctica: **un SDK nuevo compila código antiguo**. El compila
 
 ## 2. Tabla maestra de versiones
 
-Estado: 🟢 estable · 🟡 *release candidate* · **Runtime de debut** indica con qué plataforma se publicó la versión, no el
+Estado: 🟢 estable · **Runtime de debut** indica con qué plataforma se publicó la versión, no el
 único runtime posible.
 
 | C# | Publicación | Visual Studio | Runtime de debut | `LangVersion` | Tema dominante | Capítulo |
@@ -85,8 +85,8 @@ Estado: 🟢 estable · 🟡 *release candidate* · **Runtime de debut** indica 
 | **11** | nov-2022 | VS 2022 17.4 | .NET 7 | `11.0` | Matemática genérica | [10](10-csharp-11-matematica-generica.md) |
 | **12** | nov-2023 | VS 2022 17.8 | .NET 8 | `12.0` | Expresiones de colección | [11](11-csharp-12-13-colecciones.md) |
 | **13** | nov-2024 | VS 2022 17.12 | .NET 9 | `13.0` | `params` de colección y `ref struct` | [11](11-csharp-12-13-colecciones.md) |
-| **14** 🟢 | nov-2025 | VS 2026 18.0 | .NET 10 | `14.0` | Miembros de extensión | [12](12-csharp-14-extensiones.md) |
-| **15** 🟡 | RC, GA prevista nov-2026 | VS 2026 18.8+ | .NET 11 | `15.0` | Uniones y jerarquías cerradas | [13](13-csharp-15-uniones.md) |
+| **14** | nov-2025 | VS 2026 18.0 | .NET 10 | `14.0` | Miembros de extensión | [12](12-csharp-14-extensiones.md) |
+| **15** 🟢 | nov-2026 | VS 2026 18.8+ | .NET 11 | `15.0` | Uniones y jerarquías cerradas | [13](13-csharp-15-uniones.md) |
 
 ```mermaid
 timeline

@@ -183,7 +183,7 @@ flowchart TD
     B -->|Sí| M["Multidestino:<br/>netstandard2.0 + net10.0"]
     B -->|No| C{"¿Priorizas soporte<br/>largo?"}
     C -->|Sí| L[".NET 10 LTS · C# 14<br/>hasta nov-2028"]
-    C -->|No| D[".NET 11 · C# 15<br/>tras la GA"]
+    C -->|No| D[".NET 11 · C# 15<br/>STS hasta nov-2028"]
     classDef r fill:#512BD4,stroke:#2A1272,color:#fff
     class F,M,L,D r
 ```

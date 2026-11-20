@@ -14,7 +14,7 @@
 | **Visual Studio** | VS 2022 17.8 | VS 2022 17.12 |
 | **Runtime** | .NET 8 LTS (14-nov-2023) | .NET 9 STS (12-nov-2024) |
 | **`LangVersion` actual** | `12.0` | `13.0` |
-| **Fin de soporte del runtime** | 10-nov-2026 | 10-nov-2026 |
+| **Fin de soporte del runtime** | ⛔ 10-nov-2026 | ⛔ 10-nov-2026 |
 | **Laboratorio** | [CristianSifuentes/CSharp12](https://github.com/CristianSifuentes/CSharp12) | [CristianSifuentes/CSharp13](https://github.com/CristianSifuentes/CSharp13) |
 
 > [!CAUTION]
@@ -387,7 +387,7 @@ class Temporizador { public int[] Datos { get; } = new int[3]; }
 | C# 13 | Sobrecargas con expresiones de colección | `M([1])` puede elegir otra sobrecarga por el tipo exacto de elemento |
 | C# 13 | `[InlineArray]` en `record struct` | Ya no se permite (CS9259) |
 | C# 13 | `unsafe` heredado en iteradores | Marca la función local como `unsafe` |
-| Ambas | **.NET 8 y .NET 9 acaban su soporte el 10-nov-2026** | Migra a .NET 10 LTS: ver [18](18-migracion-y-ciclo-de-vida.md) |
+| Ambas | **.NET 8 y .NET 9 no tienen soporte desde el 10-nov-2026** | Migra a .NET 10 LTS: ver [18](18-migracion-y-ciclo-de-vida.md) |
 
 ---
 

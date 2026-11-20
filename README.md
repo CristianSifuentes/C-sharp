@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img alt="Actualizado al 4 de noviembre de 2026" src="https://img.shields.io/badge/actualizado-4_nov_2026-68217A?style=for-the-badge">
+  <img alt="Actualizado al 20 de noviembre de 2026" src="https://img.shields.io/badge/actualizado-20_nov_2026-68217A?style=for-the-badge">
   <img alt="Idioma: español" src="https://img.shields.io/badge/idioma-espa%C3%B1ol-2A1272?style=for-the-badge">
   <img alt="19 capítulos" src="https://img.shields.io/badge/cap%C3%ADtulos-19-9B4F96?style=for-the-badge">
   <img alt="154 características catalogadas" src="https://img.shields.io/badge/caracter%C3%ADsticas-154-512BD4?style=for-the-badge">
@@ -15,7 +15,7 @@
 <p align="center">
   <b>C# Atlas</b> es una guía técnica en español sobre la <b>evolución del lenguaje C#</b>:<br>
   cada versión, de la 1.0 a la 15, con el problema que resolvía, su código antes y después, su semántica,<br>
-  su costo, sus cambios incompatibles y el runtime y Visual Studio en que debutó, verificado al <b>4 de noviembre de 2026</b>.
+  su costo, sus cambios incompatibles y el runtime y Visual Studio en que debutó, verificado al <b>20 de noviembre de 2026</b>.
 </p>
 
 ---
@@ -57,10 +57,10 @@ adoptó *pattern matching* y tipos de datos funcionales, y hoy compite en rendim
 
 ## Estado actual del lenguaje
 
-| | Versión | Runtime | Estado al 4-nov-2026 |
+| | Versión | Runtime | Estado al 20-nov-2026 |
 |---|---|---|---|
-| 🟢 **Estable** | **C# 14** | .NET 10 LTS (soporte hasta el 14-nov-2028) | Recomendada para producción |
-| 🟡 **Próxima** | **C# 15** | .NET 11, en RC3 con licencia *go-live* | Disponibilidad general prevista en noviembre de 2026 |
+| 🟢 **Estable** | **C# 15** | .NET 11 STS (10-nov-2026, soporte hasta el 14-nov-2028) | La versión más reciente del lenguaje |
+| 🟢 **Estable LTS** | **C# 14** | .NET 10 LTS (soporte hasta el 14-nov-2028) | Recomendada si priorizas el soporte largo |
 | 🟣 ***Preview*** | `LangVersion=preview` | SDK de .NET 11 | Modelo de seguridad de memoria: no apto para producción |
 
 ---
@@ -208,8 +208,8 @@ Las características más relevantes, una columna por versión del lenguaje y un
 | [**11**](docs/10-csharp-11-matematica-generica.md) | nov-2022 | VS 2022 17.4 | .NET 7 | `INumber<T>`, `"""`, patrones de lista, `required`, campos `ref` | [CSharp11](https://github.com/CristianSifuentes/CSharp11) |
 | [**12**](docs/11-csharp-12-13-colecciones.md) | nov-2023 | VS 2022 17.8 | .NET 8 | Constructores primarios, `[…]`, `InlineArray`, alias | [CSharp12](https://github.com/CristianSifuentes/CSharp12) |
 | [**13**](docs/11-csharp-12-13-colecciones.md#6-c-13-colecciones-params) | nov-2024 | VS 2022 17.12 | .NET 9 | `params` de colección, `Lock`, `allows ref struct` | [CSharp13](https://github.com/CristianSifuentes/CSharp13) |
-| [**14** 🟢](docs/12-csharp-14-extensiones.md) | nov-2025 | VS 2026 18.0 | .NET 10 | `extension`, `field`, `Span` implícito, `?.=`, `+=` definido | [CSharp14](https://github.com/CristianSifuentes/CSharp14) |
-| [**15** 🟡](docs/13-csharp-15-uniones.md) | RC, nov-2026 | VS 2026 18.8+ | .NET 11 | `union`, `closed`, `with(...)`, `break` con etiqueta | [CSharp15](https://github.com/CristianSifuentes/CSharp15) |
+| [**14**](docs/12-csharp-14-extensiones.md) | nov-2025 | VS 2026 18.0 | .NET 10 | `extension`, `field`, `Span` implícito, `?.=`, `+=` definido | [CSharp14](https://github.com/CristianSifuentes/CSharp14) |
+| [**15** 🟢](docs/13-csharp-15-uniones.md) | nov-2026 | VS 2026 18.8+ | .NET 11 | `union`, `closed`, `with(...)`, `break` con etiqueta | [CSharp15](https://github.com/CristianSifuentes/CSharp15) |
 
 ---
 
@@ -299,11 +299,11 @@ flowchart LR
 |---|---|
 | Años desde C# 1.0 | **24** |
 | Versiones con número propio | **19** (de 1.0 a 15, incluidas 1.2 y 7.1–7.3) |
-| Versiones publicadas cada noviembre | **6** seguidas: de C# 9 a C# 14, con C# 15 a punto |
+| Versiones publicadas cada noviembre | **7** seguidas: de C# 9 a C# 15 |
 | Características en este catálogo | **154** |
 | Ediciones de ECMA-334 | **7**; la última es de diciembre de 2023 |
 | Versión por defecto en .NET Framework | **C# 7.3** |
-| Runtimes de .NET con soporte hoy | **3** (.NET 8, 9 y 10), y solo **.NET 10** tras el 10-nov-2026 hasta la GA de .NET 11 |
+| Runtimes de .NET con soporte hoy | **2** (.NET 10 LTS y .NET 11 STS); .NET 8 y 9 perdieron el soporte el 10-nov-2026 |
 
 ---
 
@@ -316,13 +316,13 @@ flowchart LR
 | Rendimiento | `Span<T>` de primera clase; `operator +=` en el sitio | C# 14 | 🟢 |
 | Nulabilidad | `a?.b = c` | C# 14 | 🟢 |
 | Herramientas | `dotnet run app.cs`, sin proyecto y con Native AOT al publicar | SDK 10 | 🟢 |
-| Tipos | **`union`**: tipos suma nativos | C# 15 | 🟡 |
-| Tipos | **`closed`**: jerarquías cerradas y exhaustivas | C# 15 | 🟡 |
-| Colecciones | `[with(capacity: n), …]` | C# 15 | 🟡 |
-| Extensiones | Indexadores de extensión | C# 15 | 🟡 |
-| Control de flujo | `break` y `continue` con etiqueta | C# 15 | 🟡 |
-| Runtime | **Runtime Async**: asincronía en el runtime, sin cambiar la sintaxis | .NET 11 | 🟡 |
-| JSON | `System.Text.Json` entiende uniones | .NET 11 | 🟡 |
+| Tipos | **`union`**: tipos suma nativos | C# 15 | 🟢 |
+| Tipos | **`closed`**: jerarquías cerradas y exhaustivas | C# 15 | 🟢 |
+| Colecciones | `[with(capacity: n), …]` | C# 15 | 🟢 |
+| Extensiones | Indexadores de extensión | C# 15 | 🟢 |
+| Control de flujo | `break` y `continue` con etiqueta | C# 15 | 🟢 |
+| Runtime | **Runtime Async**: asincronía en el runtime, sin cambiar la sintaxis | .NET 11 | 🟢 |
+| JSON | `System.Text.Json` entiende uniones | .NET 11 | 🟢 |
 | Memoria | Nuevo modelo de `unsafe` | `preview` | 🟣 |
 
 ---
@@ -331,9 +331,9 @@ flowchart LR
 
 | Fecha | Qué ocurre | Acción |
 |---|---|---|
-| **10-nov-2026** | Fin de soporte de **.NET 8** (C# 12) y **.NET 9** (C# 13) · fin del RC3 de .NET 11 | Migrar a **.NET 10 LTS** |
-| **nov-2026** | Disponibilidad general prevista de **.NET 11** y **C# 15** | Evaluar; STS con dos años de soporte |
-| **14-nov-2028** | Fin de soporte de **.NET 10** (C# 14) | Planificar el salto al siguiente LTS |
+| **10-nov-2026** ⛔ | Ya terminó el soporte de **.NET 8** (C# 12) y **.NET 9** (C# 13) | Migrar a **.NET 10 LTS** o a **.NET 11** cuanto antes |
+| **10-nov-2026** 🟢 | Disponibilidad general de **.NET 11** y **C# 15** | Adoptar si aceptas una STS de dos años de soporte |
+| **14-nov-2028** | Fin de soporte de **.NET 10** (C# 14) y **.NET 11** (C# 15) | Planificar el salto a .NET 12 LTS |
 
 > [!WARNING]
 > Una versión de C# no caduca, pero **su runtime sí**. Lista completa de cambios incompatibles y método de migración: [18 · Migración y ciclo de vida](docs/18-migracion-y-ciclo-de-vida.md).
@@ -378,9 +378,7 @@ python3 tools/verificar_ejemplos.py --dotnet /ruta/a/dotnet
 | Símbolo | Significado |
 |---|---|
 | 🟢 | Estable |
-| 🟡 | *Release candidate* |
 | 🟣 | *Preview* |
-| 🟠 | Soporte a punto de terminar |
 | ⛔ | Sin soporte |
 | ⚠️ | Cambio de comportamiento sin error de compilación |
 | `// → texto` | Salida real del programa, comprobada al ejecutarlo |
@@ -392,12 +390,12 @@ Colores de los diagramas: **morado** = lenguaje · **índigo** = compilador y he
 
 ## Metodología y fuentes
 
-- **Fecha de corte:** 4 de noviembre de 2026. C# 14 es la última versión estable; C# 15 se documenta tal como está en .NET 11 RC3. Las novedades posteriores, incluida la GA de .NET 11, no están incluidas.
-- **Ejemplos verificados:** 140 de los 143 bloques ```` ```csharp ```` se compilaron con el SDK `11.0.100-rc.3.26522.148` y **con el `-langversion` de su época**: un ejemplo de C# 7.3 demuestra que solo usa sintaxis de C# 7.3. De ellos, 104 se ejecutan y su salida se compara
+- **Fecha de corte:** 20 de noviembre de 2026. C# 15 es la última versión estable, publicada con .NET 11 el 10 de noviembre de 2026; C# 14 sigue siendo la versión de la LTS vigente (.NET 10).
+- **Ejemplos verificados:** 140 de los 143 bloques ```` ```csharp ```` se compilaron con el SDK `11.0.100` (GA) y **con el `-langversion` de su época**: un ejemplo de C# 7.3 demuestra que solo usa sintaxis de C# 7.3. De ellos, 104 se ejecutan y su salida se compara
   con los comentarios `// →`, y 13 deben fallar con el código exacto que documentan. Los 3 restantes son formas ilustrativas o requieren paquetes externos. Un compilador moderno no reproduce cada particularidad de los compiladores históricos, y los fragmentos dentro de tablas no se verifican.
 - **Fuentes:** Microsoft Learn (*What's new*, *The history of C#*, *Language versioning*, referencia del lenguaje), listas de *breaking changes* de Roslyn, `Language-Version-History.md` de `dotnet/csharplang`, *Language Feature Status* de Roslyn, política de soporte de .NET y
-  el estándar ECMA-334. Algunas semánticas de C# 15 se comprobaron por reflexión sobre el RC3.
-- **Límites:** la columna "runtime de debut" es orientativa, sobre todo en C# 7.x. Los detalles de C# 15 y de *preview* pueden cambiar. Este atlas no es documentación oficial de Microsoft.
+  el estándar ECMA-334. Algunas semánticas de C# 15 se comprobaron por reflexión sobre la GA de .NET 11.
+- **Límites:** la columna "runtime de debut" es orientativa, sobre todo en C# 7.x. Los detalles en *preview* pueden cambiar. Este atlas no es documentación oficial de Microsoft.
 - **Correcciones respecto a versiones anteriores de este README:** este atlas sustituye al README en inglés. Su contenido se conserva y se amplía, se corrigieron ejemplos que no compilaban y varias características se
   reasignaron a su versión real. Las correcciones de C# 13 y C# 14 ya se habían hecho en mayo de 2026.
 - **Contribuir:** abre un *issue* o *pull request*. Para el catálogo, edita `data/caracteristicas.csv` y ejecuta el generador; para los ejemplos, ejecuta el verificador.

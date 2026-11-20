@@ -9,7 +9,7 @@
 </div>
 
 > [!IMPORTANT]
-> Fecha de corte: **4 de noviembre de 2026**. **.NET 8 y .NET 9 terminan su soporte el 10 de noviembre de 2026**, dentro de seis días.
+> Fecha de corte: **20 de noviembre de 2026**. **.NET 8 y .NET 9 no tienen soporte desde el 10 de noviembre de 2026**, el mismo día en que se publicó .NET 11 con C# 15.
 
 ---
 
@@ -41,10 +41,10 @@ de C# 12 a C# 14 es, en la práctica, migrar de .NET 8 a .NET 10.
 
 | .NET | C# | Tipo | Lanzamiento | Último parche | Fin de soporte | Estado |
 |---|---|---|---|---|---|---|
-| **.NET 11** | 15 | STS | Previsto nov-2026 | RC3 (25-oct-2026) | Previsto nov-2028 | 🟡 RC con *go-live* |
-| **.NET 10** | 14 | LTS | 11-nov-2025 | 10.0.14 | **14-nov-2028** | 🟢 Recomendado |
-| **.NET 9** | 13 | STS | 12-nov-2024 | 9.0.22 | **10-nov-2026** | 🟠 Termina en días |
-| **.NET 8** | 12 | LTS | 14-nov-2023 | 8.0.33 | **10-nov-2026** | 🟠 Termina en días |
+| **.NET 11** | 15 | STS | 10-nov-2026 | 11.0.0 | **14-nov-2028** | 🟢 Vigente |
+| **.NET 10** | 14 | LTS | 11-nov-2025 | 10.0.15 | **14-nov-2028** | 🟢 Recomendado |
+| .NET 9 | 13 | STS | 12-nov-2024 | 9.0.23 | 10-nov-2026 | ⛔ |
+| .NET 8 | 12 | LTS | 14-nov-2023 | 8.0.34 | 10-nov-2026 | ⛔ |
 | .NET 7 | 11 | STS | 8-nov-2022 | 7.0.20 | 14-may-2024 | ⛔ |
 | .NET 6 | 10 | LTS | 8-nov-2021 | 6.0.36 | 12-nov-2024 | ⛔ |
 | .NET 5 | 9 | STS | 10-nov-2020 | 5.0.17 | 10-may-2022 | ⛔ |
@@ -59,15 +59,14 @@ gantt
     .NET 5 · C# 9      :done, 2020-11-10, 2022-05-10
     .NET 6 · C# 10     :done, 2021-11-08, 2024-11-12
     .NET 7 · C# 11     :done, 2022-11-08, 2024-05-14
-    section Terminan en noviembre de 2026
-    .NET 8 · C# 12     :crit, 2023-11-14, 2026-11-10
-    .NET 9 · C# 13     :crit, 2024-11-12, 2026-11-10
+    .NET 8 · C# 12     :done, 2023-11-14, 2026-11-10
+    .NET 9 · C# 13     :done, 2024-11-12, 2026-11-10
     section Vigentes
     .NET 10 · C# 14    :active, 2025-11-11, 2028-11-14
-    .NET 11 · C# 15    :2026-11-10, 2028-11-14
+    .NET 11 · C# 15    :active, 2026-11-10, 2028-11-14
 ```
 
-La barra de .NET 11 es una proyección basada en la política STS. **.NET Framework** sigue otra política, ligada a Windows, y se queda en C# 7.3 por defecto.
+Las fechas salen de la política de soporte oficial. **.NET Framework** sigue otra política, ligada a Windows, y se queda en C# 7.3 por defecto.
 
 ---
 

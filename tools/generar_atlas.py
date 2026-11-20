@@ -126,7 +126,7 @@ def generar_catalogo(filas: list[dict]) -> str:
     familias = Counter(r["familia"] for r in filas)
     lineas += [f"| {n} | {familias[k]} |" for k, n, _ in FAMILIAS]
     lineas += ["",
-               "**Leyenda.** Estado: 🟢 estable · 🟡 RC *release candidate* · 🟣 *preview*. "
+               "**Leyenda.** Estado: 🟢 estable · 🟣 *preview*. "
                "Requisito: lo que exige por debajo del compilador; consulta "
                "[01 § Qué necesita cada característica](01-modelo-de-versiones.md#3-qué-necesita-cada-característica).", "",
                "## Catálogo", ""]
@@ -194,7 +194,7 @@ def generar_poster(filas: list[dict]) -> str:
         s.append(f'<text x="{x + TILE // 2}" y="{y + 27}" font-size="13" fill="#A5B4FC" text-anchor="middle">{anio}</text>')
         for ti, r in enumerate(items):
             s += tile(r, x, CABECERA + 52 + ti * (TILE + GAP))
-    s.append(f'<text x="{MARGEN}" y="{alto - 34}" font-size="14" fill="#94A3B8">Borde discontinuo: C# 15, en release candidate o preview al 4 de noviembre de 2026. Fuente: data/caracteristicas.csv. Guía no oficial.</text>')
+    s.append(f'<text x="{MARGEN}" y="{alto - 34}" font-size="14" fill="#94A3B8">Borde discontinuo: características en preview al 20 de noviembre de 2026. Fuente: data/caracteristicas.csv. Guía no oficial.</text>')
     s.append("</svg>")
     return "\n".join(s) + "\n"
 

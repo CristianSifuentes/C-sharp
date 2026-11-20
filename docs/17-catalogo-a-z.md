@@ -54,7 +54,7 @@
 | Ergonomía | 41 |
 | Metaprogramación e interop | 18 |
 
-**Leyenda.** Estado: 🟢 estable · 🟡 RC *release candidate* · 🟣 *preview*. Requisito: lo que exige por debajo del compilador; consulta [01 § Qué necesita cada característica](01-modelo-de-versiones.md#3-qué-necesita-cada-característica).
+**Leyenda.** Estado: 🟢 estable · 🟣 *preview*. Requisito: lo que exige por debajo del compilador; consulta [01 § Qué necesita cada característica](01-modelo-de-versiones.md#3-qué-necesita-cada-característica).
 
 ## Catálogo
 
@@ -69,7 +69,7 @@
 | Árboles de expresión | [3](04-csharp-3-linq.md) | Funciones y LINQ | Biblioteca | 🟢 | Código representado como datos |
 | Argumentos con nombre | [4](05-csharp-4-5-dinamismo-y-asincronia.md) | Ergonomía | Compilador | 🟢 | M(puerto: 80) |
 | Argumentos con nombre no finales | [7.2](07-csharp-7-tuplas-patrones-y-ref.md) | Ergonomía | Compilador | 🟢 | M(a: 1 2) |
-| Argumentos de colección | [15](13-csharp-15-uniones.md) | Colecciones | Compilador | 🟡 RC | [with(…) …] |
+| Argumentos de colección | [15](13-csharp-15-uniones.md) | Colecciones | Compilador | 🟢 | [with(…) …] |
 | Arreglos en línea | [12](11-csharp-12-13-colecciones.md) | Memoria y rendimiento | Runtime | 🟢 | InlineArray |
 | Asignación condicional nula | [14](12-csharp-14-extensiones.md) | Nulabilidad | Compilador | 🟢 | a?.b = c |
 | Asignación de fusión nula | [8](08-csharp-8-nulabilidad-y-streams.md) | Nulabilidad | Compilador | 🟢 | a ??= b |
@@ -85,7 +85,7 @@
 
 | Característica | C# | Familia | Requisito | Estado | Descripción |
 |---|---|---|---|---|---|
-| break y continue con etiqueta | [15](13-csharp-15-uniones.md) | Ergonomía | Compilador | 🟡 RC | break externo; |
+| break y continue con etiqueta | [15](13-csharp-15-uniones.md) | Ergonomía | Compilador | 🟢 | break externo; |
 
 ### C
 
@@ -124,7 +124,7 @@
 | Enteros nativos | [9](09-csharp-9-10-records.md) | Memoria y rendimiento | Compilador | 🟢 | nint y nuint |
 | Enumeraciones | [1.0](02-csharp-1-cimientos.md) | Tipos y genéricos | Compilador | 🟢 | Conjuntos de constantes con nombre |
 | Espacio de nombres de archivo | [10](09-csharp-9-10-records.md) | Ergonomía | Compilador | 🟢 | namespace X; |
-| Estáticos de interfaz en runtimes antiguos | [15](13-csharp-15-uniones.md) | Tipos y genéricos | Compilador | 🟡 RC | Sin soporte de DIM |
+| Estáticos de interfaz en runtimes antiguos | [15](13-csharp-15-uniones.md) | Tipos y genéricos | Compilador | 🟢 | Sin soporte de DIM |
 | Eventos | [1.0](02-csharp-1-cimientos.md) | Funciones y LINQ | Compilador | 🟢 | Publicación y suscripción protegidas |
 | Expresiones de colección | [12](11-csharp-12-13-colecciones.md) | Colecciones | Compilador | 🟢 | [1 2 .. otra] |
 | Expresiones de consulta | [3](04-csharp-3-linq.md) | Funciones y LINQ | Compilador | 🟢 | from where select |
@@ -158,7 +158,7 @@
 |---|---|---|---|---|---|
 | Igualdad de tuplas | [7.3](07-csharp-7-tuplas-patrones-y-ref.md) | Modelado de datos | Compilador | 🟢 | == elemento a elemento |
 | Indexadores | [1.0](02-csharp-1-cimientos.md) | Ergonomía | Compilador | 🟢 | Acceso por índice sobre objetos |
-| Indexadores de extensión | [15](13-csharp-15-uniones.md) | Funciones y LINQ | Compilador | 🟡 RC | this[…] en extension |
+| Indexadores de extensión | [15](13-csharp-15-uniones.md) | Funciones y LINQ | Compilador | 🟢 | this[…] en extension |
 | Índice desde el final en inicializadores | [13](11-csharp-12-13-colecciones.md) | Ergonomía | Compilador | 🟢 | [^1] = 0 |
 | Índices y rangos | [8](08-csharp-8-nulabilidad-y-streams.md) | Ergonomía | Biblioteca | 🟢 | ^1 y a..b |
 | Información del llamador | [5](05-csharp-4-5-dinamismo-y-asincronia.md) | Metaprogramación e interop | Compilador | 🟢 | CallerMemberName y compañía |
@@ -179,7 +179,7 @@
 
 | Característica | C# | Familia | Requisito | Estado | Descripción |
 |---|---|---|---|---|---|
-| Jerarquías cerradas | [15](13-csharp-15-uniones.md) | Modelado de datos | Compilador | 🟡 RC | closed class |
+| Jerarquías cerradas | [15](13-csharp-15-uniones.md) | Modelado de datos | Compilador | 🟢 | closed class |
 
 ### L
 
@@ -294,7 +294,7 @@
 
 | Característica | C# | Familia | Requisito | Estado | Descripción |
 |---|---|---|---|---|---|
-| Uniones | [15](13-csharp-15-uniones.md) | Modelado de datos | Biblioteca | 🟡 RC | union T(A B) |
+| Uniones | [15](13-csharp-15-uniones.md) | Modelado de datos | Biblioteca | 🟢 | union T(A B) |
 | using static | [6](06-csharp-6-roslyn.md) | Ergonomía | Compilador | 🟢 | Importa miembros estáticos |
 | using y lock | [1.0](02-csharp-1-cimientos.md) | Ergonomía | Compilador | 🟢 | try/finally generado para recursos y monitores |
 

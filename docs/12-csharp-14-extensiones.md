@@ -16,7 +16,7 @@
 | **Visual Studio** | VS 2026 18.0 |
 | **Runtime** | .NET 10 LTS (11-nov-2025), soporte hasta el **14-nov-2028** |
 | **`LangVersion` actual** | `14.0` |
-| **Estado** | **Última versión estable** a noviembre de 2026 |
+| **Estado** | Estable. Es la versión de la LTS vigente; la última versión es [C# 15](13-csharp-15-uniones.md) (10-nov-2026) |
 | **Laboratorio** | [CristianSifuentes/CSharp14](https://github.com/CristianSifuentes/CSharp14) |
 
 > [!CAUTION]
