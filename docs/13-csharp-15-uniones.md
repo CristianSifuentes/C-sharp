@@ -18,6 +18,7 @@
 | **Runtime** | .NET 11 (STS, número impar) |
 | **`LangVersion` actual** | `15.0`, por defecto en `net11.0` |
 | **Compilador de este capítulo** | SDK `11.0.100-rc.3.26522.148` |
+| **Laboratorio** | [CristianSifuentes/CSharp15](https://github.com/CristianSifuentes/CSharp15) |
 
 > [!WARNING]
 > **C# 15 todavía no es estable.** La documentación oficial indica que el SDK de .NET 11 sigue en prelanzamiento, y la disponibilidad general se

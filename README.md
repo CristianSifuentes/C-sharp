@@ -209,7 +209,7 @@ Las características más relevantes, una columna por versión del lenguaje y un
 | [**12**](docs/11-csharp-12-13-colecciones.md) | nov-2023 | VS 2022 17.8 | .NET 8 | Constructores primarios, `[…]`, `InlineArray`, alias | [CSharp12](https://github.com/CristianSifuentes/CSharp12) |
 | [**13**](docs/11-csharp-12-13-colecciones.md#6-c-13-colecciones-params) | nov-2024 | VS 2022 17.12 | .NET 9 | `params` de colección, `Lock`, `allows ref struct` | [CSharp13](https://github.com/CristianSifuentes/CSharp13) |
 | [**14** 🟢](docs/12-csharp-14-extensiones.md) | nov-2025 | VS 2026 18.0 | .NET 10 | `extension`, `field`, `Span` implícito, `?.=`, `+=` definido | [CSharp14](https://github.com/CristianSifuentes/CSharp14) |
-| [**15** 🟡](docs/13-csharp-15-uniones.md) | RC, nov-2026 | VS 2026 18.8+ | .NET 11 | `union`, `closed`, `with(...)`, `break` con etiqueta | — |
+| [**15** 🟡](docs/13-csharp-15-uniones.md) | RC, nov-2026 | VS 2026 18.8+ | .NET 11 | `union`, `closed`, `with(...)`, `break` con etiqueta | [CSharp15](https://github.com/CristianSifuentes/CSharp15) |
 
 ---
 
